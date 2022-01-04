@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <!-- Created by Artisteer v4.2.0.60623 -->
+    <title>Fabrication</title>
+    <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+    <!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <link rel="stylesheet" href="../style.css" media="screen">
+    <!--[if lte IE 7]><link rel="stylesheet" href="../style.ie7.css" media="screen" /><![endif]-->
+    <link rel="stylesheet" href="../style.responsive.css" media="all">
+    <script src="../jquery.js"></script>
+    <script src="../script.js"></script>
+    <script src="../script.responsive.js"></script>
+    <script>jQuery(function ($) {
+    'use strict';
+    if ($.fn.slider) {
+        $(".art-slidecontainerFAB2").each(function () {
+            var slideContainer = $(this), tmp;
+            var inner = $(".art-slider-inner", slideContainer);
+            var helper = null;
+            
+            if ($.support.transition) {
+                helper = new BackgroundHelper();
+                helper.init("fade", "next", $(".art-slide-item", inner).first().css($.support.transition.prefix + "transition-duration"));
+                inner.children().each(function () {
+                    helper.processSlide($(this));
+                });
+
+                
+            } else if (browser.ie && browser.version <= 8) {
+                var slidesInfo = {
+".art-slideFAB20": {
+    "bgimage" : "url('../images/slideFAB20.jpg')",
+    "bgposition": "0 0",
+    "images": "",
+    "positions": ""
+},
+".art-slideFAB21": {
+    "bgimage" : "url('../images/slideFAB21.jpg')",
+    "bgposition": "0 0",
+    "images": "",
+    "positions": ""
+},
+".art-slideFAB22": {
+    "bgimage" : "url('../images/slideFAB22.jpg')",
+    "bgposition": "0 0",
+    "images": "",
+    "positions": ""
+},
+".art-slideFAB23": {
+    "bgimage" : "url('../images/slideFAB23.jpg')",
+    "bgposition": "0 0",
+    "images": "",
+    "positions": ""
+},
+".art-slideFAB24": {
+    "bgimage" : "url('../images/slideFAB24.jpg')",
+    "bgposition": "0 0",
+    "images": "",
+    "positions": ""
+},
+".art-slideFAB25": {
+    "bgimage" : "url('../images/slideFAB25.jpg')",
+    "bgposition": "0 0",
+    "images": "",
+    "positions": ""
+}
+                };
+                $.each(slidesInfo, function(selector, info) {
+                    processElementMultiplyBg(slideContainer.find(selector), info);
+                });
+            }
+
+            inner.children().eq(0).addClass("active");
+            slideContainer.slider({
+                pause: 2600,
+                speed: 600,
+                repeat: true,
+                animation: "fade",
+                direction: "next",
+                navigator: slideContainer.siblings(".art-slidenavigatorFAB2"),
+                helper: helper
+            });
+            
+                        
+        });
+    }
+});
+</script><style>.art-content .art-postcontent-0 .layout-item-0 { margin-right: 5px;margin-bottom: 0px;margin-left: 0px;  }
+.art-content .art-postcontent-0 .layout-item-1 { border-spacing: 10px 7px; border-collapse: separate;  }
+.art-content .art-postcontent-0 .layout-item-2 { color: #242629; background: #E9E8E8; padding: 15px;  }
+.art-content .art-postcontent-0 .layout-item-3 { border-spacing: 10px 0px; border-collapse: separate;  }
+.art-content .art-postcontent-0 .layout-item-4 { vertical-align: middle;  }
+.art-content .art-postcontent-0 .layout-item-5 { border-spacing: 10px 10px; border-collapse: separate;  }
+.art-content .art-postcontent-0 .layout-item-6 { color: #242629; background: #E9E8E7; padding: 15px;  }
+.art-content .art-postcontent-0 .layout-item-7 { padding: 15px;  }
+.ie7 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+.ie6 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+
+.art-slidecontainerFAB2 {
+    position: relative;
+        width: 627px;
+    height: 305px;
+        }
+
+.default-responsive .art-header .art-slidecontainerFAB2,
+.responsive .art-header .art-slidecontainerFAB2
+{
+  position: absolute !important;
+}
+
+.responsive .art-pageslider .art-slidecontainerFAB2 {
+  position: absolute !important;
+}
+
+.art-slidecontainerFAB2 .art-slide-item
+{
+
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    transform: rotate(0);
+}
+
+
+
+.art-slidecontainerFAB2 .art-slide-item {
+    -webkit-transition: 600ms ease-in-out opacity;
+    -moz-transition: 600ms ease-in-out opacity;
+    -ms-transition: 600ms ease-in-out opacity;
+    -o-transition: 600ms ease-in-out opacity;
+    transition: 600ms ease-in-out opacity;
+    position: absolute !important;
+    display: none;
+	left: 0;
+	top: 0;
+	opacity: 0;
+    width:  100%;
+    height: 100%;
+}
+
+.art-slidecontainerFAB2 .active, .art-slidecontainerFAB2 .next, .art-slidecontainerFAB2 .prev {
+    display: block;
+}
+
+.art-slidecontainerFAB2 .active {
+    opacity: 1;
+}
+
+.art-slidecontainerFAB2 .next, .art-slidecontainerFAB2 .prev {
+    width: 100%;
+}
+
+.art-slidecontainerFAB2 .next.forward, .art-slidecontainerFAB2 .prev.back {
+    opacity: 1;
+}
+
+.art-slidecontainerFAB2 .active.forward {
+    opacity: 0;
+}
+
+.art-slidecontainerFAB2 .active.back {
+    opacity: 0;
+}
+
+
+.art-slideFAB20 {
+    background-image:  url('../images/slideFAB20.jpg');
+        /* background-size:  auto auto; */
+        background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+/* special setup for header/pageslider */
+.responsive .art-header .art-slideFAB20 {
+    background-image:  url('../images/slideFAB20.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.responsive .art-pageslider .art-slideFAB20 {
+    background-image:  url('../images/slideFAB20.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-header .art-slideFAB20 {
+    background-image: url('../images/slideFAB20.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-pageslider .art-slideFAB20 {
+    background-image: url('../images/slideFAB20.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}.art-slideFAB21 {
+    background-image:  url('../images/slideFAB21.jpg');
+        /* background-size:  auto auto; */
+        background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+/* special setup for header/pageslider */
+.responsive .art-header .art-slideFAB21 {
+    background-image:  url('../images/slideFAB21.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.responsive .art-pageslider .art-slideFAB21 {
+    background-image:  url('../images/slideFAB21.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-header .art-slideFAB21 {
+    background-image: url('../images/slideFAB21.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-pageslider .art-slideFAB21 {
+    background-image: url('../images/slideFAB21.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}.art-slideFAB22 {
+    background-image:  url('../images/slideFAB22.jpg');
+        /* background-size:  auto auto; */
+        background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+/* special setup for header/pageslider */
+.responsive .art-header .art-slideFAB22 {
+    background-image:  url('../images/slideFAB22.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.responsive .art-pageslider .art-slideFAB22 {
+    background-image:  url('../images/slideFAB22.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-header .art-slideFAB22 {
+    background-image: url('../images/slideFAB22.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-pageslider .art-slideFAB22 {
+    background-image: url('../images/slideFAB22.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}.art-slideFAB23 {
+    background-image:  url('../images/slideFAB23.jpg');
+        /* background-size:  auto auto; */
+        background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+/* special setup for header/pageslider */
+.responsive .art-header .art-slideFAB23 {
+    background-image:  url('../images/slideFAB23.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.responsive .art-pageslider .art-slideFAB23 {
+    background-image:  url('../images/slideFAB23.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-header .art-slideFAB23 {
+    background-image: url('../images/slideFAB23.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-pageslider .art-slideFAB23 {
+    background-image: url('../images/slideFAB23.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}.art-slideFAB24 {
+    background-image:  url('../images/slideFAB24.jpg');
+        /* background-size:  auto auto; */
+        background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+/* special setup for header/pageslider */
+.responsive .art-header .art-slideFAB24 {
+    background-image:  url('../images/slideFAB24.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.responsive .art-pageslider .art-slideFAB24 {
+    background-image:  url('../images/slideFAB24.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-header .art-slideFAB24 {
+    background-image: url('../images/slideFAB24.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-pageslider .art-slideFAB24 {
+    background-image: url('../images/slideFAB24.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}.art-slideFAB25 {
+    background-image:  url('../images/slideFAB25.jpg');
+        /* background-size:  auto auto; */
+        background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+/* special setup for header/pageslider */
+.responsive .art-header .art-slideFAB25 {
+    background-image:  url('../images/slideFAB25.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.responsive .art-pageslider .art-slideFAB25 {
+    background-image:  url('../images/slideFAB25.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-header .art-slideFAB25 {
+    background-image: url('../images/slideFAB25.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-pageslider .art-slideFAB25 {
+    background-image: url('../images/slideFAB25.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.art-slidenavigatorFAB2 {
+  display: inline-block;
+  position: absolute;
+  direction: ltr !important;
+  top: 281px;
+  left: 80.22%;
+  z-index: 101;
+  line-height: 0 !important;
+  -webkit-background-origin: border !important;
+  -moz-background-origin: border !important;
+  background-origin: border-box !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+    white-space: nowrap;
+    }
+.art-slidenavigatorFAB2
+{
+background: #7B828A;background: -webkit-linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;background: -moz-linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;background: -o-linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;background: -ms-linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;-svg-background: linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;background: linear-gradient(to bottom, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;
+-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;
+
+
+padding:7px;
+
+
+
+
+
+}
+.art-slidenavigatorFAB2 > a
+{
+background: #464A4E;background: #464A4E;background: #464A4E;background: #464A4E;background: #464A4E;-svg-background: #464A4E;background: #464A4E;
+-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+
+
+
+margin:0 10px 0 0;
+
+width: 10px;
+
+height: 10px;
+}
+.art-slidenavigatorFAB2 > a.active
+{
+background: #C4C7CA;background: #C4C7CA;background: #C4C7CA;background: #C4C7CA;background: #C4C7CA;-svg-background: #C4C7CA;background: #C4C7CA;
+-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+
+
+
+margin:0 10px 0 0;
+
+width: 10px;
+
+height: 10px;
+}
+.art-slidenavigatorFAB2 > a:hover
+{
+background: #656B72;background: #656B72;background: #656B72;background: #656B72;background: #656B72;-svg-background: #656B72;background: #656B72;
+-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+
+
+
+margin:0 10px 0 0;
+
+width: 10px;
+
+height: 10px;
+}
+
+</style></head>
+  <body>
+    <div id="art-main">
+      <header class="art-header">
+        <div class="art-shapes"> </div>
+        <div id="art-flash-area">
+          <div id="art-flash-container"> <object id="art-flash-object" data="../images/flash.swf"
+              type="application/x-shockwave-flash" height="250" width="1000"> <param
+                name="quality" value="high"> <param name="scale" value="exactfit">
+              <param name="wmode" value="transparent"> <param name="flashvars"
+                value="color1=0xFFFFFF&amp;alpha1=.30&amp;framerate1=24&amp;loop=true&amp;wmode=transparent">
+              <param name="swfliveconnect" value="true">
+              <!--[if !IE]>--> <object type="application/x-shockwave-flash" data="../images/flash.swf"
+                height="250" width="1000"> <param name="quality" value="high">
+                <param name="scale" value="exactfit"> <param name="wmode" value="transparent">
+                <param name="flashvars" value="color1=0xFFFFFF&amp;alpha1=.30&amp;framerate1=24&amp;loop=true&amp;wmode=transparent">
+                <param name="swfliveconnect" value="true">
+                <!--<![endif]-->
+                <div class="art-flash-alt"><a href="http://www.adobe.com/go/getflashplayer"><img
+                      src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif"
+                      alt="Get Adobe Flash player"></a></div>
+                <!--[if !IE]>--> </object>
+              <!--<![endif]--> </object> </div>
+        </div>
+      </header>
+      <nav class="art-nav">
+        <ul class="art-hmenu">
+          <li><a href="../accueil.html" class="">Accueil</a></li>
+          <li><a href="../presentation.html" class="">Présentation</a>
+            <ul class="">
+              <li><a href="../presentation/contacts.html" class="">Contacts</a></li>
+              <li><a href="../presentation/acces.html" class="">Accès</a></li>
+              <li><a href="../presentation/taxe_agefiph.html" class="">Taxe
+                  AGEFIPH</a></li>
+              <li><a href="../presentation/liens.html" class="">Liens</a></li>
+            </ul>
+          </li>
+          <li><a href="../blanchisserie.html" class="">Blanchisserie</a></li>
+          <li><a href="../espaces_verts.html" class="">Espaces Verts</a></li>
+          <li><a href="../menage_indust.html" class="">Ménage indust.</a></li>
+          <li><a href="../plv_condi_mailing.html" class="active">PLV-Condi-Mailing</a>
+            <ul class="active">
+              <li><a href="../plv_condi_mailing/fabrication.html" class="active">Fabrication</a></li>
+              <li><a href="../plv_condi_mailing/conditionnement.html">Conditionnement</a></li>
+              <li><a href="../plv_condi_mailing/mailing.html">Mailing</a></li>
+            </ul>
+          </li>
+          <li><a href="../esat-adped-94.html">ESAT-ADPED 94</a>
+            <ul>
+              <li><a href="../esat-adped-94/projets-individualises.html">Projets
+                  Individualisés</a></li>
+              <li><a href="../esat-adped-94/different-competent.html">Différent
+                  &amp; Compétent</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="art-sheet clearfix">
+        <div class="art-layout-wrapper">
+          <div class="art-content-layout">
+            <div class="art-content-layout-row">
+              <div class="art-layout-cell art-content">
+                <article class="art-post art-article">
+                  <div class="art-postcontent art-postcontent-0 clearfix">
+                    <div class="art-content-layout-wrapper layout-item-0">
+                      <div class="art-content-layout layout-item-1">
+                        <div class="art-content-layout-row">
+                          <div class="art-layout-cell layout-item-2" style="width: 100%">
+                            <p style="line-height: 100%; margin-top: 0px; margin-bottom: 15px; text-align: center;"><span
+                                style="font-size: 22px; font-weight: bold; letter-spacing: 2px; color: rgb(0, 48, 71); font-style: italic; font-family: 'Trebuchet MS';"><span
+                                  style="text-decoration: underline;">Sous-traitance
+                                  industrielle</span> :</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="art-content-layout layout-item-3">
+                      <div class="art-content-layout-row">
+                        <div class="art-layout-cell layout-item-4" style="width: 67%">
+                          <p></p>
+                          <div id="FAB2" style="position: relative; display: inline-block; z-index: 0; margin: 5px;  border-width: 0px;  "
+                            class="art-collage">
+                            <div class="art-slider art-slidecontainerFAB2" data-width="627"
+                              data-height="305" style="width: 626px; height: 324px;">
+                              <div class="art-slider-inner" style="width: 616px; height: 329px; margin-top: -17px;">
+                                <div class="art-slide-item art-slideFAB20"> </div>
+                                <div class="art-slide-item art-slideFAB21"> </div>
+                                <div class="art-slide-item art-slideFAB22"> </div>
+                                <div class="art-slide-item art-slideFAB23"> </div>
+                                <div class="art-slide-item art-slideFAB24"> </div>
+                                <div class="art-slide-item art-slideFAB25"> </div>
+                              </div>
+                            </div>
+                            <div class="art-slidenavigator art-slidenavigatorFAB2"
+                              data-left="1" data-top="1"> <a href="#" class="art-slidenavigatoritem"></a><a
+                                href="#" class="art-slidenavigatoritem"></a><a href="#"
+                                class="art-slidenavigatoritem"></a><a href="#" class="art-slidenavigatoritem"></a><a
+                                href="#" class="art-slidenavigatoritem"></a><a href="#"
+                                class="art-slidenavigatoritem"></a> </div>
+                          </div>
+                          <p> </p>
+                        </div>
+                        <div class="art-layout-cell layout-item-2" style="width: 274px; margin-left: 63px;">
+                          <p class="MsoNormal" style="margin-bottom: 0.0001pt; margin-left: 33px;"><span
+                              style="font-family: 'Trebuchet MS';"><span style="color: rgb(0, 48, 71); font-size: 16px; font-weight: bold; text-decoration: underline;">Nos
+                                secteurs d'activité</span><span style="color: rgb(0, 48, 71); font-size: 16px; font-weight: bold;">
+                              </span><span style="color: rgb(0, 48, 71); font-size: 16px; font-weight: bold;">:</span></span></p>
+                          <p class="MsoNormal" style="margin-bottom: 0.0001pt; margin-left: 33px;"><span
+                              style="font-size: 12px; color: rgb(84, 66, 133); font-family: 'Trebuchet MS';">Industrie
+                              : fabrication de mobilier urbain, PLV</span></p>
+                          <p class="MsoNormal" style="margin-bottom: 0.0001pt; margin-left: 30px;"><span
+                              style="font-family: 'Trebuchet MS';"><span style="font-size: 16px; font-weight: bold; color: rgb(0, 48, 71); text-decoration: underline;">Nos
+                                clients</span><span style="font-size: 16px; font-weight: bold; color: rgb(0, 48, 71);">
+                              </span><span style="font-size: 16px; font-weight: bold; color: rgb(0, 48, 71);">:</span></span></p>
+                          <p class="MsoNormal" style="margin-bottom: 0.0001pt; margin-left: 32px;"><span
+                              style="color: rgb(84, 66, 133); font-weight: bold; font-size: 14px; font-family: 'Trebuchet MS';">MDI
+                              FRANCE</span></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="art-content-layout layout-item-5">
+                      <div class="art-content-layout-row">
+                        <div class="art-layout-cell layout-item-6" style="width: 33%">
+                          <span style="color: rgb(0, 48, 71); font-size: 16px; font-weight: bold; font-family: 'Trebuchet MS';"><span
+                              style="text-decoration: underline;">Activités</span>
+                            :</span>
+                          <p style="margin-top: 0px; margin-bottom: 0px;"></p>
+                          <ul>
+                            <li><span style="font-family: 'Trebuchet MS';"><span
+                                  style="color: #544285;">Fabrication de
+                                  supports promotionnels, équipements de points
+                                  de vente, produits plv intérieure et
+                                  extérieure, mobilier, système d'affichage...</span>
+                                <span style="color: #003047; line-height: 13px;"></span></span></li>
+                            <li><span style="line-height: 13px; color: rgb(84, 66, 133); font-family: 'Trebuchet MS';">Conditionnement</span></li>
+                            <li><span style="line-height: 13px; color: rgb(84, 66, 133); font-family: 'Trebuchet MS';">Mise
+                                en carton</span></li>
+                            <li><span style="font-family: 'Trebuchet MS';"><span
+                                  style="line-height: 13px; color: #544285;">Stockage</span><br>
+                              </span></li>
+                            <li><span style="color: rgb(84, 66, 133); font-family: 'Trebuchet MS';">Expédition</span></li>
+                          </ul>
+                          <p><br>
+                          </p>
+                        </div>
+                        <div class="art-layout-cell layout-item-6" style="width: 34%">
+                          <span style="font-family: 'Trebuchet MS';"><span style="color: rgb(0, 48, 71); font-size: 16px; font-weight: bold;"><span
+                                style="text-decoration: underline;">Compétences</span>
+                              :</span><br>
+                          </span>
+                          <ul>
+                            <li style="color: rgb(0, 48, 71); line-height: 100%;"><span
+                                style="color: rgb(84, 66, 133); font-family: 'Trebuchet MS';">Lecture
+                                de codes et symboles</span></li>
+                            <li><span style="line-height: 13px; color: rgb(84, 66, 133); font-family: 'Trebuchet MS';">Lecture
+                                de documents technique</span></li>
+                            <li><span style="font-family: 'Trebuchet MS';"><span
+                                  style="line-height: 13px; color: #544285;">Découpes
+                                  et m</span><span style="line-height: 13px; color: #544285;">anipulation
+                                  de machines complexes</span></span></li>
+                            <li><span style="color: rgb(84, 66, 133); font-family: 'Trebuchet MS';">Mesures</span></li>
+                            <li><span style="color: rgb(84, 66, 133); font-family: 'Trebuchet MS';">Assemblage</span></li>
+                            <li><span style="line-height: 13px; color: rgb(84, 66, 133); font-family: 'Trebuchet MS';">Respecter
+                                les règles de sécurité</span></li>
+                            <li><span style="font-family: 'Trebuchet MS';"><span
+                                  style="line-height: 13px; color: #544285;">Gestes
+                                  et postures de manutention</span><br>
+                              </span></li>
+                          </ul>
+                          <p><br>
+                          </p>
+                        </div>
+                        <div class="art-layout-cell layout-item-6" style="width: 33%">
+                          <span style="font-family: 'Trebuchet MS';"><span style="color: rgb(0, 48, 71); font-weight: bold; font-size: 16px;"><span
+                                style="text-decoration: underline;">Les
+                                équipements</span> :</span><br>
+                          </span>
+                          <p style="margin-top: 0px; margin-bottom: 0px;"></p>
+                          <ul>
+                            <li style="color: rgb(0, 48, 71); line-height: 100%;"><span
+                                style="color: rgb(84, 66, 133); font-family: 'Trebuchet MS';">Balance
+                                compteuse</span></li>
+                            <li><span style="line-height: 13px; color: rgb(84, 66, 133); font-family: 'Trebuchet MS';">Fardeleuse</span></li>
+                            <li><span style="line-height: 13px; color: rgb(84, 66, 133); font-family: 'Trebuchet MS';">Assembleuse
+                                de documents</span></li>
+                            <li><span style="line-height: 13px; color: rgb(84, 66, 133); font-family: 'Trebuchet MS';">Plieuse</span></li>
+                            <li><span style="line-height: 13px; color: rgb(84, 66, 133); font-family: 'Trebuchet MS';">Cercleuse</span></li>
+                            <li><span style="line-height: 13px; color: rgb(84, 66, 133); font-family: 'Trebuchet MS';">Filmeuse
+                                de palette</span></li>
+                            <li><span style="font-family: 'Trebuchet MS';"><span
+                                  style="line-height: 13px; color: #544285;">Espace
+                                  de stockage</span><br>
+                              </span></li>
+                          </ul>
+                          <p><br>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="art-content-layout layout-item-3">
+                      <div class="art-content-layout-row">
+                        <div class="art-layout-cell layout-item-7" style="width: 75%">
+                          <p style="text-align: left;"><span style="font-family: 'Trebuchet MS';"><span
+                                style="color: rgb(255, 255, 255); font-size: 13px; font-style: italic; font-weight: bold;"><span
+                                  style="text-decoration: underline;">Contacts</span>
+                                :&nbsp;</span><br>
+                            </span></p>
+                          <p><span style="color: rgb(255, 255, 255); font-size: 13px; font-family: 'Trebuchet MS';"><span
+                                style="font-style: italic;"><span style="font-weight: bold;">Alain
+                                  GOSSE</span>&nbsp;-</span>&nbsp;mobile : 06 78
+                              78 79 48</span></p>
+                          <p><span style="color: rgb(255, 255, 255); font-size: 13px; font-family: 'Trebuchet MS';"><span
+                                style="font-style: italic;"><span style="font-weight: bold;">Mahmoud</span></span>
+                              <span style="font-weight: bold; font-style: italic;">IDRES
+                                -&nbsp;</span><span style="-webkit-border-horizontal-spacing: 10px; -webkit-border-vertical-spacing: 10px; color: rgb(255, 255, 255);">mobile
+                                :&nbsp;<span style="color: rgb(255, 255, 255);">07
+                                  60 80 41 93</span></span></span></p>
+                          <p><span style="color: rgb(255, 255, 255); font-size: 13px; font-family: 'Trebuchet MS';"><span
+                                style="-webkit-border-horizontal-spacing: 10px; -webkit-border-vertical-spacing: 10px; color: rgb(255, 255, 255);"><span
+                                  style="color: rgb(255, 255, 255);"><i><b>Steeve
+                                      LE DUIGOU</b></i> - mobile : 06 50 62 23
+                                  84<br>
+                                </span></span></span></p>
+                        </div>
+                        <div class="art-layout-cell layout-item-7" style="width: 25%">
+                          <p style="text-align: center;"><a href="mailto:conditionnement@ateliersdefresnes.org"><img
+                                alt="" src="../images/mailto-bl-4.png" style="border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px;"
+                                class="" height="62" width="65"></a><br>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="art-footer">
+        <div class="art-footer-inner">
+          <div style="position:relative;display:inline-block;padding-left:40px;padding-right:40px">
+            <p><br>
+            </p>
+            <p><a href="https://www.facebook.com/Les-Ateliers-de-Fresnes-725962174202376/?ref=aymt_homepage_panel"
+                target="_blank" title="Page &quot;Les Ateliers de Fresnes&quot;"
+                style="font-style: italic;"><span style="color: rgb(255, 255, 0);  font-size: 16px;">Suivez
+                  nous sur Facebook / avec notre page "Les Ateliers de Fresnes"</span></a><span
+                style="font-size: 12px;"></span></p>
+          </div>
+          <p class="art-page-footer"> <span id="art-footnote-links"><a href="http://www.artisteer.com/"
+                target="_blank">Web Template</a> created with Artisteer.</span>
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

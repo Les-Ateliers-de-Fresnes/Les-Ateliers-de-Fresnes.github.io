@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <!-- Created by Artisteer v4.2.0.60623 -->
+    <title>Conditionnement</title>
+    <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+    <!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <link rel="stylesheet" href="../style.css" media="screen">
+    <!--[if lte IE 7]><link rel="stylesheet" href="../style.ie7.css" media="screen" /><![endif]-->
+    <link rel="stylesheet" href="../style.responsive.css" media="all">
+    <script src="../jquery.js"></script>
+    <script src="../script.js"></script>
+    <script src="../script.responsive.js"></script>
+    <script>jQuery(function ($) {
+    'use strict';
+    if ($.fn.slider) {
+        $(".art-slidecontainer9d49f34e3ecb4d80a3ffffc395a16a7a").each(function () {
+            var slideContainer = $(this), tmp;
+            var inner = $(".art-slider-inner", slideContainer);
+            var helper = null;
+            
+            if ($.support.transition) {
+                helper = new BackgroundHelper();
+                helper.init("horizontal", "next", $(".art-slide-item", inner).first().css($.support.transition.prefix + "transition-duration"));
+                inner.children().each(function () {
+                    helper.processSlide($(this), true);
+                });
+
+                                var initialWidth = slideContainer.attr("data-width");
+                var initialHeight = slideContainer.attr("data-height");
+                helper.updateSize(inner, { width: initialWidth, height: initialHeight });
+                
+                var items = helper.items(helper.current(0), helper.next(0));
+                helper.setBackground(inner, items);
+                helper.setPosition(inner, items);
+
+                slideContainer.on("beforeSlide", function () {
+                    var activeItem = $(".active", this),
+                        nextItem = $(".next, .prev", this),
+                        activePos = $(".art-slide-item", this).index(activeItem),
+                        nextPos = $(".art-slide-item", this).index(nextItem);
+
+                    var currentItems = helper.items(helper.current(activePos), helper.current(nextPos));
+
+                    helper.transition(inner, false);
+                    helper.setBackground(inner, currentItems);
+                    helper.setPosition(inner, currentItems);
+                    if (inner.length) {
+                        tmp = inner.get(0).offsetHeight;
+                    }
+
+                    var movedCurrentItems = helper.items(helper.current(activePos), helper.current(nextPos), true);
+                    helper.transition(inner, true);
+                    helper.setPosition(inner, movedCurrentItems);
+                });
+                
+            } else if (browser.ie && browser.version <= 8) {
+                var slidesInfo = {
+".art-slide9d49f34e3ecb4d80a3ffffc395a16a7a0": {
+    "bgimage" : "url('../images/slide9d49f34e3ecb4d80a3ffffc395a16a7a0.jpg')",
+    "bgposition": "0 0",
+    "images": "",
+    "positions": ""
+},
+".art-slide9d49f34e3ecb4d80a3ffffc395a16a7a1": {
+    "bgimage" : "url('../images/slide9d49f34e3ecb4d80a3ffffc395a16a7a1.jpg')",
+    "bgposition": "0 0",
+    "images": "",
+    "positions": ""
+},
+".art-slide9d49f34e3ecb4d80a3ffffc395a16a7a2": {
+    "bgimage" : "url('../images/slide9d49f34e3ecb4d80a3ffffc395a16a7a2.jpg')",
+    "bgposition": "0 0",
+    "images": "",
+    "positions": ""
+},
+".art-slide9d49f34e3ecb4d80a3ffffc395a16a7a3": {
+    "bgimage" : "url('../images/slide9d49f34e3ecb4d80a3ffffc395a16a7a3.jpg')",
+    "bgposition": "0 0",
+    "images": "",
+    "positions": ""
+},
+".art-slide9d49f34e3ecb4d80a3ffffc395a16a7a4": {
+    "bgimage" : "url('../images/slide9d49f34e3ecb4d80a3ffffc395a16a7a4.jpg')",
+    "bgposition": "0 0",
+    "images": "",
+    "positions": ""
+}
+                };
+                $.each(slidesInfo, function(selector, info) {
+                    processElementMultiplyBg(slideContainer.find(selector), info);
+                });
+            }
+
+            inner.children().eq(0).addClass("active");
+            slideContainer.slider({
+                pause: 2600,
+                speed: 600,
+                repeat: true,
+                animation: "horizontal",
+                direction: "next",
+                navigator: slideContainer.siblings(".art-slidenavigator9d49f34e3ecb4d80a3ffffc395a16a7a"),
+                helper: helper
+            });
+            
+                        
+        });
+    }
+});
+</script><style>.art-content .art-postcontent-0 .layout-item-0 { border-spacing: 10px 13px; border-collapse: separate;  }
+.art-content .art-postcontent-0 .layout-item-1 { padding: 0px;  }
+.art-content .art-postcontent-0 .layout-item-2 { margin-top: 0px;  }
+.art-content .art-postcontent-0 .layout-item-3 { border-spacing: 10px 0px; border-collapse: separate;  }
+.art-content .art-postcontent-0 .layout-item-4 { padding: 0px; vertical-align: top;  }
+.art-content .art-postcontent-0 .layout-item-5 { color: #1D1F20; background: #B6BFC9; padding: 15px;  }
+.art-content .art-postcontent-0 .layout-item-6 { margin-top: 5px;margin-bottom: 5px;  }
+.art-content .art-postcontent-0 .layout-item-7 { border-spacing: 10px 5px; border-collapse: separate;  }
+.art-content .art-postcontent-0 .layout-item-8 { border-spacing: 10px 10px; border-collapse: separate;  }
+.ie7 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+.ie6 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+
+.art-slidecontainer9d49f34e3ecb4d80a3ffffc395a16a7a {
+    position: relative;
+        width: 623px;
+    height: 304px;
+        }
+
+.default-responsive .art-header .art-slidecontainer9d49f34e3ecb4d80a3ffffc395a16a7a,
+.responsive .art-header .art-slidecontainer9d49f34e3ecb4d80a3ffffc395a16a7a
+{
+  position: absolute !important;
+}
+
+.responsive .art-pageslider .art-slidecontainer9d49f34e3ecb4d80a3ffffc395a16a7a {
+  position: absolute !important;
+}
+
+.art-slidecontainer9d49f34e3ecb4d80a3ffffc395a16a7a .art-slide-item
+{
+
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    transform: rotate(0);
+}
+
+.art-slidecontainer9d49f34e3ecb4d80a3ffffc395a16a7a .art-slide-item {
+    -webkit-transition: 600ms ease-in-out left;
+    -moz-transition: 600ms ease-in-out left;
+    -ms-transition: 600ms ease-in-out left;
+    -o-transition: 600ms ease-in-out left;
+    transition: 600ms ease-in-out left;
+    position: relative;
+    display: none;
+    width:  100%;
+    height: 100%;
+}
+
+.art-slidecontainer9d49f34e3ecb4d80a3ffffc395a16a7a .active, .art-slidecontainer9d49f34e3ecb4d80a3ffffc395a16a7a .next, .art-slidecontainer9d49f34e3ecb4d80a3ffffc395a16a7a .prev {
+    display: block;
+}
+
+.art-slidecontainer9d49f34e3ecb4d80a3ffffc395a16a7a .active {
+    left: 0;
+}
+.ie10 .art-slidecontainer9d49f34e3ecb4d80a3ffffc395a16a7a .active {
+    left: 0.1px;
+}
+
+.art-slidecontainer9d49f34e3ecb4d80a3ffffc395a16a7a .next, .art-slidecontainer9d49f34e3ecb4d80a3ffffc395a16a7a .prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.art-slidecontainer9d49f34e3ecb4d80a3ffffc395a16a7a .next {
+    left: 100%;
+}
+
+.art-slidecontainer9d49f34e3ecb4d80a3ffffc395a16a7a .prev {
+    left: -100%;
+}
+
+.art-slidecontainer9d49f34e3ecb4d80a3ffffc395a16a7a .next.forward, .art-slidecontainer9d49f34e3ecb4d80a3ffffc395a16a7a .prev.back {
+    left: 0;
+}
+.ie10 .art-slidecontainer9d49f34e3ecb4d80a3ffffc395a16a7a .next.forward, .art-slidecontainer9d49f34e3ecb4d80a3ffffc395a16a7a .prev.back {
+    left: 0.1px;
+}
+
+.art-slidecontainer9d49f34e3ecb4d80a3ffffc395a16a7a .active.forward {
+    left: -100%;
+}
+
+.art-slidecontainer9d49f34e3ecb4d80a3ffffc395a16a7a .active.back {
+    left: 100%;
+}
+
+
+
+
+.art-slide9d49f34e3ecb4d80a3ffffc395a16a7a0 {
+    background-image:  url('../images/slide9d49f34e3ecb4d80a3ffffc395a16a7a0.jpg');
+        /* background-size:  auto auto; */
+        background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+/* special setup for header/pageslider */
+.responsive .art-header .art-slide9d49f34e3ecb4d80a3ffffc395a16a7a0 {
+    background-image:  url('../images/slide9d49f34e3ecb4d80a3ffffc395a16a7a0.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.responsive .art-pageslider .art-slide9d49f34e3ecb4d80a3ffffc395a16a7a0 {
+    background-image:  url('../images/slide9d49f34e3ecb4d80a3ffffc395a16a7a0.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-header .art-slide9d49f34e3ecb4d80a3ffffc395a16a7a0 {
+    background-image: url('../images/slide9d49f34e3ecb4d80a3ffffc395a16a7a0.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-pageslider .art-slide9d49f34e3ecb4d80a3ffffc395a16a7a0 {
+    background-image: url('../images/slide9d49f34e3ecb4d80a3ffffc395a16a7a0.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}.art-slide9d49f34e3ecb4d80a3ffffc395a16a7a1 {
+    background-image:  url('../images/slide9d49f34e3ecb4d80a3ffffc395a16a7a1.jpg');
+        /* background-size:  auto auto; */
+        background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+/* special setup for header/pageslider */
+.responsive .art-header .art-slide9d49f34e3ecb4d80a3ffffc395a16a7a1 {
+    background-image:  url('../images/slide9d49f34e3ecb4d80a3ffffc395a16a7a1.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.responsive .art-pageslider .art-slide9d49f34e3ecb4d80a3ffffc395a16a7a1 {
+    background-image:  url('../images/slide9d49f34e3ecb4d80a3ffffc395a16a7a1.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-header .art-slide9d49f34e3ecb4d80a3ffffc395a16a7a1 {
+    background-image: url('../images/slide9d49f34e3ecb4d80a3ffffc395a16a7a1.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-pageslider .art-slide9d49f34e3ecb4d80a3ffffc395a16a7a1 {
+    background-image: url('../images/slide9d49f34e3ecb4d80a3ffffc395a16a7a1.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}.art-slide9d49f34e3ecb4d80a3ffffc395a16a7a2 {
+    background-image:  url('../images/slide9d49f34e3ecb4d80a3ffffc395a16a7a2.jpg');
+        /* background-size:  auto auto; */
+        background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+/* special setup for header/pageslider */
+.responsive .art-header .art-slide9d49f34e3ecb4d80a3ffffc395a16a7a2 {
+    background-image:  url('../images/slide9d49f34e3ecb4d80a3ffffc395a16a7a2.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.responsive .art-pageslider .art-slide9d49f34e3ecb4d80a3ffffc395a16a7a2 {
+    background-image:  url('../images/slide9d49f34e3ecb4d80a3ffffc395a16a7a2.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-header .art-slide9d49f34e3ecb4d80a3ffffc395a16a7a2 {
+    background-image: url('../images/slide9d49f34e3ecb4d80a3ffffc395a16a7a2.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-pageslider .art-slide9d49f34e3ecb4d80a3ffffc395a16a7a2 {
+    background-image: url('../images/slide9d49f34e3ecb4d80a3ffffc395a16a7a2.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}.art-slide9d49f34e3ecb4d80a3ffffc395a16a7a3 {
+    background-image:  url('../images/slide9d49f34e3ecb4d80a3ffffc395a16a7a3.jpg');
+        /* background-size:  auto auto; */
+        background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+/* special setup for header/pageslider */
+.responsive .art-header .art-slide9d49f34e3ecb4d80a3ffffc395a16a7a3 {
+    background-image:  url('../images/slide9d49f34e3ecb4d80a3ffffc395a16a7a3.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.responsive .art-pageslider .art-slide9d49f34e3ecb4d80a3ffffc395a16a7a3 {
+    background-image:  url('../images/slide9d49f34e3ecb4d80a3ffffc395a16a7a3.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-header .art-slide9d49f34e3ecb4d80a3ffffc395a16a7a3 {
+    background-image: url('../images/slide9d49f34e3ecb4d80a3ffffc395a16a7a3.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-pageslider .art-slide9d49f34e3ecb4d80a3ffffc395a16a7a3 {
+    background-image: url('../images/slide9d49f34e3ecb4d80a3ffffc395a16a7a3.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}.art-slide9d49f34e3ecb4d80a3ffffc395a16a7a4 {
+    background-image:  url('../images/slide9d49f34e3ecb4d80a3ffffc395a16a7a4.jpg');
+        /* background-size:  auto auto; */
+        background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+/* special setup for header/pageslider */
+.responsive .art-header .art-slide9d49f34e3ecb4d80a3ffffc395a16a7a4 {
+    background-image:  url('../images/slide9d49f34e3ecb4d80a3ffffc395a16a7a4.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.responsive .art-pageslider .art-slide9d49f34e3ecb4d80a3ffffc395a16a7a4 {
+    background-image:  url('../images/slide9d49f34e3ecb4d80a3ffffc395a16a7a4.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-header .art-slide9d49f34e3ecb4d80a3ffffc395a16a7a4 {
+    background-image: url('../images/slide9d49f34e3ecb4d80a3ffffc395a16a7a4.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-pageslider .art-slide9d49f34e3ecb4d80a3ffffc395a16a7a4 {
+    background-image: url('../images/slide9d49f34e3ecb4d80a3ffffc395a16a7a4.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.art-slidenavigator9d49f34e3ecb4d80a3ffffc395a16a7a {
+  display: inline-block;
+  position: absolute;
+  direction: ltr !important;
+  top: 280px;
+  left: 83.31%;
+  z-index: 101;
+  line-height: 0 !important;
+  -webkit-background-origin: border !important;
+  -moz-background-origin: border !important;
+  background-origin: border-box !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+    white-space: nowrap;
+    }
+.art-slidenavigator9d49f34e3ecb4d80a3ffffc395a16a7a
+{
+background: #7B828A;background: -webkit-linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;background: -moz-linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;background: -o-linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;background: -ms-linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;-svg-background: linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;background: linear-gradient(to bottom, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;
+-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;
+
+
+padding:7px;
+
+
+
+
+
+}
+.art-slidenavigator9d49f34e3ecb4d80a3ffffc395a16a7a > a
+{
+background: #464A4E;background: #464A4E;background: #464A4E;background: #464A4E;background: #464A4E;-svg-background: #464A4E;background: #464A4E;
+-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+
+
+
+margin:0 10px 0 0;
+
+width: 10px;
+
+height: 10px;
+}
+.art-slidenavigator9d49f34e3ecb4d80a3ffffc395a16a7a > a.active
+{
+background: #C4C7CA;background: #C4C7CA;background: #C4C7CA;background: #C4C7CA;background: #C4C7CA;-svg-background: #C4C7CA;background: #C4C7CA;
+-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+
+
+
+margin:0 10px 0 0;
+
+width: 10px;
+
+height: 10px;
+}
+.art-slidenavigator9d49f34e3ecb4d80a3ffffc395a16a7a > a:hover
+{
+background: #656B72;background: #656B72;background: #656B72;background: #656B72;background: #656B72;-svg-background: #656B72;background: #656B72;
+-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+
+
+
+margin:0 10px 0 0;
+
+width: 10px;
+
+height: 10px;
+}
+
+</style></head>
+  <body>
+    <div id="art-main">
+      <header class="art-header">
+        <div class="art-shapes"> </div>
+        <div id="art-flash-area">
+          <div id="art-flash-container"> <object id="art-flash-object" data="../images/flash.swf"
+              type="application/x-shockwave-flash" height="250" width="1000"> <param
+                name="quality" value="high"> <param name="scale" value="exactfit">
+              <param name="wmode" value="transparent"> <param name="flashvars"
+                value="color1=0xFFFFFF&amp;alpha1=.30&amp;framerate1=24&amp;loop=true&amp;wmode=transparent">
+              <param name="swfliveconnect" value="true">
+              <!--[if !IE]>--> <object type="application/x-shockwave-flash" data="../images/flash.swf"
+                height="250" width="1000"> <param name="quality" value="high">
+                <param name="scale" value="exactfit"> <param name="wmode" value="transparent">
+                <param name="flashvars" value="color1=0xFFFFFF&amp;alpha1=.30&amp;framerate1=24&amp;loop=true&amp;wmode=transparent">
+                <param name="swfliveconnect" value="true">
+                <!--<![endif]-->
+                <div class="art-flash-alt"><a href="http://www.adobe.com/go/getflashplayer"><img
+                      src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif"
+                      alt="Get Adobe Flash player"></a></div>
+                <!--[if !IE]>--> </object>
+              <!--<![endif]--> </object> </div>
+        </div>
+      </header>
+      <nav class="art-nav">
+        <ul class="art-hmenu">
+          <li><a href="../accueil.html" class="">Accueil</a></li>
+          <li><a href="../presentation.html" class="">Présentation</a>
+            <ul class="">
+              <li><a href="../presentation/contacts.html" class="">Contacts</a></li>
+              <li><a href="../presentation/acces.html" class="">Accès</a></li>
+              <li><a href="../presentation/taxe_agefiph.html" class="">Taxe
+                  AGEFIPH</a></li>
+              <li><a href="../presentation/liens.html" class="">Liens</a></li>
+            </ul>
+          </li>
+          <li><a href="../blanchisserie.html" class="">Blanchisserie</a></li>
+          <li><a href="../espaces_verts.html" class="">Espaces Verts</a></li>
+          <li><a href="../menage_indust.html" class="">Ménage indust.</a></li>
+          <li><a href="../plv_condi_mailing.html" class="active">PLV-Condi-Mailing</a>
+            <ul class="active">
+              <li><a href="../plv_condi_mailing/fabrication.html" class="">Fabrication</a></li>
+              <li><a href="../plv_condi_mailing/conditionnement.html" class="active">Conditionnement</a></li>
+              <li><a href="../plv_condi_mailing/mailing.html">Mailing</a></li>
+            </ul>
+          </li>
+          <li><a href="../esat-adped-94.html">ESAT-ADPED 94</a>
+            <ul>
+              <li><a href="../esat-adped-94/projets-individualises.html">Projets
+                  Individualisés</a></li>
+              <li><a href="../esat-adped-94/different-competent.html">Différent
+                  &amp; Compétent</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="art-sheet clearfix">
+        <div class="art-layout-wrapper">
+          <div class="art-content-layout">
+            <div class="art-content-layout-row">
+              <div class="art-layout-cell art-content">
+                <article class="art-post art-article">
+                  <div class="art-postcontent art-postcontent-0 clearfix">
+                    <div class="art-content-layout layout-item-0">
+                      <div class="art-content-layout-row">
+                        <div class="art-layout-cell layout-item-1" style="width: 100%">
+                          <p style="margin-top: 0px; line-height: 150%; margin-bottom: 15px; text-align: center;"><span
+                              style="font-weight: bold; letter-spacing: 2px; font-style: italic; color: rgb(255, 255, 255); font-size: 24px;"><span
+                                style="text-decoration: underline; font-family: 'Trebuchet MS';">Conditionnement</span></span></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="art-content-layout-wrapper layout-item-2">
+                      <div class="art-content-layout layout-item-3">
+                        <div class="art-content-layout-row">
+                          <div class="art-layout-cell layout-item-4" style="width: 67%">
+                            <p></p>
+                            <div id="9d49f34e3ecb4d80a3ffffc395a16a7a" style="position: relative; display: inline-block; z-index: 0; margin-top: 0px; margin-right: 5px; margin-bottom: 0px; margin-left: 5px;  border-width: 0px;  "
+                              class="art-collage">
+                              <div class="art-slider art-slidecontainer9d49f34e3ecb4d80a3ffffc395a16a7a"
+                                data-width="623" data-height="304">
+                                <div class="art-slider-inner">
+                                  <div class="art-slide-item art-slide9d49f34e3ecb4d80a3ffffc395a16a7a0">
+                                  </div>
+                                  <div class="art-slide-item art-slide9d49f34e3ecb4d80a3ffffc395a16a7a1">
+                                  </div>
+                                  <div class="art-slide-item art-slide9d49f34e3ecb4d80a3ffffc395a16a7a2">
+                                  </div>
+                                  <div class="art-slide-item art-slide9d49f34e3ecb4d80a3ffffc395a16a7a3">
+                                  </div>
+                                  <div class="art-slide-item art-slide9d49f34e3ecb4d80a3ffffc395a16a7a4">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="art-slidenavigator art-slidenavigator9d49f34e3ecb4d80a3ffffc395a16a7a"
+                                data-left="1" data-top="1"> <a href="#" class="art-slidenavigatoritem"></a><a
+                                  href="#" class="art-slidenavigatoritem"></a><a
+                                  href="#" class="art-slidenavigatoritem"></a><a
+                                  href="#" class="art-slidenavigatoritem"></a><a
+                                  href="#" class="art-slidenavigatoritem"></a> </div>
+                            </div>
+                            <p> </p>
+                          </div>
+                          <div class="art-layout-cell layout-item-5" style="width: 33%">
+                            <p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span
+                                style="color: rgb(0, 48, 71); font-size: 16px; font-weight: bold; font-family: 'Trebuchet MS';"><span
+                                  style="text-decoration: underline;">Nos
+                                  secteurs d'activité</span> :</span></p>
+                            <p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span
+                                style="font-size: 9pt; color: rgb(0, 48, 71); font-family: 'Trebuchet MS';">Petite
+                                et grande distribution</span></p>
+                            <p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span
+                                style="font-size: 9pt; color: rgb(0, 48, 71); font-family: 'Trebuchet MS';">Publicité</span></p>
+                            <p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span
+                                style="font-size: 16px; font-weight: bold; color: rgb(0, 48, 71); font-family: 'Trebuchet MS';"><span
+                                  style="text-decoration: underline;">Nos
+                                  clients</span> :</span></p>
+                            <p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span
+                                style="font-size: 9pt; color: rgb(0, 48, 71); font-family: 'Trebuchet MS';">Compagnies
+                                aériennes</span></p>
+                            <p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span
+                                style="font-size: 9pt; color: rgb(0, 48, 71); font-family: 'Trebuchet MS';">Grande
+                                distribution</span></p>
+                            <p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span
+                                style="font-size: 9pt; color: rgb(0, 48, 71); font-family: 'Trebuchet MS';">PME
+                                et GE</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="art-content-layout-wrapper layout-item-6">
+                      <div class="art-content-layout layout-item-7">
+                        <div class="art-content-layout-row">
+                          <div class="art-layout-cell layout-item-5" style="width: 33%">
+                            <span style="color: rgb(0, 48, 71); font-size: 16px; font-weight: bold; font-family: 'Trebuchet MS';">Activités
+                              :</span>
+                            <p style="margin-top: 0px; margin-bottom: 0px;"></p>
+                            <ul>
+                              <li><span style="color: rgb(0, 48, 71); line-height: 13px; font-family: 'Trebuchet MS';">Cerclage,
+                                  filmage, pesage, comptage, étiquetage, …</span></li>
+                              <li><span style="color: rgb(0, 48, 71); line-height: 13px; font-family: 'Trebuchet MS';">Conditionnement</span></li>
+                              <li><span style="color: rgb(0, 48, 71); line-height: 13px; font-family: 'Trebuchet MS';">Mise
+                                  en carton</span></li>
+                              <li><span style="font-family: 'Trebuchet MS';"><span
+                                    style="color: rgb(0, 48, 71); line-height: 13px;">Stockage</span><br>
+                                </span></li>
+                              <li><span style="color: rgb(0, 48, 71); font-family: 'Trebuchet MS';">Expédition</span></li>
+                            </ul>
+                          </div>
+                          <div class="art-layout-cell layout-item-5" style="width: 34%">
+                            <span style="font-family: 'Trebuchet MS';"><span style="color: rgb(0, 48, 71); font-size: 16px; font-weight: bold;"><span
+                                  style="text-decoration: underline;">Compétences</span>
+                                :</span><br>
+                            </span>
+                            <p style="margin-top: 0px; margin-bottom: 0px;"></p>
+                            <ul>
+                              <li style="color: rgb(0, 48, 71); line-height: 100%;"><span
+                                  style="color: rgb(0, 48, 71); font-family: 'Trebuchet MS';">Lecture
+                                  de codes et symboles</span></li>
+                              <li><span style="color: rgb(0, 48, 71); line-height: 13px; font-family: 'Trebuchet MS';">Lecture
+                                  de documents technique</span></li>
+                              <li><span style="color: rgb(0, 48, 71); line-height: 13px; font-family: 'Trebuchet MS';">Calcul
+                                  de quantité (dosage)</span></li>
+                              <li><span style="color: rgb(0, 48, 71); line-height: 13px; font-family: 'Trebuchet MS';">Manipulation
+                                  de machines complexes</span></li>
+                              <li><span style="color: rgb(0, 48, 71); line-height: 13px; font-family: 'Trebuchet MS';">Respecter
+                                  les règles de sécurité</span></li>
+                              <li><span style="color: rgb(0, 48, 71); line-height: 13px; font-family: 'Trebuchet MS';">Gestes
+                                  et postures de manutention</span></li>
+                            </ul>
+                          </div>
+                          <div class="art-layout-cell layout-item-5" style="width: 33%">
+                            <span style="font-family: 'Trebuchet MS';"><span style="color: rgb(0, 48, 71); font-weight: bold; font-size: 16px;"><span
+                                  style="text-decoration: underline;">Les
+                                  équipements</span> :</span><br>
+                            </span>
+                            <p style="margin-top: 0px; margin-bottom: 0px;"></p>
+                            <ul>
+                              <li style="color: rgb(0, 48, 71); line-height: 100%;"><span
+                                  style="color: rgb(0, 48, 71); font-family: 'Trebuchet MS';">Balance
+                                  compteuse</span></li>
+                              <li><span style="color: rgb(0, 48, 71); line-height: 13px; font-family: 'Trebuchet MS';">Fardeleuse</span></li>
+                              <li><span style="color: rgb(0, 48, 71); line-height: 13px; font-family: 'Trebuchet MS';">Assembleuse
+                                  de documents</span></li>
+                              <li><span style="color: rgb(0, 48, 71); line-height: 13px; font-family: 'Trebuchet MS';">Plieuse</span></li>
+                              <li><span style="color: rgb(0, 48, 71); line-height: 13px; font-family: 'Trebuchet MS';">Cercleuse</span></li>
+                              <li><span style="color: rgb(0, 48, 71); line-height: 13px; font-family: 'Trebuchet MS';">Filmeuse
+                                  de palette</span></li>
+                              <li><span style="color: rgb(0, 48, 71); line-height: 13px; font-family: 'Trebuchet MS';">Espace
+                                  de stockage</span></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="art-content-layout layout-item-8">
+                      <div class="art-content-layout-row">
+                        <div class="art-layout-cell layout-item-5" style="width: 50%">
+                          <p><span style="font-weight: bold; font-size: 16px;"><span
+                                style="color: rgb(0, 48, 71); font-style: italic;"><span
+                                  style="text-decoration: underline; font-family: 'Trebuchet MS';">Ils
+                                  nous font confiance…</span></span></span></p>
+                          <span style="color: rgb(0, 48, 71); font-style: italic; font-family: 'Trebuchet MS';">Air
+                            France, Alliances Xerox, Atol, Black &amp; Decker,
+                            Coca cola, Laboratoires Synthelabo, Playmobil, Soft
+                            Marketing, …</span><br>
+                        </div>
+                        <div class="art-layout-cell layout-item-5" style="width: 50%">
+                          <p><span style="color: rgb(255, 255, 255);"><span style="font-weight: bold; font-style: italic; color: rgb(0, 48, 71); font-size: 16px; font-family: 'Trebuchet MS';"><span
+                                  style="text-decoration: underline;">Contact</span>
+                                :&nbsp;<a href="mailto:conditionnement@ateliersdefresnes.org"><img
+                                    alt="" src="../images/mailto-bl-3.png" style="float: right; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;"
+                                    class="" height="74" width="78"></a></span></span></p>
+                          <p><span style="font-family: 'Trebuchet MS';"><span style="color: rgb(0, 48, 71); font-size: 14px; font-style: italic; font-weight: bold;">Steeve
+                                LE DUIGOU - mobile : 06 50 62 23 84</span><span
+                                style="color: rgb(0, 48, 71); font-size: 14px; font-style: italic;"></span></span></p>
+                          <p><span style="font-family: 'Trebuchet MS';"><span style="color: rgb(0, 48, 71); font-size: 14px; font-style: italic; font-weight: bold;">&nbsp;Michèle
+                                BAMOSIA - mobile : 06 83 24 25 01</span><b><span
+                                  style="color: rgb(0, 48, 71); font-size: 14px; font-style: italic;"></span></b></span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="art-footer">
+        <div class="art-footer-inner">
+          <div style="position:relative;display:inline-block;padding-left:40px;padding-right:40px">
+            <p><br>
+            </p>
+            <p><a href="https://www.facebook.com/Les-Ateliers-de-Fresnes-725962174202376/?ref=aymt_homepage_panel"
+                target="_blank" title="Page &quot;Les Ateliers de Fresnes&quot;"
+                style="font-style: italic;"><span style="color: rgb(255, 255, 0);  font-size: 16px;">Suivez
+                  nous sur Facebook / avec notre page "Les Ateliers de Fresnes"</span></a><span
+                style="font-size: 12px;"></span></p>
+          </div>
+          <p class="art-page-footer"> <span id="art-footnote-links"><a href="http://www.artisteer.com/"
+                target="_blank">Web Template</a> created with Artisteer.</span>
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

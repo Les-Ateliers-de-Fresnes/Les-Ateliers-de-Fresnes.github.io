@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <!-- Created by Artisteer v4.2.0.60623 -->
+    <title>Blanchisserie</title>
+    <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+    <!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <link rel="stylesheet" href="style.css" media="screen">
+    <!--[if lte IE 7]><link rel="stylesheet" href="style.ie7.css" media="screen" /><![endif]-->
+    <link rel="stylesheet" href="style.responsive.css" media="all">
+    <script src="jquery.js"></script>
+    <script src="script.js"></script>
+    <script src="script.responsive.js"></script>
+    <script>jQuery(function ($) {
+    'use strict';
+    if ($.fn.slider) {
+        $(".art-slidecontainerBLNB1").each(function () {
+            var slideContainer = $(this), tmp;
+            var inner = $(".art-slider-inner", slideContainer);
+            var helper = null;
+            
+            if ($.support.transition) {
+                helper = new BackgroundHelper();
+                helper.init("fade", "next", $(".art-slide-item", inner).first().css($.support.transition.prefix + "transition-duration"));
+                inner.children().each(function () {
+                    helper.processSlide($(this));
+                });
+
+                
+            } else if (browser.ie && browser.version <= 8) {
+                var slidesInfo = {
+".art-slideBLNB10": {
+    "bgimage" : "url('images/slideBLNB10.jpg')",
+    "bgposition": "0 0",
+    "images": "",
+    "positions": ""
+},
+".art-slideBLNB11": {
+    "bgimage" : "url('images/slideBLNB11.jpg')",
+    "bgposition": "0 0",
+    "images": "",
+    "positions": ""
+},
+".art-slideBLNB12": {
+    "bgimage" : "url('images/slideBLNB12.jpg')",
+    "bgposition": "0 0",
+    "images": "",
+    "positions": ""
+},
+".art-slideBLNB13": {
+    "bgimage" : "url('images/slideBLNB13.jpg')",
+    "bgposition": "0 0",
+    "images": "",
+    "positions": ""
+},
+".art-slideBLNB14": {
+    "bgimage" : "url('images/slideBLNB14.jpg')",
+    "bgposition": "0 0",
+    "images": "",
+    "positions": ""
+},
+".art-slideBLNB15": {
+    "bgimage" : "url('images/slideBLNB15.jpg')",
+    "bgposition": "0 0",
+    "images": "",
+    "positions": ""
+}
+                };
+                $.each(slidesInfo, function(selector, info) {
+                    processElementMultiplyBg(slideContainer.find(selector), info);
+                });
+            }
+
+            inner.children().eq(0).addClass("active");
+            slideContainer.slider({
+                pause: 2600,
+                speed: 600,
+                repeat: true,
+                animation: "fade",
+                direction: "next",
+                navigator: slideContainer.siblings(".art-slidenavigatorBLNB1"),
+                helper: helper
+            });
+            
+                        
+        });
+    }
+});
+</script><style>.art-content .art-postcontent-0 .layout-item-0 { color: #292B2E; background: #FFFFFF; padding: 15px; vertical-align: middle;  }
+.art-content .art-postcontent-0 .layout-item-1 { margin-top: 4px;margin-right: 0px;margin-bottom: 4px;margin-left: 0px;  }
+.art-content .art-postcontent-0 .layout-item-2 {  border-collapse: separate;  }
+.art-content .art-postcontent-0 .layout-item-3 { color: #2C4D63; background: #FCFCFD; padding: 15px;  }
+.art-content .art-postcontent-0 .layout-item-4 { margin-top: 0px;margin-bottom: 0px;  }
+.art-content .art-postcontent-0 .layout-item-5 { color: #D4D6D9; background: ;  border-collapse: separate;  }
+.art-content .art-postcontent-0 .layout-item-6 { color: #2E5066; background: #FFFFFF; padding: 15px;  }
+.art-content .art-postcontent-0 .layout-item-7 { color: #292B2E; background: #FFFFFF; border-spacing: 15px 0px; border-collapse: separate;  }
+.art-content .art-postcontent-0 .layout-item-8 { color: #FFFFFF; background: ; padding: 15px;  }
+.ie7 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+.ie6 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+
+.art-slidecontainerBLNB1 {
+    position: relative;
+        width: 651px;
+    height: 317px;
+        }
+
+.default-responsive .art-header .art-slidecontainerBLNB1,
+.responsive .art-header .art-slidecontainerBLNB1
+{
+  position: absolute !important;
+}
+
+.responsive .art-pageslider .art-slidecontainerBLNB1 {
+  position: absolute !important;
+}
+
+.art-slidecontainerBLNB1 .art-slide-item
+{
+
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    transform: rotate(0);
+}
+
+
+
+.art-slidecontainerBLNB1 .art-slide-item {
+    -webkit-transition: 600ms ease-in-out opacity;
+    -moz-transition: 600ms ease-in-out opacity;
+    -ms-transition: 600ms ease-in-out opacity;
+    -o-transition: 600ms ease-in-out opacity;
+    transition: 600ms ease-in-out opacity;
+    position: absolute !important;
+    display: none;
+	left: 0;
+	top: 0;
+	opacity: 0;
+    width:  100%;
+    height: 100%;
+}
+
+.art-slidecontainerBLNB1 .active, .art-slidecontainerBLNB1 .next, .art-slidecontainerBLNB1 .prev {
+    display: block;
+}
+
+.art-slidecontainerBLNB1 .active {
+    opacity: 1;
+}
+
+.art-slidecontainerBLNB1 .next, .art-slidecontainerBLNB1 .prev {
+    width: 100%;
+}
+
+.art-slidecontainerBLNB1 .next.forward, .art-slidecontainerBLNB1 .prev.back {
+    opacity: 1;
+}
+
+.art-slidecontainerBLNB1 .active.forward {
+    opacity: 0;
+}
+
+.art-slidecontainerBLNB1 .active.back {
+    opacity: 0;
+}
+
+
+.art-slideBLNB10 {
+    background-image:  url('images/slideBLNB10.jpg');
+        /* background-size:  auto auto; */
+        background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+/* special setup for header/pageslider */
+.responsive .art-header .art-slideBLNB10 {
+    background-image:  url('images/slideBLNB10.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.responsive .art-pageslider .art-slideBLNB10 {
+    background-image:  url('images/slideBLNB10.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-header .art-slideBLNB10 {
+    background-image: url('images/slideBLNB10.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-pageslider .art-slideBLNB10 {
+    background-image: url('images/slideBLNB10.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}.art-slideBLNB11 {
+    background-image:  url('images/slideBLNB11.jpg');
+        /* background-size:  auto auto; */
+        background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+/* special setup for header/pageslider */
+.responsive .art-header .art-slideBLNB11 {
+    background-image:  url('images/slideBLNB11.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.responsive .art-pageslider .art-slideBLNB11 {
+    background-image:  url('images/slideBLNB11.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-header .art-slideBLNB11 {
+    background-image: url('images/slideBLNB11.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-pageslider .art-slideBLNB11 {
+    background-image: url('images/slideBLNB11.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}.art-slideBLNB12 {
+    background-image:  url('images/slideBLNB12.jpg');
+        /* background-size:  auto auto; */
+        background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+/* special setup for header/pageslider */
+.responsive .art-header .art-slideBLNB12 {
+    background-image:  url('images/slideBLNB12.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.responsive .art-pageslider .art-slideBLNB12 {
+    background-image:  url('images/slideBLNB12.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-header .art-slideBLNB12 {
+    background-image: url('images/slideBLNB12.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-pageslider .art-slideBLNB12 {
+    background-image: url('images/slideBLNB12.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}.art-slideBLNB13 {
+    background-image:  url('images/slideBLNB13.jpg');
+        /* background-size:  auto auto; */
+        background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+/* special setup for header/pageslider */
+.responsive .art-header .art-slideBLNB13 {
+    background-image:  url('images/slideBLNB13.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.responsive .art-pageslider .art-slideBLNB13 {
+    background-image:  url('images/slideBLNB13.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-header .art-slideBLNB13 {
+    background-image: url('images/slideBLNB13.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-pageslider .art-slideBLNB13 {
+    background-image: url('images/slideBLNB13.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}.art-slideBLNB14 {
+    background-image:  url('images/slideBLNB14.jpg');
+        /* background-size:  auto auto; */
+        background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+/* special setup for header/pageslider */
+.responsive .art-header .art-slideBLNB14 {
+    background-image:  url('images/slideBLNB14.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.responsive .art-pageslider .art-slideBLNB14 {
+    background-image:  url('images/slideBLNB14.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-header .art-slideBLNB14 {
+    background-image: url('images/slideBLNB14.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-pageslider .art-slideBLNB14 {
+    background-image: url('images/slideBLNB14.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}.art-slideBLNB15 {
+    background-image:  url('images/slideBLNB15.jpg');
+        /* background-size:  auto auto; */
+        background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+/* special setup for header/pageslider */
+.responsive .art-header .art-slideBLNB15 {
+    background-image:  url('images/slideBLNB15.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.responsive .art-pageslider .art-slideBLNB15 {
+    background-image:  url('images/slideBLNB15.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-header .art-slideBLNB15 {
+    background-image: url('images/slideBLNB15.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-pageslider .art-slideBLNB15 {
+    background-image: url('images/slideBLNB15.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.art-slidenavigatorBLNB1 {
+  display: inline-block;
+  position: absolute;
+  direction: ltr !important;
+  top: 293px;
+  left: 80.95%;
+  z-index: 101;
+  line-height: 0 !important;
+  -webkit-background-origin: border !important;
+  -moz-background-origin: border !important;
+  background-origin: border-box !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+    white-space: nowrap;
+    }
+.art-slidenavigatorBLNB1
+{
+background: #7B828A;background: -webkit-linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;background: -moz-linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;background: -o-linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;background: -ms-linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;-svg-background: linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;background: linear-gradient(to bottom, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;
+-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;
+
+
+padding:7px;
+
+
+
+
+
+}
+.art-slidenavigatorBLNB1 > a
+{
+background: #464A4E;background: #464A4E;background: #464A4E;background: #464A4E;background: #464A4E;-svg-background: #464A4E;background: #464A4E;
+-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+
+
+
+margin:0 10px 0 0;
+
+width: 10px;
+
+height: 10px;
+}
+.art-slidenavigatorBLNB1 > a.active
+{
+background: #C4C7CA;background: #C4C7CA;background: #C4C7CA;background: #C4C7CA;background: #C4C7CA;-svg-background: #C4C7CA;background: #C4C7CA;
+-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+
+
+
+margin:0 10px 0 0;
+
+width: 10px;
+
+height: 10px;
+}
+.art-slidenavigatorBLNB1 > a:hover
+{
+background: #656B72;background: #656B72;background: #656B72;background: #656B72;background: #656B72;-svg-background: #656B72;background: #656B72;
+-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+
+
+
+margin:0 10px 0 0;
+
+width: 10px;
+
+height: 10px;
+}
+
+</style></head>
+  <body>
+    <div id="art-main">
+      <header class="art-header">
+        <div class="art-shapes"> </div>
+        <div id="art-flash-area">
+          <div id="art-flash-container"> <object id="art-flash-object" data="images/flash.swf"
+              type="application/x-shockwave-flash" height="250" width="1000"> <param
+                name="quality" value="high"> <param name="scale" value="exactfit">
+              <param name="wmode" value="transparent"> <param name="flashvars"
+                value="color1=0xFFFFFF&amp;alpha1=.30&amp;framerate1=24&amp;loop=true&amp;wmode=transparent">
+              <param name="swfliveconnect" value="true">
+              <!--[if !IE]>--> <object type="application/x-shockwave-flash" data="images/flash.swf"
+                height="250" width="1000"> <param name="quality" value="high">
+                <param name="scale" value="exactfit"> <param name="wmode" value="transparent">
+                <param name="flashvars" value="color1=0xFFFFFF&amp;alpha1=.30&amp;framerate1=24&amp;loop=true&amp;wmode=transparent">
+                <param name="swfliveconnect" value="true">
+                <!--<![endif]-->
+                <div class="art-flash-alt"><a href="http://www.adobe.com/go/getflashplayer"><img
+                      src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif"
+                      alt="Get Adobe Flash player"></a></div>
+                <!--[if !IE]>--> </object>
+              <!--<![endif]--> </object> </div>
+        </div>
+      </header>
+      <nav class="art-nav">
+        <ul class="art-hmenu">
+          <li><a href="accueil.html" class="">Accueil</a></li>
+          <li><a href="presentation.html" class="">Présentation</a>
+            <ul class="">
+              <li><a href="presentation/contacts.html" class="">Contacts</a></li>
+              <li><a href="presentation/acces.html" class="">Accès</a></li>
+              <li><a href="presentation/taxe_agefiph.html" class="">Taxe AGEFIPH</a></li>
+              <li><a href="presentation/liens.html" class="">Liens</a></li>
+            </ul>
+          </li>
+          <li><a href="blanchisserie.html" class="active">Blanchisserie</a></li>
+          <li><a href="espaces_verts.html">Espaces Verts</a></li>
+          <li><a href="menage_indust.html">Ménage indust.</a></li>
+          <li><a href="plv_condi_mailing.html">PLV-Condi-Mailing</a>
+            <ul>
+              <li><a href="plv_condi_mailing/fabrication.html">Fabrication</a></li>
+              <li><a href="plv_condi_mailing/conditionnement.html">Conditionnement</a></li>
+              <li><a href="plv_condi_mailing/mailing.html">Mailing</a></li>
+            </ul>
+          </li>
+          <li><a href="esat-adped-94.html">ESAT-ADPED 94</a>
+            <ul>
+              <li><a href="esat-adped-94/projets-individualises.html">Projets
+                  Individualisés</a></li>
+              <li><a href="esat-adped-94/different-competent.html">Différent
+                  &amp; Compétent</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="art-sheet clearfix">
+        <div class="art-layout-wrapper">
+          <div class="art-content-layout">
+            <div class="art-content-layout-row">
+              <div class="art-layout-cell art-content">
+                <article class="art-post art-article">
+                  <div class="art-postcontent art-postcontent-0 clearfix">
+                    <div class="art-content-layout">
+                      <div class="art-content-layout-row">
+                        <div class="art-layout-cell layout-item-0" style="width: 100%">
+                          <h4 style="text-align: center;"><span style="font-size: 24px; font-style: italic; color: rgb(252, 252, 253); background-color: rgb(255, 255, 255); font-family: 'Trebuchet MS';"><span
+                                style="color: #24B6FF; background-color: #FFFFFF;">&nbsp;<span
+                                  style="text-decoration: underline;">Notre
+                                  blanchisserie</span> :</span>&nbsp;</span></h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="art-content-layout-wrapper layout-item-1">
+                      <div class="art-content-layout layout-item-2">
+                        <div class="art-content-layout-row">
+                          <div class="art-layout-cell layout-item-0" style="width: 70%">
+                            <p> </p>
+                            <p></p>
+                            <div id="BLNB1" style="position: relative; display: inline-block; z-index: 0; margin: 5px;  border-width: 0px;  "
+                              class="art-collage">
+                              <div class="art-slider art-slidecontainerBLNB1" data-width="651"
+                                data-height="317">
+                                <div class="art-slider-inner">
+                                  <div class="art-slide-item art-slideBLNB10">
+                                  </div>
+                                  <div class="art-slide-item art-slideBLNB11">
+                                  </div>
+                                  <div class="art-slide-item art-slideBLNB12">
+                                  </div>
+                                  <div class="art-slide-item art-slideBLNB13">
+                                  </div>
+                                  <div class="art-slide-item art-slideBLNB14">
+                                  </div>
+                                  <div class="art-slide-item art-slideBLNB15">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="art-slidenavigator art-slidenavigatorBLNB1"
+                                data-left="1" data-top="1">
+                                <a href="#" class="art-slidenavigatoritem"></a><a
+                                  href="#" class="art-slidenavigatoritem"></a><a
+                                  href="#" class="art-slidenavigatoritem"></a><a
+                                  href="#" class="art-slidenavigatoritem"></a><a
+                                  href="#" class="art-slidenavigatoritem"></a><a
+                                  href="#" class="art-slidenavigatoritem"></a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="art-layout-cell layout-item-3" style="width: 30%">
+                            <p> </p>
+                            <h4 style="line-height: 125%;"><span style="font-weight: bold; font-size: 16px; font-family: 'Trebuchet MS';"><span
+                                  style="text-decoration: underline;">Nos
+                                  secteurs d'activité</span> :</span></h4>
+                            <span style="font-family: 'Trebuchet MS';"><span style="font-size: 12px;">-
+                                Blanchisserie industrielle<br>
+                                - Hôtellerie<br>
+                                - Restauration<br>
+                                - Santé et action sociale<br>
+                                - Laboratoires,unités de recherche<br>
+                                - Entreprises et commerces<br>
+                              </span><br>
+                            </span>
+                            <h4><span style="font-weight: bold; font-size: 16px; font-family: 'Trebuchet MS';"><span
+                                  style="text-decoration: underline;">Nos
+                                  clients</span> :</span></h4>
+                            <span style="font-family: 'Trebuchet MS';">-
+                              Résidences hôtelières et de tourisme<br>
+                              - Restaurants<br>
+                              - Foyers d'hébergement<br>
+                              - Maisons de retraite<br>
+                              - Etablissements de santé<br>
+                              - Grande Distributions<br>
+                              - Commerces, pressing<br>
+                              - Laboratoires et centres de recherche<br>
+                              &nbsp;<br>
+                              - Clients individuels<br>
+                            </span><br>
+                            <p> </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="art-content-layout-wrapper layout-item-4">
+                      <div class="art-content-layout layout-item-5">
+                        <div class="art-content-layout-row">
+                          <div class="art-layout-cell layout-item-6" style="width: 33%">
+                            <p> </p>
+                            <h4 style="line-height: 125%;"><span style="font-family: 'Trebuchet MS';"><span
+                                  style="font-style: italic; text-decoration: underline;">
+                                  Nos Atouts</span><span style="font-style: italic;">:</span></span></h4>
+                            <span style="font-size: 14px; font-weight: bold; font-family: 'Trebuchet MS';"><span
+                                style="text-decoration: underline;">Production</span>
+                              :<br>
+                              <span style="font-size: 12px; line-height: 15px; font-weight: normal;"><br>
+                                - Une capacité de lavage de 2 tonnes/jour</span><br>
+                            </span>
+                            <p style="line-height: 125%; margin-bottom: 1px;"><span
+                                style="font-family: 'Trebuchet MS';">-
+                                Traçabilité du linge : Nous pouvons marquer
+                                individuellement chaque vêtement et vous
+                                indiquer pour chaque article la fréquence des
+                                lavages, l’usure des vêtements, … Informations
+                                importantes pour certains vêtements de sécurité
+                                ou pour des établissements pour personnes âgées.<span
+                                  style="font-weight: bold; font-size: 14px;"><br>
+                                  <br>
+                                </span></span></p>
+                            <p style="line-height: 125%; margin-bottom: 1px;"><span
+                                style="font-family: 'Trebuchet MS';"><span style="font-weight: bold; font-size: 14px;"><span
+                                    style="text-decoration: underline;">La norme
+                                    RBAC</span> :</span><br>
+                                <br>
+                                <span style="color: #2E508A;">Notre
+                                  blanchisserie travaille dans le cadre de la
+                                  norme RABC : Elle offre à l’ensemble de nos
+                                  clients le niveau de pureté de nos linges
+                                  exigé par le secteur sanitaire.</span></span></p>
+                            <p> </p>
+                          </div>
+                          <div class="art-layout-cell layout-item-6" style="width: 37%">
+                            <span style="font-weight: bold; font-family: 'Trebuchet MS';"><span
+                                style="font-size: 16px;"><span style="text-decoration: underline;">Activités</span>
+                                :</span><br>
+                            </span>
+                            <p style="line-height: 125%;"><span style="font-family: 'Trebuchet MS';">-
+                                Trier le linge selon le type et la couleur des
+                                articles, la nature du textile et retirer les
+                                objets indésirables<br>
+                                - Transporter le linge sur différents postes de
+                                travail<br>
+                                - Alimenter en linge et produits les machines à
+                                laver, à sécher, à plier en fonction de leur
+                                capacité<br>
+                                - Enclencher le cycle de lavage, de séchage, de
+                                pliage des machines et les décharger en fin de
+                                cycle<br>
+                                - Contrôler l'aspect du linge traité, identifier
+                                et évacuer les articles défectueux<br>
+                                - Conditionner, emballer le linge traité<br>
+                                - Effectuer les opérations d'entretien des
+                                machines (aspiration des filtres, nettoyage des
+                                grilles, ...) ou de désinfection des chariots,
+                                des bacs</span></p>
+                            <p style="line-height: 125%;"> </p>
+                            <p> </p>
+                          </div>
+                          <div class="art-layout-cell layout-item-6" style="width: 30%">
+                            <span style="font-family: 'Trebuchet MS';"> - Calcul
+                              de quantité<br>
+                              - Manipulation de produits chimiques (acides,
+                              soude, solvant, ...)<br>
+                              - Identification de tache et salissure<br>
+                              - Caractéristiques des tissus et matières textiles<br>
+                              - Règles d'hygiène et de sécurité<br>
+                              - Gestes et postures de manutention<br>
+                              - Procédures de nettoyage et de désinfection<br>
+                              - Procédures de décontamination<br>
+                            </span>
+                            <p><span style="font-weight: bold; font-size: 16px; font-family: 'Trebuchet MS';"><span
+                                  style="text-decoration: underline;">Les
+                                  équipements</span> :</span></p>
+                            <span style="font-family: 'Trebuchet MS';">- 3
+                              laveuses essoreuses à grande capacité (25 à 110kg)<br>
+                              - 4 séchoirs rotatifs<br>
+                              - 2 sécheuses repasseuses<br>
+                              - 4 tables à repasser<br>
+                              - 2 filmeuses<br>
+                              - 1 filmeuse murale<br>
+                              - 1 balance<br>
+                              - Presse pour le textile<br>
+                              - Presse pour thermo marquage</span><br>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="art-content-layout layout-item-7">
+                      <div class="art-content-layout-row">
+                        <div class="art-layout-cell layout-item-8" style="width: 50%">
+                          <p style="line-height: 125%;"><span style="font-style: italic; font-family: 'Trebuchet MS';"><span
+                                style="font-weight: bold; font-size: 18px; color: #2E508A;"><span
+                                  style="text-decoration: underline;">Ils nous
+                                  font confiance</span>…</span><br>
+                              <br>
+                              <span style="font-weight: bold; color: #2E508A;">Pressings,
+                                Blanchisserie de Paris, Ikea, Castorama,
+                                Hôtels,Chateauform' Ronqueux, Foyers de jeunes
+                                travailleurs, Foyer d'hébergement Jacques
+                                Josquin, Maison de Retraite Soleil d'Automne...</span></span><span
+                              style="font-size: 16px;"><br>
+                            </span></p>
+                        </div>
+                        <div class="art-layout-cell layout-item-8" style="width: 50%">
+                          <p><span style="font-size: 16px; font-weight: bold; font-style: italic; color: rgb(46, 80, 138); font-family: 'Trebuchet MS';"><span
+                                style="text-decoration: underline;">Contacts</span>
+                              :&nbsp;</span></p>
+                          <p><span style="font-family: 'Trebuchet MS';"><span style="font-weight: bold; font-style: italic;"><span
+                                  style="font-size: 13px; color: #2E508A;">Ligne
+                                  directe : 01 49 84 90 44<br>
+                                </span></span></span></p>
+                          <p><span style="font-family: 'Trebuchet MS';"><span style="font-weight: bold; font-style: italic;"><span
+                                  style="font-size: 13px; color: #2E508A;">Emilie
+                                  COHEN - mobile : 06 74 79 69 32</span></span><span
+                                style="font-size: 13px; font-style: italic; font-weight: bold; color: #2E508A;"></span></span></p>
+                          <p><span style="font-size: 13px; font-style: italic; font-weight: bold; color: rgb(46, 80, 138); font-family: 'Trebuchet MS';">Sami
+                              YAHIA - mobile : 06 69 69 62 04&nbsp;</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="art-footer">
+        <div class="art-footer-inner">
+          <div style="position:relative;display:inline-block;padding-left:40px;padding-right:40px">
+            <p><br>
+            </p>
+            <p><a href="https://www.facebook.com/Les-Ateliers-de-Fresnes-725962174202376/?ref=aymt_homepage_panel"
+                target="_blank" title="Page &quot;Les Ateliers de Fresnes&quot;"
+                style="font-style: italic;"><span style="color: rgb(255, 255, 0);  font-size: 16px;">Suivez
+                  nous sur Facebook / avec notre page "Les Ateliers de Fresnes"</span></a><span
+                style="font-size: 12px;"></span></p>
+          </div>
+          <p class="art-page-footer"> <span id="art-footnote-links"><a href="http://www.artisteer.com/"
+                target="_blank">Web Template</a> created with Artisteer.</span>
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

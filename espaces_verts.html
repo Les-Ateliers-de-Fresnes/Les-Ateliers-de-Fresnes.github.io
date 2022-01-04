@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <!-- Created by Artisteer v4.2.0.60623 -->
+    <title>Espaces Verts</title>
+    <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+    <!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <link rel="stylesheet" href="style.css" media="screen">
+    <!--[if lte IE 7]><link rel="stylesheet" href="style.ie7.css" media="screen" /><![endif]-->
+    <link rel="stylesheet" href="style.responsive.css" media="all">
+    <script src="jquery.js"></script>
+    <script src="script.js"></script>
+    <script src="script.responsive.js"></script>
+    <script>jQuery(function ($) {
+    'use strict';
+    if ($.fn.slider) {
+        $(".art-slidecontainerslide1").each(function () {
+            var slideContainer = $(this), tmp;
+            var inner = $(".art-slider-inner", slideContainer);
+            var helper = null;
+            
+            if ($.support.transition) {
+                helper = new BackgroundHelper();
+                helper.init("horizontal", "next", $(".art-slide-item", inner).first().css($.support.transition.prefix + "transition-duration"));
+                inner.children().each(function () {
+                    helper.processSlide($(this), true);
+                });
+
+                                var initialWidth = slideContainer.attr("data-width");
+                var initialHeight = slideContainer.attr("data-height");
+                helper.updateSize(inner, { width: initialWidth, height: initialHeight });
+                
+                var items = helper.items(helper.current(0), helper.next(0));
+                helper.setBackground(inner, items);
+                helper.setPosition(inner, items);
+
+                slideContainer.on("beforeSlide", function () {
+                    var activeItem = $(".active", this),
+                        nextItem = $(".next, .prev", this),
+                        activePos = $(".art-slide-item", this).index(activeItem),
+                        nextPos = $(".art-slide-item", this).index(nextItem);
+
+                    var currentItems = helper.items(helper.current(activePos), helper.current(nextPos));
+
+                    helper.transition(inner, false);
+                    helper.setBackground(inner, currentItems);
+                    helper.setPosition(inner, currentItems);
+                    if (inner.length) {
+                        tmp = inner.get(0).offsetHeight;
+                    }
+
+                    var movedCurrentItems = helper.items(helper.current(activePos), helper.current(nextPos), true);
+                    helper.transition(inner, true);
+                    helper.setPosition(inner, movedCurrentItems);
+                });
+                
+            } else if (browser.ie && browser.version <= 8) {
+                var slidesInfo = {
+".art-slideslide10": {
+    "bgimage" : "url('images/slideslide10.jpg')",
+    "bgposition": "0 0",
+    "images": "",
+    "positions": ""
+},
+".art-slideslide11": {
+    "bgimage" : "url('images/slideslide11.jpg')",
+    "bgposition": "0 0",
+    "images": "",
+    "positions": ""
+},
+".art-slideslide12": {
+    "bgimage" : "url('images/slideslide12.jpg')",
+    "bgposition": "0 0",
+    "images": "",
+    "positions": ""
+},
+".art-slideslide13": {
+    "bgimage" : "url('images/slideslide13.jpg')",
+    "bgposition": "0 0",
+    "images": "",
+    "positions": ""
+},
+".art-slideslide14": {
+    "bgimage" : "url('images/slideslide14.jpg')",
+    "bgposition": "0 0",
+    "images": "",
+    "positions": ""
+},
+".art-slideslide15": {
+    "bgimage" : "url('images/slideslide15.jpg')",
+    "bgposition": "0 0",
+    "images": "",
+    "positions": ""
+}
+                };
+                $.each(slidesInfo, function(selector, info) {
+                    processElementMultiplyBg(slideContainer.find(selector), info);
+                });
+            }
+
+            inner.children().eq(0).addClass("active");
+            slideContainer.slider({
+                pause: 2600,
+                speed: 600,
+                repeat: true,
+                animation: "horizontal",
+                direction: "next",
+                navigator: slideContainer.siblings(".art-slidenavigatorslide1"),
+                helper: helper
+            });
+            
+                        
+        });
+    }
+});
+</script><style>.art-content .art-postcontent-0 .layout-item-0 { color: #242629; background: #6C89A7;background: rgba(108, 137, 167, 0.09); padding: 20px;  }
+.art-content .art-postcontent-0 .layout-item-1 { margin-top: 10px;margin-bottom: 10px;  }
+.art-content .art-postcontent-0 .layout-item-2 { border-spacing: 15px 0px; border-collapse: separate;  }
+.art-content .art-postcontent-0 .layout-item-3 { vertical-align: middle;  }
+.art-content .art-postcontent-0 .layout-item-4 { color: #D4D6D9; background: ; padding: 15px; vertical-align: middle;  }
+.art-content .art-postcontent-0 .layout-item-5 { color: #213A4A; background: #E2F093; padding: 15px;  }
+.art-content .art-postcontent-0 .layout-item-6 { color: #213A4A; background: #BCFE85; padding: 15px;  }
+.art-content .art-postcontent-0 .layout-item-7 { color: #FFFFFF; background: #CCD6E0;background: transparent; padding: 15px;  }
+.ie7 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+.ie6 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+
+.art-slidecontainerslide1 {
+    position: relative;
+        width: 651px;
+    height: 317px;
+        }
+
+.default-responsive .art-header .art-slidecontainerslide1,
+.responsive .art-header .art-slidecontainerslide1
+{
+  position: absolute !important;
+}
+
+.responsive .art-pageslider .art-slidecontainerslide1 {
+  position: absolute !important;
+}
+
+.art-slidecontainerslide1 .art-slide-item
+{
+
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    transform: rotate(0);
+}
+
+.art-slidecontainerslide1 .art-slide-item {
+    -webkit-transition: 600ms ease-in-out left;
+    -moz-transition: 600ms ease-in-out left;
+    -ms-transition: 600ms ease-in-out left;
+    -o-transition: 600ms ease-in-out left;
+    transition: 600ms ease-in-out left;
+    position: relative;
+    display: none;
+    width:  100%;
+    height: 100%;
+}
+
+.art-slidecontainerslide1 .active, .art-slidecontainerslide1 .next, .art-slidecontainerslide1 .prev {
+    display: block;
+}
+
+.art-slidecontainerslide1 .active {
+    left: 0;
+}
+.ie10 .art-slidecontainerslide1 .active {
+    left: 0.1px;
+}
+
+.art-slidecontainerslide1 .next, .art-slidecontainerslide1 .prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.art-slidecontainerslide1 .next {
+    left: 100%;
+}
+
+.art-slidecontainerslide1 .prev {
+    left: -100%;
+}
+
+.art-slidecontainerslide1 .next.forward, .art-slidecontainerslide1 .prev.back {
+    left: 0;
+}
+.ie10 .art-slidecontainerslide1 .next.forward, .art-slidecontainerslide1 .prev.back {
+    left: 0.1px;
+}
+
+.art-slidecontainerslide1 .active.forward {
+    left: -100%;
+}
+
+.art-slidecontainerslide1 .active.back {
+    left: 100%;
+}
+
+
+
+
+.art-slideslide10 {
+    background-image:  url('images/slideslide10.jpg');
+        /* background-size:  auto auto; */
+        background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+/* special setup for header/pageslider */
+.responsive .art-header .art-slideslide10 {
+    background-image:  url('images/slideslide10.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.responsive .art-pageslider .art-slideslide10 {
+    background-image:  url('images/slideslide10.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-header .art-slideslide10 {
+    background-image: url('images/slideslide10.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-pageslider .art-slideslide10 {
+    background-image: url('images/slideslide10.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}.art-slideslide11 {
+    background-image:  url('images/slideslide11.jpg');
+        /* background-size:  auto auto; */
+        background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+/* special setup for header/pageslider */
+.responsive .art-header .art-slideslide11 {
+    background-image:  url('images/slideslide11.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.responsive .art-pageslider .art-slideslide11 {
+    background-image:  url('images/slideslide11.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-header .art-slideslide11 {
+    background-image: url('images/slideslide11.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-pageslider .art-slideslide11 {
+    background-image: url('images/slideslide11.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}.art-slideslide12 {
+    background-image:  url('images/slideslide12.jpg');
+        /* background-size:  auto auto; */
+        background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+/* special setup for header/pageslider */
+.responsive .art-header .art-slideslide12 {
+    background-image:  url('images/slideslide12.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.responsive .art-pageslider .art-slideslide12 {
+    background-image:  url('images/slideslide12.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-header .art-slideslide12 {
+    background-image: url('images/slideslide12.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-pageslider .art-slideslide12 {
+    background-image: url('images/slideslide12.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}.art-slideslide13 {
+    background-image:  url('images/slideslide13.jpg');
+        /* background-size:  auto auto; */
+        background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+/* special setup for header/pageslider */
+.responsive .art-header .art-slideslide13 {
+    background-image:  url('images/slideslide13.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.responsive .art-pageslider .art-slideslide13 {
+    background-image:  url('images/slideslide13.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-header .art-slideslide13 {
+    background-image: url('images/slideslide13.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-pageslider .art-slideslide13 {
+    background-image: url('images/slideslide13.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}.art-slideslide14 {
+    background-image:  url('images/slideslide14.jpg');
+        /* background-size:  auto auto; */
+        background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+/* special setup for header/pageslider */
+.responsive .art-header .art-slideslide14 {
+    background-image:  url('images/slideslide14.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.responsive .art-pageslider .art-slideslide14 {
+    background-image:  url('images/slideslide14.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-header .art-slideslide14 {
+    background-image: url('images/slideslide14.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-pageslider .art-slideslide14 {
+    background-image: url('images/slideslide14.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}.art-slideslide15 {
+    background-image:  url('images/slideslide15.jpg');
+        /* background-size:  auto auto; */
+        background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+/* special setup for header/pageslider */
+.responsive .art-header .art-slideslide15 {
+    background-image:  url('images/slideslide15.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.responsive .art-pageslider .art-slideslide15 {
+    background-image:  url('images/slideslide15.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-header .art-slideslide15 {
+    background-image: url('images/slideslide15.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-pageslider .art-slideslide15 {
+    background-image: url('images/slideslide15.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.art-slidenavigatorslide1 {
+  display: inline-block;
+  position: absolute;
+  direction: ltr !important;
+  top: 293px;
+  left: 80.95%;
+  z-index: 101;
+  line-height: 0 !important;
+  -webkit-background-origin: border !important;
+  -moz-background-origin: border !important;
+  background-origin: border-box !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+    white-space: nowrap;
+    }
+.art-slidenavigatorslide1
+{
+background: #7B828A;background: -webkit-linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;background: -moz-linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;background: -o-linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;background: -ms-linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;-svg-background: linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;background: linear-gradient(to bottom, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;
+-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;
+
+
+padding:7px;
+
+
+
+
+
+}
+.art-slidenavigatorslide1 > a
+{
+background: #1AB3FF;background: #1AB3FF;background: #1AB3FF;background: #1AB3FF;background: #1AB3FF;-svg-background: #1AB3FF;background: #1AB3FF;
+-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+
+
+
+margin:0 10px 0 0;
+
+width: 10px;
+
+height: 10px;
+}
+.art-slidenavigatorslide1 > a.active
+{
+background: #FFFFFF;background: #FFFFFF;background: #FFFFFF;background: #FFFFFF;background: #FFFFFF;-svg-background: #FFFFFF;background: #FFFFFF;
+-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+
+
+
+margin:0 10px 0 0;
+
+width: 10px;
+
+height: 10px;
+}
+.art-slidenavigatorslide1 > a:hover
+{
+background: #656B72;background: #656B72;background: #656B72;background: #656B72;background: #656B72;-svg-background: #656B72;background: #656B72;
+-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+
+
+
+margin:0 10px 0 0;
+
+width: 10px;
+
+height: 10px;
+}
+
+</style></head>
+  <body>
+    <div id="art-main">
+      <header class="art-header">
+        <div class="art-shapes"> </div>
+        <div id="art-flash-area">
+          <div id="art-flash-container"> <object id="art-flash-object" data="images/flash.swf"
+              type="application/x-shockwave-flash" height="250" width="1000"> <param
+                name="quality" value="high"> <param name="scale" value="exactfit">
+              <param name="wmode" value="transparent"> <param name="flashvars"
+                value="color1=0xFFFFFF&amp;alpha1=.30&amp;framerate1=24&amp;loop=true&amp;wmode=transparent">
+              <param name="swfliveconnect" value="true">
+              <!--[if !IE]>--> <object type="application/x-shockwave-flash" data="images/flash.swf"
+                height="250" width="1000"> <param name="quality" value="high">
+                <param name="scale" value="exactfit"> <param name="wmode" value="transparent">
+                <param name="flashvars" value="color1=0xFFFFFF&amp;alpha1=.30&amp;framerate1=24&amp;loop=true&amp;wmode=transparent">
+                <param name="swfliveconnect" value="true">
+                <!--<![endif]-->
+                <div class="art-flash-alt"><a href="http://www.adobe.com/go/getflashplayer"><img
+                      src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif"
+                      alt="Get Adobe Flash player"></a></div>
+                <!--[if !IE]>--> </object>
+              <!--<![endif]--> </object> </div>
+        </div>
+      </header>
+      <nav class="art-nav">
+        <ul class="art-hmenu">
+          <li><a href="accueil.html" class="">Accueil</a></li>
+          <li><a href="presentation.html" class="">Présentation</a>
+            <ul class="">
+              <li><a href="presentation/contacts.html" class="">Contacts</a></li>
+              <li><a href="presentation/acces.html" class="">Accès</a></li>
+              <li><a href="presentation/taxe_agefiph.html" class="">Taxe AGEFIPH</a></li>
+              <li><a href="presentation/liens.html" class="">Liens</a></li>
+            </ul>
+          </li>
+          <li><a href="blanchisserie.html" class="">Blanchisserie</a></li>
+          <li><a href="espaces_verts.html" class="active">Espaces Verts</a></li>
+          <li><a href="menage_indust.html">Ménage indust.</a></li>
+          <li><a href="plv_condi_mailing.html">PLV-Condi-Mailing</a>
+            <ul>
+              <li><a href="plv_condi_mailing/fabrication.html">Fabrication</a></li>
+              <li><a href="plv_condi_mailing/conditionnement.html">Conditionnement</a></li>
+              <li><a href="plv_condi_mailing/mailing.html">Mailing</a></li>
+            </ul>
+          </li>
+          <li><a href="esat-adped-94.html">ESAT-ADPED 94</a>
+            <ul>
+              <li><a href="esat-adped-94/projets-individualises.html">Projets
+                  Individualisés</a></li>
+              <li><a href="esat-adped-94/different-competent.html">Différent
+                  &amp; Compétent</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="art-sheet clearfix">
+        <div class="art-layout-wrapper">
+          <div class="art-content-layout">
+            <div class="art-content-layout-row">
+              <div class="art-layout-cell art-content">
+                <article class="art-post art-article">
+                  <div class="art-postcontent art-postcontent-0 clearfix">
+                    <div class="art-content-layout">
+                      <div class="art-content-layout-row">
+                        <div class="art-layout-cell layout-item-0" style="width: 100%">
+                          <h4 style="color: rgb(214, 217, 219); text-align: center;"><span
+                              style="line-height: 20px; color: rgb(41, 43, 46); font-style: italic; font-family: 'Trebuchet MS';"><span
+                                style="color: rgb(37, 253, 13); font-size: 22px; text-decoration: underline;">L'Atelier
+                                Espaces Verts</span><span style="font-size: 16px;">&nbsp;</span></span></h4>
+                          <h4 style="color: rgb(214, 217, 219); text-align: center;"><span
+                              style="font-family: 'Trebuchet MS';"><span style="font-size: 16px; color: rgb(252, 252, 253); font-style: italic; line-height: 20px;">est
+                                composé de 3 équipes&nbsp;</span><span style="font-size: 16px; line-height: 20px; color: rgb(41, 43, 46); font-style: italic;"><span
+                                  style="color: rgb(252, 252, 253);">de 6
+                                  compagnons&nbsp;</span></span><span style="font-size: 16px; font-style: italic; line-height: 20px; color: rgb(252, 252, 253);">encadrés&nbsp;</span><span
+                                style="font-size: 16px; color: rgb(252, 252, 253); font-style: italic; line-height: 20px;">par
+                                3 moniteurs-éducateurs.</span></span></h4>
+                          <p><span style="font-weight: bold; font-size: 20px; color: #25FD0D;"></span></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="art-content-layout-wrapper layout-item-1">
+                      <div class="art-content-layout layout-item-2">
+                        <div class="art-content-layout-row">
+                          <div class="art-layout-cell layout-item-3" style="width: 70%">
+                            <p></p>
+                            <div id="slide1" style="position: relative; display: inline-block; z-index: 0; margin: 5px;  border-width: 0px;  "
+                              class="art-collage">
+                              <div class="art-slider art-slidecontainerslide1" data-width="651"
+                                data-height="317">
+                                <div class="art-slider-inner">
+                                  <div class="art-slide-item art-slideslide10">
+                                  </div>
+                                  <div class="art-slide-item art-slideslide11">
+                                  </div>
+                                  <div class="art-slide-item art-slideslide12">
+                                  </div>
+                                  <div class="art-slide-item art-slideslide13">
+                                  </div>
+                                  <div class="art-slide-item art-slideslide14">
+                                  </div>
+                                  <div class="art-slide-item art-slideslide15">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="art-slidenavigator art-slidenavigatorslide1"
+                                data-left="1" data-top="1"> <a href="#" class="art-slidenavigatoritem"></a><a
+                                  href="#" class="art-slidenavigatoritem"></a><a
+                                  href="#" class="art-slidenavigatoritem"></a><a
+                                  href="#" class="art-slidenavigatoritem"></a><a
+                                  href="#" class="art-slidenavigatoritem"></a><a
+                                  href="#" class="art-slidenavigatoritem"></a> </div>
+                            </div>
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; </div>
+                          <div class="art-layout-cell layout-item-4" style="width: 30%">
+                            <h4 style="line-height: 200%; margin-left: 14px;"><span
+                                style="font-family: 'Trebuchet MS';"><span style="color: rgb(37, 253, 13); font-size: 16px; letter-spacing: 1px; line-height: 18px;"><span
+                                    style="text-decoration: underline;">Nos
+                                    secteurs d'activité</span> :</span><br>
+                              </span></h4>
+                            <ul style="line-height: 200%;">
+                              <li style="margin-left: 14px;"><span style="font-size: 14px;"><span
+                                    style="line-height: 14px; font-family: 'Trebuchet MS';"><span
+                                      style="font-weight: bold;"><span style="color: rgb(37, 253, 13);">Domaine
+                                        public&nbsp;:</span></span> <span style="color: rgb(252, 252, 253);">parc,
+                                      terrains de sports, jardins</span></span></span></li>
+                              <li style="margin-left: 15px;"><span style="font-size: 14px; font-family: 'Trebuchet MS';"><span
+                                    style="line-height: 14px;"><span style="color: rgb(37, 253, 13); font-weight: bold;">Domaine
+                                      privé&nbsp;:</span> <span style="color: rgb(252, 252, 253);">entretien
+                                      des jardins de maisons et des sites
+                                      d’entreprises.</span></span><br>
+                                </span></li>
+                            </ul>
+                            <p style="line-height: 200%;"> </p>
+                            <p class="MsoNormal" style="margin-bottom: 0.0001pt; line-height: 200%; margin-left: 14px;"><span
+                                style="line-height: 115%; color: rgb(37, 253, 13); font-size: 16px; font-weight: bold; font-family: 'Trebuchet MS';"><span
+                                  style="text-decoration: underline;">Nos
+                                  clients</span> :</span></p>
+                            <ul style="line-height: 200%;">
+                              <li style="margin-left: 18px;"><span style="font-size: 14px; font-family: 'Trebuchet MS';"><span
+                                    style="line-height: 14px; color: rgb(252, 252, 253);">Entreprises
+                                    publiques et privées</span><br>
+                                </span></li>
+                              <li style="margin-left: 14px;"><span style="line-height: 14px; font-size: 14px; color: rgb(252, 252, 253); font-family: 'Trebuchet MS';">Ecoles,
+                                  universités</span></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="art-content-layout layout-item-2">
+                      <div class="art-content-layout-row">
+                        <div class="art-layout-cell layout-item-5" style="width: 33%">
+                          <p class="MsoNormal" style="margin-bottom: 0.0001pt; text-align: justify;"><span
+                              style="font-weight: bold; font-style: italic; font-size: 16px; font-family: 'Trebuchet MS';"><span
+                                style="text-decoration: underline;">Nos atouts</span>
+                              :</span></p>
+                          <p class="MsoNormal" style="margin-bottom: 0.0001pt; text-align: justify;"><span
+                              style="font-weight: bold; font-size: 14px; text-decoration: underline; font-family: 'Trebuchet MS';">Production</span></p>
+                          <p class="MsoNormal" style="margin-bottom: 0.0001pt; text-align: justify;"><span
+                              style="font-size: 9pt; font-family: 'Trebuchet MS';">Une
+                              capacité d’action sur une superficie de 15
+                              hectares.</span></p>
+                          <p class="MsoNormal" style="margin-bottom: 0.0001pt; text-align: justify;"><span
+                              style="font-size: 9pt; font-family: 'Trebuchet MS';">Suivi
+                              du chantier&nbsp;: à chaque passage, nous vous
+                              déposons un bon de réalisation relevant toutes nos
+                              prestations sur le chantier et les difficultés
+                              rencontrées.</span></p>
+                          <p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span
+                              style="font-weight: bold; font-size: 14px; text-decoration: underline; font-family: 'Trebuchet MS';">Une
+                              qualité certifiée</span></p>
+                          <p class="MsoNormal" style="margin-bottom: 0.0001pt; text-align: justify;"><span
+                              style="font-size: 9pt; font-family: 'Trebuchet MS';">L’ESAT
+                              travaille avec l’agrément phytosanitaire : Cet
+                              agrément permet aux différents intervenants
+                              d’utiliser les produits appropriés à l’entretien
+                              de vos espaces vert.</span></p>
+                          <p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span
+                              style="font-size: 9pt; font-family: 'Trebuchet MS';">Respect
+                              des normes européennes de sécurité.</span></p>
+                        </div>
+                        <div class="art-layout-cell layout-item-6" style="width: 34%">
+                          <span style="font-family: 'Trebuchet MS';"><span style="font-weight: bold; font-size: 14px;"><span
+                                style="text-decoration: underline;"> Activités</span>
+                              :<br>
+                            </span><br>
+                            <span style="font-size: 12px;">- Tailler les arbres
+                              et arbustes pour obtenir des formes particulières.<br>
+                              - Effectuer l’entretien des surfaces par le binage
+                              des massifs, le ramassage des feuilles, le
+                              décapage de la mousse ou le débroussaillage...<br>
+                              - Réaliser l’entretien des gazons (tonte,
+                              scarification, aération, ...)<br>
+                              - Réguler la croissance des plantes en apportant
+                              les éléments nécessaires (eau, engrais, …)<br>
+                              - Créer des espaces verts (plantation)</span><br>
+                            <span style="font-size: 14px; font-weight: bold;"><br>
+                              <span style="text-decoration: underline;">Compétences</span>
+                              :<br>
+                            </span><br>
+                            <span style="font-size: 12px;">- Lecture de codes et
+                              symboles<br>
+                              - Lecture de documents technique<br>
+                              - Calcul de quantité (dosage)<br>
+                              - Manipulation de machines complexes<br>
+                              - Respecter les règles d’hygiène et de sécurité<br>
+                              - Gestes et postures de manutention</span><br>
+                          </span><br>
+                        </div>
+                        <div class="art-layout-cell layout-item-5" style="width: 33%">
+                          <span style="font-family: 'Trebuchet MS';"><span style="font-weight: bold; font-size: 14px;"><span
+                                style="text-decoration: underline;"> Les
+                                équipements</span> :</span><br>
+                            <br>
+                            - 3 camions benne<br>
+                            - 1 remorque<br>
+                            Tondeuses :<br>
+                            - 1 autoportée<br>
+                            - 14 autotractées<br>
+                            - 1 girobroyeur<br>
+                            - 6 débroussailleuses à fil ou à lame<br>
+                            - 6 souffleurs<br>
+                            - 1 aspirateur à feuilles autotractée<br>
+                            - 1 aspirateur à feuilles sur camion<br>
+                            - 2 pulvérisateurs (16 L et 200 L)<br>
+                            - 1 semoir (20 L)<br>
+                            - 6 tailles haies<br>
+                            - 2 tronçonneuses<br>
+                            - 1 échafaudage<br>
+                            - 1 nettoyeur haute pression</span><br>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="art-content-layout">
+                      <div class="art-content-layout-row">
+                        <div class="art-layout-cell layout-item-7" style="width: 50%">
+                          <p style="line-height: 125%;"><span style="font-style: italic; font-family: 'Trebuchet MS';"><span
+                                style="font-weight: bold;"><span style="font-size: 18px; text-decoration: underline;">Ils
+                                  nous font confiance…</span><br>
+                              </span><br>
+                              <span style="font-size: 13px; font-weight: bold;">ORANGE
+                                IDF, IRSTEA, Clear Chanel, Université de Paris
+                                Jussieu, Ecole Polytechnique Féminine,
+                                Université d'Evry, Renault Fresnes...</span></span></p>
+                        </div>
+                        <div class="art-layout-cell layout-item-7" style="width: 50%">
+                          <p><span style="font-size: 14px; font-weight: bold; font-style: italic; font-family: 'Trebuchet MS';"><span
+                                style="text-decoration: underline;">Contacts</span>
+                              :<a href="maito:espaces-verts@ateliersdefresnes.org"><img
+                                  alt="" src="images/mailto-vert.png" style="float: right;"
+                                  class="" height="62" width="65"></a></span></p>
+                          <p><span style="font-size: 14px; font-family: 'Trebuchet MS';"><span
+                                style="font-weight: bold; font-style: italic;">Jamal
+                                SAHOU</span>&nbsp; <span style="font-weight: bold;">mobile
+                                :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                06 69 69 62 06</span></span></p>
+                          <p><span style="font-size: 14px; font-family: 'Trebuchet MS';"><span
+                                style="font-weight: bold; font-style: italic;">Jean-Charles
+                                VALCY</span>&nbsp; <span style="font-weight: bold;">mobile
+                                : 06 78 77 64 72</span></span></p>
+                          <p><span style="font-size: 14px; font-style: italic; font-weight: bold; font-family: 'Trebuchet MS';">Jean-Marc
+                              VULGAIRE mobLile : 06 99 59 92 69 <br>
+                            </span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="art-footer">
+        <div class="art-footer-inner">
+          <div style="position:relative;display:inline-block;padding-left:40px;padding-right:40px">
+            <p><br>
+            </p>
+            <p><a href="https://www.facebook.com/Les-Ateliers-de-Fresnes-725962174202376/?ref=aymt_homepage_panel"
+                target="_blank" title="Page &quot;Les Ateliers de Fresnes&quot;"
+                style="font-style: italic;"><span style="color: rgb(255, 255, 0);  font-size: 16px;">Suivez
+                  nous sur Facebook / avec notre page "Les Ateliers de Fresnes"</span></a><span
+                style="font-size: 12px;"></span></p>
+          </div>
+          <p class="art-page-footer"> <span id="art-footnote-links"><a href="http://www.artisteer.com/"
+                target="_blank">Web Template</a> created with Artisteer.</span>
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
