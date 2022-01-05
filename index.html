@@ -1,1915 +1,2395 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en-US"><head><!-- Created by Artisteer v4.2.0.60623 -->
-    <meta charset="utf-8">
+<html dir="ltr" lang="en-US">
+  <head>
+    <!-- Created by Artisteer v4.2.0.60623 -->
+    <meta charset="utf-8" />
     <title>Accueil</title>
-    <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+    <meta
+      name="viewport"
+      content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width"
+    />
 
-    <!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <link rel="stylesheet" href="style.css" media="screen">
-    <!--[if lte IE 7]><link rel="stylesheet" href="style.ie7.css" media="screen" /><![endif]-->
-    <link rel="stylesheet" href="style.responsive.css" media="all">
-
+    <!--[if lt IE 9
+      ]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script
+    ><![endif]-->
+    <link rel="stylesheet" href="style.css" media="screen" />
+    <!--[if lte IE 7
+      ]><link rel="stylesheet" href="style.ie7.css" media="screen"
+    /><![endif]-->
+    <link rel="stylesheet" href="style.responsive.css" media="all" />
 
     <script src="jquery.js"></script>
     <script src="script.js"></script>
     <script src="script.responsive.js"></script>
-<meta name="description" content="Description">
-<meta name="keywords" content="Keywords">
+    <meta name="description" content="Description" />
+    <meta name="keywords" content="Keywords" />
 
-
-<script>jQuery(function ($) {
-    'use strict';
-    if ($.fn.slider) {
-        $(".art-slidecontainer001").each(function () {
-            var slideContainer = $(this), tmp;
+    <script>
+      jQuery(function ($) {
+        "use strict";
+        if ($.fn.slider) {
+          $(".art-slidecontainer001").each(function () {
+            var slideContainer = $(this),
+              tmp;
             var inner = $(".art-slider-inner", slideContainer);
             var helper = null;
-            
-            if ($.support.transition) {
-                helper = new BackgroundHelper();
-                helper.init("fade", "next", $(".art-slide-item", inner).first().css($.support.transition.prefix + "transition-duration"));
-                inner.children().each(function () {
-                    helper.processSlide($(this));
-                });
 
-                
+            if ($.support.transition) {
+              helper = new BackgroundHelper();
+              helper.init(
+                "fade",
+                "next",
+                $(".art-slide-item", inner)
+                  .first()
+                  .css($.support.transition.prefix + "transition-duration")
+              );
+              inner.children().each(function () {
+                helper.processSlide($(this));
+              });
             } else if (browser.ie && browser.version <= 8) {
-                var slidesInfo = {
-".art-slide0010": {
-    "bgimage" : "url('images/slide0010.jpg')",
-    "bgposition": "0 0",
-    "images": "",
-    "positions": ""
-},
-".art-slide0011": {
-    "bgimage" : "url('images/slide0011.jpg')",
-    "bgposition": "0 0",
-    "images": "",
-    "positions": ""
-},
-".art-slide0012": {
-    "bgimage" : "url('images/slide0012.jpg')",
-    "bgposition": "0 0",
-    "images": "",
-    "positions": ""
-},
-".art-slide0013": {
-    "bgimage" : "url('images/slide0013.jpg')",
-    "bgposition": "0 0",
-    "images": "",
-    "positions": ""
-}
-                };
-                $.each(slidesInfo, function(selector, info) {
-                    processElementMultiplyBg(slideContainer.find(selector), info);
-                });
+              var slidesInfo = {
+                ".art-slide0010": {
+                  bgimage: "url('images/slide0010.jpg')",
+                  bgposition: "0 0",
+                  images: "",
+                  positions: "",
+                },
+                ".art-slide0011": {
+                  bgimage: "url('images/slide0011.jpg')",
+                  bgposition: "0 0",
+                  images: "",
+                  positions: "",
+                },
+                ".art-slide0012": {
+                  bgimage: "url('images/slide0012.jpg')",
+                  bgposition: "0 0",
+                  images: "",
+                  positions: "",
+                },
+                ".art-slide0013": {
+                  bgimage: "url('images/slide0013.jpg')",
+                  bgposition: "0 0",
+                  images: "",
+                  positions: "",
+                },
+              };
+              $.each(slidesInfo, function (selector, info) {
+                processElementMultiplyBg(slideContainer.find(selector), info);
+              });
             }
 
             inner.children().eq(0).addClass("active");
             slideContainer.slider({
-                pause: 2600,
-                speed: 600,
-                repeat: true,
-                animation: "fade",
-                direction: "next",
-                navigator: slideContainer.siblings(".art-slidenavigator001"),
-                helper: helper
+              pause: 2600,
+              speed: 600,
+              repeat: true,
+              animation: "fade",
+              direction: "next",
+              navigator: slideContainer.siblings(".art-slidenavigator001"),
+              helper: helper,
             });
-            
-                        
-        });
-    }
-});
-jQuery(function ($) {
-    'use strict';
-    if ($.fn.slider) {
-        $(".art-slidecontainer005").each(function () {
-            var slideContainer = $(this), tmp;
+          });
+        }
+      });
+      jQuery(function ($) {
+        "use strict";
+        if ($.fn.slider) {
+          $(".art-slidecontainer005").each(function () {
+            var slideContainer = $(this),
+              tmp;
             var inner = $(".art-slider-inner", slideContainer);
             var helper = null;
-            
-            if ($.support.transition) {
-                helper = new BackgroundHelper();
-                helper.init("fade", "next", $(".art-slide-item", inner).first().css($.support.transition.prefix + "transition-duration"));
-                inner.children().each(function () {
-                    helper.processSlide($(this));
-                });
 
-                
+            if ($.support.transition) {
+              helper = new BackgroundHelper();
+              helper.init(
+                "fade",
+                "next",
+                $(".art-slide-item", inner)
+                  .first()
+                  .css($.support.transition.prefix + "transition-duration")
+              );
+              inner.children().each(function () {
+                helper.processSlide($(this));
+              });
             } else if (browser.ie && browser.version <= 8) {
-                var slidesInfo = {
-".art-slide0050": {
-    "bgimage" : "url('images/slide0050.jpg')",
-    "bgposition": "0 0",
-    "images": "",
-    "positions": ""
-},
-".art-slide0051": {
-    "bgimage" : "url('images/slide0051.jpg')",
-    "bgposition": "0 0",
-    "images": "",
-    "positions": ""
-},
-".art-slide0052": {
-    "bgimage" : "url('images/slide0052.jpg')",
-    "bgposition": "0 0",
-    "images": "",
-    "positions": ""
-},
-".art-slide0053": {
-    "bgimage" : "url('images/slide0053.jpg')",
-    "bgposition": "0 0",
-    "images": "",
-    "positions": ""
-}
-                };
-                $.each(slidesInfo, function(selector, info) {
-                    processElementMultiplyBg(slideContainer.find(selector), info);
-                });
+              var slidesInfo = {
+                ".art-slide0050": {
+                  bgimage: "url('images/slide0050.jpg')",
+                  bgposition: "0 0",
+                  images: "",
+                  positions: "",
+                },
+                ".art-slide0051": {
+                  bgimage: "url('images/slide0051.jpg')",
+                  bgposition: "0 0",
+                  images: "",
+                  positions: "",
+                },
+                ".art-slide0052": {
+                  bgimage: "url('images/slide0052.jpg')",
+                  bgposition: "0 0",
+                  images: "",
+                  positions: "",
+                },
+                ".art-slide0053": {
+                  bgimage: "url('images/slide0053.jpg')",
+                  bgposition: "0 0",
+                  images: "",
+                  positions: "",
+                },
+              };
+              $.each(slidesInfo, function (selector, info) {
+                processElementMultiplyBg(slideContainer.find(selector), info);
+              });
             }
 
             inner.children().eq(0).addClass("active");
             slideContainer.slider({
-                pause: 2600,
-                speed: 600,
-                repeat: true,
-                animation: "fade",
-                direction: "next",
-                navigator: slideContainer.siblings(".art-slidenavigator005"),
-                helper: helper
+              pause: 2600,
+              speed: 600,
+              repeat: true,
+              animation: "fade",
+              direction: "next",
+              navigator: slideContainer.siblings(".art-slidenavigator005"),
+              helper: helper,
             });
-            
-                        
-        });
-    }
-});
-jQuery(function ($) {
-    'use strict';
-    if ($.fn.slider) {
-        $(".art-slidecontainer003").each(function () {
-            var slideContainer = $(this), tmp;
+          });
+        }
+      });
+      jQuery(function ($) {
+        "use strict";
+        if ($.fn.slider) {
+          $(".art-slidecontainer003").each(function () {
+            var slideContainer = $(this),
+              tmp;
             var inner = $(".art-slider-inner", slideContainer);
             var helper = null;
-            
-            if ($.support.transition) {
-                helper = new BackgroundHelper();
-                helper.init("fade", "next", $(".art-slide-item", inner).first().css($.support.transition.prefix + "transition-duration"));
-                inner.children().each(function () {
-                    helper.processSlide($(this));
-                });
 
-                
+            if ($.support.transition) {
+              helper = new BackgroundHelper();
+              helper.init(
+                "fade",
+                "next",
+                $(".art-slide-item", inner)
+                  .first()
+                  .css($.support.transition.prefix + "transition-duration")
+              );
+              inner.children().each(function () {
+                helper.processSlide($(this));
+              });
             } else if (browser.ie && browser.version <= 8) {
-                var slidesInfo = {
-".art-slide0030": {
-    "bgimage" : "url('images/slide0030.jpg')",
-    "bgposition": "0 0",
-    "images": "",
-    "positions": ""
-},
-".art-slide0031": {
-    "bgimage" : "url('images/slide0031.jpg')",
-    "bgposition": "0 0",
-    "images": "",
-    "positions": ""
-},
-".art-slide0032": {
-    "bgimage" : "url('images/slide0032.jpg')",
-    "bgposition": "0 0",
-    "images": "",
-    "positions": ""
-},
-".art-slide0033": {
-    "bgimage" : "url('images/slide0033.jpg')",
-    "bgposition": "0 0",
-    "images": "",
-    "positions": ""
-}
-                };
-                $.each(slidesInfo, function(selector, info) {
-                    processElementMultiplyBg(slideContainer.find(selector), info);
-                });
+              var slidesInfo = {
+                ".art-slide0030": {
+                  bgimage: "url('images/slide0030.jpg')",
+                  bgposition: "0 0",
+                  images: "",
+                  positions: "",
+                },
+                ".art-slide0031": {
+                  bgimage: "url('images/slide0031.jpg')",
+                  bgposition: "0 0",
+                  images: "",
+                  positions: "",
+                },
+                ".art-slide0032": {
+                  bgimage: "url('images/slide0032.jpg')",
+                  bgposition: "0 0",
+                  images: "",
+                  positions: "",
+                },
+                ".art-slide0033": {
+                  bgimage: "url('images/slide0033.jpg')",
+                  bgposition: "0 0",
+                  images: "",
+                  positions: "",
+                },
+              };
+              $.each(slidesInfo, function (selector, info) {
+                processElementMultiplyBg(slideContainer.find(selector), info);
+              });
             }
 
             inner.children().eq(0).addClass("active");
             slideContainer.slider({
-                pause: 2600,
-                speed: 600,
-                repeat: true,
-                animation: "fade",
-                direction: "next",
-                navigator: slideContainer.siblings(".art-slidenavigator003"),
-                helper: helper
+              pause: 2600,
+              speed: 600,
+              repeat: true,
+              animation: "fade",
+              direction: "next",
+              navigator: slideContainer.siblings(".art-slidenavigator003"),
+              helper: helper,
             });
-            
-                        
-        });
-    }
-});
-jQuery(function ($) {
-    'use strict';
-    if ($.fn.slider) {
-        $(".art-slidecontainer004").each(function () {
-            var slideContainer = $(this), tmp;
+          });
+        }
+      });
+      jQuery(function ($) {
+        "use strict";
+        if ($.fn.slider) {
+          $(".art-slidecontainer004").each(function () {
+            var slideContainer = $(this),
+              tmp;
             var inner = $(".art-slider-inner", slideContainer);
             var helper = null;
-            
-            if ($.support.transition) {
-                helper = new BackgroundHelper();
-                helper.init("fade", "next", $(".art-slide-item", inner).first().css($.support.transition.prefix + "transition-duration"));
-                inner.children().each(function () {
-                    helper.processSlide($(this));
-                });
 
-                
+            if ($.support.transition) {
+              helper = new BackgroundHelper();
+              helper.init(
+                "fade",
+                "next",
+                $(".art-slide-item", inner)
+                  .first()
+                  .css($.support.transition.prefix + "transition-duration")
+              );
+              inner.children().each(function () {
+                helper.processSlide($(this));
+              });
             } else if (browser.ie && browser.version <= 8) {
-                var slidesInfo = {
-".art-slide0040": {
-    "bgimage" : "url('images/slide0040.jpg')",
-    "bgposition": "0 0",
-    "images": "",
-    "positions": ""
-},
-".art-slide0041": {
-    "bgimage" : "url('images/slide0041.jpg')",
-    "bgposition": "0 0",
-    "images": "",
-    "positions": ""
-},
-".art-slide0042": {
-    "bgimage" : "url('images/slide0042.jpg')",
-    "bgposition": "0 0",
-    "images": "",
-    "positions": ""
-},
-".art-slide0043": {
-    "bgimage" : "url('images/slide0043.jpg')",
-    "bgposition": "0 0",
-    "images": "",
-    "positions": ""
-}
-                };
-                $.each(slidesInfo, function(selector, info) {
-                    processElementMultiplyBg(slideContainer.find(selector), info);
-                });
+              var slidesInfo = {
+                ".art-slide0040": {
+                  bgimage: "url('images/slide0040.jpg')",
+                  bgposition: "0 0",
+                  images: "",
+                  positions: "",
+                },
+                ".art-slide0041": {
+                  bgimage: "url('images/slide0041.jpg')",
+                  bgposition: "0 0",
+                  images: "",
+                  positions: "",
+                },
+                ".art-slide0042": {
+                  bgimage: "url('images/slide0042.jpg')",
+                  bgposition: "0 0",
+                  images: "",
+                  positions: "",
+                },
+                ".art-slide0043": {
+                  bgimage: "url('images/slide0043.jpg')",
+                  bgposition: "0 0",
+                  images: "",
+                  positions: "",
+                },
+              };
+              $.each(slidesInfo, function (selector, info) {
+                processElementMultiplyBg(slideContainer.find(selector), info);
+              });
             }
 
             inner.children().eq(0).addClass("active");
             slideContainer.slider({
-                pause: 2600,
-                speed: 600,
-                repeat: true,
-                animation: "fade",
-                direction: "next",
-                navigator: slideContainer.siblings(".art-slidenavigator004"),
-                helper: helper
+              pause: 2600,
+              speed: 600,
+              repeat: true,
+              animation: "fade",
+              direction: "next",
+              navigator: slideContainer.siblings(".art-slidenavigator004"),
+              helper: helper,
             });
-            
-                        
-        });
-    }
-});
-</script><style>.art-content .art-postcontent-0 .layout-item-0 { margin-bottom: 5px;  }
-.art-content .art-postcontent-0 .layout-item-1 { border-spacing: 10px 0px; border-collapse: separate;  }
-.art-content .art-postcontent-0 .layout-item-2 { border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-top-color:#595E64;border-right-color:#595E64;border-bottom-color:#595E64;border-left-color:#595E64; color: #D4D6D9; padding-right: 10px;padding-left: 10px;  }
-.art-content .art-postcontent-0 .layout-item-3 { margin-top: 0px;  }
-.art-content .art-postcontent-0 .layout-item-4 { padding: 10px;  }
-.art-content .art-postcontent-0 .layout-item-5 { padding-top: 10px;padding-right: 10px;padding-bottom: 0px;padding-left: 10px;  }
-.art-content .art-postcontent-0 .layout-item-6 { color: #D4D6D9; background: ; border-spacing: 15px 15px; border-collapse: separate;  }
-.art-content .art-postcontent-0 .layout-item-7 { color: #DCDEE0; background: ; padding: 15px;  }
-.art-content .art-postcontent-0 .layout-item-8 { color: #1D1F20; background: #D8EF95; padding-top: 10px;padding-right: 15px;padding-bottom: 10px;padding-left: 15px;  }
-.ie7 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
-.ie6 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
-
-.art-slidecontainer001 {
-    position: relative;
-        width: 230px;
-    height: 185px;
+          });
         }
+      });
+    </script>
+    <style>
+      .art-content .art-postcontent-0 .layout-item-0 {
+        margin-bottom: 5px;
+      }
+      .art-content .art-postcontent-0 .layout-item-1 {
+        border-spacing: 10px 0px;
+        border-collapse: separate;
+      }
+      .art-content .art-postcontent-0 .layout-item-2 {
+        border-top-style: solid;
+        border-right-style: solid;
+        border-bottom-style: solid;
+        border-left-style: solid;
+        border-top-width: 1px;
+        border-right-width: 1px;
+        border-bottom-width: 1px;
+        border-left-width: 1px;
+        border-top-color: #595e64;
+        border-right-color: #595e64;
+        border-bottom-color: #595e64;
+        border-left-color: #595e64;
+        color: #d4d6d9;
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+      .art-content .art-postcontent-0 .layout-item-3 {
+        margin-top: 0px;
+      }
+      .art-content .art-postcontent-0 .layout-item-4 {
+        padding: 10px;
+      }
+      .art-content .art-postcontent-0 .layout-item-5 {
+        padding-top: 10px;
+        padding-right: 10px;
+        padding-bottom: 0px;
+        padding-left: 10px;
+      }
+      .art-content .art-postcontent-0 .layout-item-6 {
+        color: #d4d6d9;
+        background: ;
+        border-spacing: 15px 15px;
+        border-collapse: separate;
+      }
+      .art-content .art-postcontent-0 .layout-item-7 {
+        color: #dcdee0;
+        background: ;
+        padding: 15px;
+      }
+      .art-content .art-postcontent-0 .layout-item-8 {
+        color: #1d1f20;
+        background: #d8ef95;
+        padding-top: 10px;
+        padding-right: 15px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+      }
+      .ie7 .art-post .art-layout-cell {
+        border: none !important;
+        padding: 0 !important;
+      }
+      .ie6 .art-post .art-layout-cell {
+        border: none !important;
+        padding: 0 !important;
+      }
 
-.default-responsive .art-header .art-slidecontainer001,
-.responsive .art-header .art-slidecontainer001
-{
-  position: absolute !important;
-}
-
-.responsive .art-pageslider .art-slidecontainer001 {
-  position: absolute !important;
-}
-
-.art-slidecontainer001 .art-slide-item
-{
-
-    -webkit-transform: rotate(0);
-    -moz-transform: rotate(0);
-    transform: rotate(0);
-}
-
-
-
-.art-slidecontainer001 .art-slide-item {
-    -webkit-transition: 600ms ease-in-out opacity;
-    -moz-transition: 600ms ease-in-out opacity;
-    -ms-transition: 600ms ease-in-out opacity;
-    -o-transition: 600ms ease-in-out opacity;
-    transition: 600ms ease-in-out opacity;
-    position: absolute !important;
-    display: none;
-	left: 0;
-	top: 0;
-	opacity: 0;
-    width:  100%;
-    height: 100%;
-}
-
-.art-slidecontainer001 .active, .art-slidecontainer001 .next, .art-slidecontainer001 .prev {
-    display: block;
-}
-
-.art-slidecontainer001 .active {
-    opacity: 1;
-}
-
-.art-slidecontainer001 .next, .art-slidecontainer001 .prev {
-    width: 100%;
-}
-
-.art-slidecontainer001 .next.forward, .art-slidecontainer001 .prev.back {
-    opacity: 1;
-}
-
-.art-slidecontainer001 .active.forward {
-    opacity: 0;
-}
-
-.art-slidecontainer001 .active.back {
-    opacity: 0;
-}
-
-
-.art-slide0010 {
-    background-image:  url('images/slide0010.jpg');
-        /* background-size:  auto auto; */
-        background-position:  center center;
-    background-repeat: no-repeat;
-}
-
-/* special setup for header/pageslider */
-.responsive .art-header .art-slide0010 {
-    background-image:  url('images/slide0010.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
-
-.responsive .art-pageslider .art-slide0010 {
-    background-image:  url('images/slide0010.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
-
-.default-responsive .art-header .art-slide0010 {
-    background-image: url('images/slide0010.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-
-.default-responsive .art-pageslider .art-slide0010 {
-    background-image: url('images/slide0010.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}.art-slide0011 {
-    background-image:  url('images/slide0011.jpg');
-        /* background-size:  auto auto; */
-        background-position:  center center;
-    background-repeat: no-repeat;
-}
-
-/* special setup for header/pageslider */
-.responsive .art-header .art-slide0011 {
-    background-image:  url('images/slide0011.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
-
-.responsive .art-pageslider .art-slide0011 {
-    background-image:  url('images/slide0011.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
-
-.default-responsive .art-header .art-slide0011 {
-    background-image: url('images/slide0011.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-
-.default-responsive .art-pageslider .art-slide0011 {
-    background-image: url('images/slide0011.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}.art-slide0012 {
-    background-image:  url('images/slide0012.jpg');
-        /* background-size:  auto auto; */
-        background-position:  center center;
-    background-repeat: no-repeat;
-}
-
-/* special setup for header/pageslider */
-.responsive .art-header .art-slide0012 {
-    background-image:  url('images/slide0012.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
-
-.responsive .art-pageslider .art-slide0012 {
-    background-image:  url('images/slide0012.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
-
-.default-responsive .art-header .art-slide0012 {
-    background-image: url('images/slide0012.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-
-.default-responsive .art-pageslider .art-slide0012 {
-    background-image: url('images/slide0012.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}.art-slide0013 {
-    background-image:  url('images/slide0013.jpg');
-        /* background-size:  auto auto; */
-        background-position:  center center;
-    background-repeat: no-repeat;
-}
-
-/* special setup for header/pageslider */
-.responsive .art-header .art-slide0013 {
-    background-image:  url('images/slide0013.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
-
-.responsive .art-pageslider .art-slide0013 {
-    background-image:  url('images/slide0013.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
-
-.default-responsive .art-header .art-slide0013 {
-    background-image: url('images/slide0013.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-
-.default-responsive .art-pageslider .art-slide0013 {
-    background-image: url('images/slide0013.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-
-.art-slidenavigator001 {
-  display: inline-block;
-  position: absolute;
-  direction: ltr !important;
-  top: 161px;
-  left: 63.48%;
-  z-index: 101;
-  line-height: 0 !important;
-  -webkit-background-origin: border !important;
-  -moz-background-origin: border !important;
-  background-origin: border-box !important;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  text-align: center;
-    white-space: nowrap;
-    }
-.art-slidenavigator001
-{
-background: #7B828A;background: -webkit-linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;background: -moz-linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;background: -o-linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;background: -ms-linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;-svg-background: linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;background: linear-gradient(to bottom, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;
--webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;
-
-
-padding:7px;
-
-
-
-
-
-}
-.art-slidenavigator001 > a
-{
-background: #464A4E;background: #464A4E;background: #464A4E;background: #464A4E;background: #464A4E;-svg-background: #464A4E;background: #464A4E;
--webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
-
-
-
-margin:0 10px 0 0;
-
-width: 10px;
-
-height: 10px;
-}
-.art-slidenavigator001 > a.active
-{
-background: #C4C7CA;background: #C4C7CA;background: #C4C7CA;background: #C4C7CA;background: #C4C7CA;-svg-background: #C4C7CA;background: #C4C7CA;
--webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
-
-
-
-margin:0 10px 0 0;
-
-width: 10px;
-
-height: 10px;
-}
-.art-slidenavigator001 > a:hover
-{
-background: #656B72;background: #656B72;background: #656B72;background: #656B72;background: #656B72;-svg-background: #656B72;background: #656B72;
--webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
-
-
-
-margin:0 10px 0 0;
-
-width: 10px;
-
-height: 10px;
-}
-
-.art-slidecontainer005 {
-    position: relative;
+      .art-slidecontainer001 {
+        position: relative;
         width: 230px;
-    height: 185px;
-        }
+        height: 185px;
+      }
 
-.default-responsive .art-header .art-slidecontainer005,
-.responsive .art-header .art-slidecontainer005
-{
-  position: absolute !important;
-}
+      .default-responsive .art-header .art-slidecontainer001,
+      .responsive .art-header .art-slidecontainer001 {
+        position: absolute !important;
+      }
 
-.responsive .art-pageslider .art-slidecontainer005 {
-  position: absolute !important;
-}
+      .responsive .art-pageslider .art-slidecontainer001 {
+        position: absolute !important;
+      }
 
-.art-slidecontainer005 .art-slide-item
-{
+      .art-slidecontainer001 .art-slide-item {
+        -webkit-transform: rotate(0);
+        -moz-transform: rotate(0);
+        transform: rotate(0);
+      }
 
-    -webkit-transform: rotate(0);
-    -moz-transform: rotate(0);
-    transform: rotate(0);
-}
+      .art-slidecontainer001 .art-slide-item {
+        -webkit-transition: 600ms ease-in-out opacity;
+        -moz-transition: 600ms ease-in-out opacity;
+        -ms-transition: 600ms ease-in-out opacity;
+        -o-transition: 600ms ease-in-out opacity;
+        transition: 600ms ease-in-out opacity;
+        position: absolute !important;
+        display: none;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+      }
 
+      .art-slidecontainer001 .active,
+      .art-slidecontainer001 .next,
+      .art-slidecontainer001 .prev {
+        display: block;
+      }
 
+      .art-slidecontainer001 .active {
+        opacity: 1;
+      }
 
-.art-slidecontainer005 .art-slide-item {
-    -webkit-transition: 600ms ease-in-out opacity;
-    -moz-transition: 600ms ease-in-out opacity;
-    -ms-transition: 600ms ease-in-out opacity;
-    -o-transition: 600ms ease-in-out opacity;
-    transition: 600ms ease-in-out opacity;
-    position: absolute !important;
-    display: none;
-	left: 0;
-	top: 0;
-	opacity: 0;
-    width:  100%;
-    height: 100%;
-}
+      .art-slidecontainer001 .next,
+      .art-slidecontainer001 .prev {
+        width: 100%;
+      }
 
-.art-slidecontainer005 .active, .art-slidecontainer005 .next, .art-slidecontainer005 .prev {
-    display: block;
-}
+      .art-slidecontainer001 .next.forward,
+      .art-slidecontainer001 .prev.back {
+        opacity: 1;
+      }
 
-.art-slidecontainer005 .active {
-    opacity: 1;
-}
+      .art-slidecontainer001 .active.forward {
+        opacity: 0;
+      }
 
-.art-slidecontainer005 .next, .art-slidecontainer005 .prev {
-    width: 100%;
-}
+      .art-slidecontainer001 .active.back {
+        opacity: 0;
+      }
 
-.art-slidecontainer005 .next.forward, .art-slidecontainer005 .prev.back {
-    opacity: 1;
-}
-
-.art-slidecontainer005 .active.forward {
-    opacity: 0;
-}
-
-.art-slidecontainer005 .active.back {
-    opacity: 0;
-}
-
-
-.art-slide0050 {
-    background-image:  url('images/slide0050.jpg');
+      .art-slide0010 {
+        background-image: url("images/slide0010.jpg");
         /* background-size:  auto auto; */
-        background-position:  center center;
-    background-repeat: no-repeat;
-}
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-/* special setup for header/pageslider */
-.responsive .art-header .art-slide0050 {
-    background-image:  url('images/slide0050.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
+      /* special setup for header/pageslider */
+      .responsive .art-header .art-slide0010 {
+        background-image: url("images/slide0010.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.responsive .art-pageslider .art-slide0050 {
-    background-image:  url('images/slide0050.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
+      .responsive .art-pageslider .art-slide0010 {
+        background-image: url("images/slide0010.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.default-responsive .art-header .art-slide0050 {
-    background-image: url('images/slide0050.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
+      .default-responsive .art-header .art-slide0010 {
+        background-image: url("images/slide0010.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.default-responsive .art-pageslider .art-slide0050 {
-    background-image: url('images/slide0050.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}.art-slide0051 {
-    background-image:  url('images/slide0051.jpg');
+      .default-responsive .art-pageslider .art-slide0010 {
+        background-image: url("images/slide0010.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+      .art-slide0011 {
+        background-image: url("images/slide0011.jpg");
         /* background-size:  auto auto; */
-        background-position:  center center;
-    background-repeat: no-repeat;
-}
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-/* special setup for header/pageslider */
-.responsive .art-header .art-slide0051 {
-    background-image:  url('images/slide0051.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
+      /* special setup for header/pageslider */
+      .responsive .art-header .art-slide0011 {
+        background-image: url("images/slide0011.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.responsive .art-pageslider .art-slide0051 {
-    background-image:  url('images/slide0051.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
+      .responsive .art-pageslider .art-slide0011 {
+        background-image: url("images/slide0011.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.default-responsive .art-header .art-slide0051 {
-    background-image: url('images/slide0051.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
+      .default-responsive .art-header .art-slide0011 {
+        background-image: url("images/slide0011.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.default-responsive .art-pageslider .art-slide0051 {
-    background-image: url('images/slide0051.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}.art-slide0052 {
-    background-image:  url('images/slide0052.jpg');
+      .default-responsive .art-pageslider .art-slide0011 {
+        background-image: url("images/slide0011.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+      .art-slide0012 {
+        background-image: url("images/slide0012.jpg");
         /* background-size:  auto auto; */
-        background-position:  center center;
-    background-repeat: no-repeat;
-}
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-/* special setup for header/pageslider */
-.responsive .art-header .art-slide0052 {
-    background-image:  url('images/slide0052.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
+      /* special setup for header/pageslider */
+      .responsive .art-header .art-slide0012 {
+        background-image: url("images/slide0012.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.responsive .art-pageslider .art-slide0052 {
-    background-image:  url('images/slide0052.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
+      .responsive .art-pageslider .art-slide0012 {
+        background-image: url("images/slide0012.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.default-responsive .art-header .art-slide0052 {
-    background-image: url('images/slide0052.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
+      .default-responsive .art-header .art-slide0012 {
+        background-image: url("images/slide0012.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.default-responsive .art-pageslider .art-slide0052 {
-    background-image: url('images/slide0052.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}.art-slide0053 {
-    background-image:  url('images/slide0053.jpg');
+      .default-responsive .art-pageslider .art-slide0012 {
+        background-image: url("images/slide0012.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+      .art-slide0013 {
+        background-image: url("images/slide0013.jpg");
         /* background-size:  auto auto; */
-        background-position:  center center;
-    background-repeat: no-repeat;
-}
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-/* special setup for header/pageslider */
-.responsive .art-header .art-slide0053 {
-    background-image:  url('images/slide0053.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
+      /* special setup for header/pageslider */
+      .responsive .art-header .art-slide0013 {
+        background-image: url("images/slide0013.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.responsive .art-pageslider .art-slide0053 {
-    background-image:  url('images/slide0053.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
+      .responsive .art-pageslider .art-slide0013 {
+        background-image: url("images/slide0013.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.default-responsive .art-header .art-slide0053 {
-    background-image: url('images/slide0053.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
+      .default-responsive .art-header .art-slide0013 {
+        background-image: url("images/slide0013.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.default-responsive .art-pageslider .art-slide0053 {
-    background-image: url('images/slide0053.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
+      .default-responsive .art-pageslider .art-slide0013 {
+        background-image: url("images/slide0013.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.art-slidenavigator005 {
-  display: inline-block;
-  position: absolute;
-  direction: ltr !important;
-  top: 161px;
-  left: 63.48%;
-  z-index: 101;
-  line-height: 0 !important;
-  -webkit-background-origin: border !important;
-  -moz-background-origin: border !important;
-  background-origin: border-box !important;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  text-align: center;
-    white-space: nowrap;
-    }
-.art-slidenavigator005
-{
-background: #7B828A;background: -webkit-linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;background: -moz-linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;background: -o-linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;background: -ms-linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;-svg-background: linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;background: linear-gradient(to bottom, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;
--webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;
+      .art-slidenavigator001 {
+        display: inline-block;
+        position: absolute;
+        direction: ltr !important;
+        top: 161px;
+        left: 63.48%;
+        z-index: 101;
+        line-height: 0 !important;
+        -webkit-background-origin: border !important;
+        -moz-background-origin: border !important;
+        background-origin: border-box !important;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        text-align: center;
+        white-space: nowrap;
+      }
+      .art-slidenavigator001 {
+        background: #7b828a;
+        background: -webkit-linear-gradient(
+            top,
+            rgba(163, 168, 174, 0.6) 0,
+            rgba(120, 128, 135, 0.6) 53%,
+            rgba(86, 92, 97, 0.6) 100%
+          )
+          no-repeat;
+        background: -moz-linear-gradient(
+            top,
+            rgba(163, 168, 174, 0.6) 0,
+            rgba(120, 128, 135, 0.6) 53%,
+            rgba(86, 92, 97, 0.6) 100%
+          )
+          no-repeat;
+        background: -o-linear-gradient(
+            top,
+            rgba(163, 168, 174, 0.6) 0,
+            rgba(120, 128, 135, 0.6) 53%,
+            rgba(86, 92, 97, 0.6) 100%
+          )
+          no-repeat;
+        background: -ms-linear-gradient(
+            top,
+            rgba(163, 168, 174, 0.6) 0,
+            rgba(120, 128, 135, 0.6) 53%,
+            rgba(86, 92, 97, 0.6) 100%
+          )
+          no-repeat;
+        -svg-background: linear-gradient(
+            top,
+            rgba(163, 168, 174, 0.6) 0,
+            rgba(120, 128, 135, 0.6) 53%,
+            rgba(86, 92, 97, 0.6) 100%
+          )
+          no-repeat;
+        background: linear-gradient(
+            to bottom,
+            rgba(163, 168, 174, 0.6) 0,
+            rgba(120, 128, 135, 0.6) 53%,
+            rgba(86, 92, 97, 0.6) 100%
+          )
+          no-repeat;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
 
+        padding: 7px;
+      }
+      .art-slidenavigator001 > a {
+        background: #464a4e;
+        background: #464a4e;
+        background: #464a4e;
+        background: #464a4e;
+        background: #464a4e;
+        -svg-background: #464a4e;
+        background: #464a4e;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
 
-padding:7px;
+        margin: 0 10px 0 0;
 
+        width: 10px;
 
+        height: 10px;
+      }
+      .art-slidenavigator001 > a.active {
+        background: #c4c7ca;
+        background: #c4c7ca;
+        background: #c4c7ca;
+        background: #c4c7ca;
+        background: #c4c7ca;
+        -svg-background: #c4c7ca;
+        background: #c4c7ca;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
 
+        margin: 0 10px 0 0;
 
+        width: 10px;
 
-}
-.art-slidenavigator005 > a
-{
-background: #464A4E;background: #464A4E;background: #464A4E;background: #464A4E;background: #464A4E;-svg-background: #464A4E;background: #464A4E;
--webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+        height: 10px;
+      }
+      .art-slidenavigator001 > a:hover {
+        background: #656b72;
+        background: #656b72;
+        background: #656b72;
+        background: #656b72;
+        background: #656b72;
+        -svg-background: #656b72;
+        background: #656b72;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
 
+        margin: 0 10px 0 0;
 
+        width: 10px;
 
-margin:0 10px 0 0;
+        height: 10px;
+      }
 
-width: 10px;
-
-height: 10px;
-}
-.art-slidenavigator005 > a.active
-{
-background: #C4C7CA;background: #C4C7CA;background: #C4C7CA;background: #C4C7CA;background: #C4C7CA;-svg-background: #C4C7CA;background: #C4C7CA;
--webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
-
-
-
-margin:0 10px 0 0;
-
-width: 10px;
-
-height: 10px;
-}
-.art-slidenavigator005 > a:hover
-{
-background: #656B72;background: #656B72;background: #656B72;background: #656B72;background: #656B72;-svg-background: #656B72;background: #656B72;
--webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
-
-
-
-margin:0 10px 0 0;
-
-width: 10px;
-
-height: 10px;
-}
-
-.art-slidecontainer003 {
-    position: relative;
+      .art-slidecontainer005 {
+        position: relative;
         width: 230px;
-    height: 185px;
-        }
+        height: 185px;
+      }
 
-.default-responsive .art-header .art-slidecontainer003,
-.responsive .art-header .art-slidecontainer003
-{
-  position: absolute !important;
-}
+      .default-responsive .art-header .art-slidecontainer005,
+      .responsive .art-header .art-slidecontainer005 {
+        position: absolute !important;
+      }
 
-.responsive .art-pageslider .art-slidecontainer003 {
-  position: absolute !important;
-}
+      .responsive .art-pageslider .art-slidecontainer005 {
+        position: absolute !important;
+      }
 
-.art-slidecontainer003 .art-slide-item
-{
+      .art-slidecontainer005 .art-slide-item {
+        -webkit-transform: rotate(0);
+        -moz-transform: rotate(0);
+        transform: rotate(0);
+      }
 
-    -webkit-transform: rotate(0);
-    -moz-transform: rotate(0);
-    transform: rotate(0);
-}
+      .art-slidecontainer005 .art-slide-item {
+        -webkit-transition: 600ms ease-in-out opacity;
+        -moz-transition: 600ms ease-in-out opacity;
+        -ms-transition: 600ms ease-in-out opacity;
+        -o-transition: 600ms ease-in-out opacity;
+        transition: 600ms ease-in-out opacity;
+        position: absolute !important;
+        display: none;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+      }
 
+      .art-slidecontainer005 .active,
+      .art-slidecontainer005 .next,
+      .art-slidecontainer005 .prev {
+        display: block;
+      }
 
+      .art-slidecontainer005 .active {
+        opacity: 1;
+      }
 
-.art-slidecontainer003 .art-slide-item {
-    -webkit-transition: 600ms ease-in-out opacity;
-    -moz-transition: 600ms ease-in-out opacity;
-    -ms-transition: 600ms ease-in-out opacity;
-    -o-transition: 600ms ease-in-out opacity;
-    transition: 600ms ease-in-out opacity;
-    position: absolute !important;
-    display: none;
-	left: 0;
-	top: 0;
-	opacity: 0;
-    width:  100%;
-    height: 100%;
-}
+      .art-slidecontainer005 .next,
+      .art-slidecontainer005 .prev {
+        width: 100%;
+      }
 
-.art-slidecontainer003 .active, .art-slidecontainer003 .next, .art-slidecontainer003 .prev {
-    display: block;
-}
+      .art-slidecontainer005 .next.forward,
+      .art-slidecontainer005 .prev.back {
+        opacity: 1;
+      }
 
-.art-slidecontainer003 .active {
-    opacity: 1;
-}
+      .art-slidecontainer005 .active.forward {
+        opacity: 0;
+      }
 
-.art-slidecontainer003 .next, .art-slidecontainer003 .prev {
-    width: 100%;
-}
+      .art-slidecontainer005 .active.back {
+        opacity: 0;
+      }
 
-.art-slidecontainer003 .next.forward, .art-slidecontainer003 .prev.back {
-    opacity: 1;
-}
-
-.art-slidecontainer003 .active.forward {
-    opacity: 0;
-}
-
-.art-slidecontainer003 .active.back {
-    opacity: 0;
-}
-
-
-.art-slide0030 {
-    background-image:  url('images/slide0030.jpg');
+      .art-slide0050 {
+        background-image: url("images/slide0050.jpg");
         /* background-size:  auto auto; */
-        background-position:  center center;
-    background-repeat: no-repeat;
-}
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-/* special setup for header/pageslider */
-.responsive .art-header .art-slide0030 {
-    background-image:  url('images/slide0030.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
+      /* special setup for header/pageslider */
+      .responsive .art-header .art-slide0050 {
+        background-image: url("images/slide0050.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.responsive .art-pageslider .art-slide0030 {
-    background-image:  url('images/slide0030.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
+      .responsive .art-pageslider .art-slide0050 {
+        background-image: url("images/slide0050.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.default-responsive .art-header .art-slide0030 {
-    background-image: url('images/slide0030.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
+      .default-responsive .art-header .art-slide0050 {
+        background-image: url("images/slide0050.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.default-responsive .art-pageslider .art-slide0030 {
-    background-image: url('images/slide0030.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}.art-slide0031 {
-    background-image:  url('images/slide0031.jpg');
+      .default-responsive .art-pageslider .art-slide0050 {
+        background-image: url("images/slide0050.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+      .art-slide0051 {
+        background-image: url("images/slide0051.jpg");
         /* background-size:  auto auto; */
-        background-position:  center center;
-    background-repeat: no-repeat;
-}
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-/* special setup for header/pageslider */
-.responsive .art-header .art-slide0031 {
-    background-image:  url('images/slide0031.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
+      /* special setup for header/pageslider */
+      .responsive .art-header .art-slide0051 {
+        background-image: url("images/slide0051.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.responsive .art-pageslider .art-slide0031 {
-    background-image:  url('images/slide0031.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
+      .responsive .art-pageslider .art-slide0051 {
+        background-image: url("images/slide0051.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.default-responsive .art-header .art-slide0031 {
-    background-image: url('images/slide0031.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
+      .default-responsive .art-header .art-slide0051 {
+        background-image: url("images/slide0051.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.default-responsive .art-pageslider .art-slide0031 {
-    background-image: url('images/slide0031.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}.art-slide0032 {
-    background-image:  url('images/slide0032.jpg');
+      .default-responsive .art-pageslider .art-slide0051 {
+        background-image: url("images/slide0051.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+      .art-slide0052 {
+        background-image: url("images/slide0052.jpg");
         /* background-size:  auto auto; */
-        background-position:  center center;
-    background-repeat: no-repeat;
-}
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-/* special setup for header/pageslider */
-.responsive .art-header .art-slide0032 {
-    background-image:  url('images/slide0032.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
+      /* special setup for header/pageslider */
+      .responsive .art-header .art-slide0052 {
+        background-image: url("images/slide0052.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.responsive .art-pageslider .art-slide0032 {
-    background-image:  url('images/slide0032.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
+      .responsive .art-pageslider .art-slide0052 {
+        background-image: url("images/slide0052.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.default-responsive .art-header .art-slide0032 {
-    background-image: url('images/slide0032.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
+      .default-responsive .art-header .art-slide0052 {
+        background-image: url("images/slide0052.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.default-responsive .art-pageslider .art-slide0032 {
-    background-image: url('images/slide0032.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}.art-slide0033 {
-    background-image:  url('images/slide0033.jpg');
+      .default-responsive .art-pageslider .art-slide0052 {
+        background-image: url("images/slide0052.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+      .art-slide0053 {
+        background-image: url("images/slide0053.jpg");
         /* background-size:  auto auto; */
-        background-position:  center center;
-    background-repeat: no-repeat;
-}
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-/* special setup for header/pageslider */
-.responsive .art-header .art-slide0033 {
-    background-image:  url('images/slide0033.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
+      /* special setup for header/pageslider */
+      .responsive .art-header .art-slide0053 {
+        background-image: url("images/slide0053.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.responsive .art-pageslider .art-slide0033 {
-    background-image:  url('images/slide0033.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
+      .responsive .art-pageslider .art-slide0053 {
+        background-image: url("images/slide0053.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.default-responsive .art-header .art-slide0033 {
-    background-image: url('images/slide0033.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
+      .default-responsive .art-header .art-slide0053 {
+        background-image: url("images/slide0053.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.default-responsive .art-pageslider .art-slide0033 {
-    background-image: url('images/slide0033.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
+      .default-responsive .art-pageslider .art-slide0053 {
+        background-image: url("images/slide0053.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.art-slidenavigator003 {
-  display: inline-block;
-  position: absolute;
-  direction: ltr !important;
-  top: 161px;
-  left: 63.48%;
-  z-index: 101;
-  line-height: 0 !important;
-  -webkit-background-origin: border !important;
-  -moz-background-origin: border !important;
-  background-origin: border-box !important;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  text-align: center;
-    white-space: nowrap;
-    }
-.art-slidenavigator003
-{
-background: #7B828A;background: -webkit-linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;background: -moz-linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;background: -o-linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;background: -ms-linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;-svg-background: linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;background: linear-gradient(to bottom, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;
--webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;
+      .art-slidenavigator005 {
+        display: inline-block;
+        position: absolute;
+        direction: ltr !important;
+        top: 161px;
+        left: 63.48%;
+        z-index: 101;
+        line-height: 0 !important;
+        -webkit-background-origin: border !important;
+        -moz-background-origin: border !important;
+        background-origin: border-box !important;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        text-align: center;
+        white-space: nowrap;
+      }
+      .art-slidenavigator005 {
+        background: #7b828a;
+        background: -webkit-linear-gradient(
+            top,
+            rgba(163, 168, 174, 0.6) 0,
+            rgba(120, 128, 135, 0.6) 53%,
+            rgba(86, 92, 97, 0.6) 100%
+          )
+          no-repeat;
+        background: -moz-linear-gradient(
+            top,
+            rgba(163, 168, 174, 0.6) 0,
+            rgba(120, 128, 135, 0.6) 53%,
+            rgba(86, 92, 97, 0.6) 100%
+          )
+          no-repeat;
+        background: -o-linear-gradient(
+            top,
+            rgba(163, 168, 174, 0.6) 0,
+            rgba(120, 128, 135, 0.6) 53%,
+            rgba(86, 92, 97, 0.6) 100%
+          )
+          no-repeat;
+        background: -ms-linear-gradient(
+            top,
+            rgba(163, 168, 174, 0.6) 0,
+            rgba(120, 128, 135, 0.6) 53%,
+            rgba(86, 92, 97, 0.6) 100%
+          )
+          no-repeat;
+        -svg-background: linear-gradient(
+            top,
+            rgba(163, 168, 174, 0.6) 0,
+            rgba(120, 128, 135, 0.6) 53%,
+            rgba(86, 92, 97, 0.6) 100%
+          )
+          no-repeat;
+        background: linear-gradient(
+            to bottom,
+            rgba(163, 168, 174, 0.6) 0,
+            rgba(120, 128, 135, 0.6) 53%,
+            rgba(86, 92, 97, 0.6) 100%
+          )
+          no-repeat;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
 
+        padding: 7px;
+      }
+      .art-slidenavigator005 > a {
+        background: #464a4e;
+        background: #464a4e;
+        background: #464a4e;
+        background: #464a4e;
+        background: #464a4e;
+        -svg-background: #464a4e;
+        background: #464a4e;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
 
-padding:7px;
+        margin: 0 10px 0 0;
 
+        width: 10px;
 
+        height: 10px;
+      }
+      .art-slidenavigator005 > a.active {
+        background: #c4c7ca;
+        background: #c4c7ca;
+        background: #c4c7ca;
+        background: #c4c7ca;
+        background: #c4c7ca;
+        -svg-background: #c4c7ca;
+        background: #c4c7ca;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
 
+        margin: 0 10px 0 0;
 
+        width: 10px;
 
-}
-.art-slidenavigator003 > a
-{
-background: #464A4E;background: #464A4E;background: #464A4E;background: #464A4E;background: #464A4E;-svg-background: #464A4E;background: #464A4E;
--webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+        height: 10px;
+      }
+      .art-slidenavigator005 > a:hover {
+        background: #656b72;
+        background: #656b72;
+        background: #656b72;
+        background: #656b72;
+        background: #656b72;
+        -svg-background: #656b72;
+        background: #656b72;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
 
+        margin: 0 10px 0 0;
 
+        width: 10px;
 
-margin:0 10px 0 0;
+        height: 10px;
+      }
 
-width: 10px;
-
-height: 10px;
-}
-.art-slidenavigator003 > a.active
-{
-background: #C4C7CA;background: #C4C7CA;background: #C4C7CA;background: #C4C7CA;background: #C4C7CA;-svg-background: #C4C7CA;background: #C4C7CA;
--webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
-
-
-
-margin:0 10px 0 0;
-
-width: 10px;
-
-height: 10px;
-}
-.art-slidenavigator003 > a:hover
-{
-background: #656B72;background: #656B72;background: #656B72;background: #656B72;background: #656B72;-svg-background: #656B72;background: #656B72;
--webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
-
-
-
-margin:0 10px 0 0;
-
-width: 10px;
-
-height: 10px;
-}
-
-.art-slidecontainer004 {
-    position: relative;
+      .art-slidecontainer003 {
+        position: relative;
         width: 230px;
-    height: 185px;
-        }
+        height: 185px;
+      }
 
-.default-responsive .art-header .art-slidecontainer004,
-.responsive .art-header .art-slidecontainer004
-{
-  position: absolute !important;
-}
+      .default-responsive .art-header .art-slidecontainer003,
+      .responsive .art-header .art-slidecontainer003 {
+        position: absolute !important;
+      }
 
-.responsive .art-pageslider .art-slidecontainer004 {
-  position: absolute !important;
-}
+      .responsive .art-pageslider .art-slidecontainer003 {
+        position: absolute !important;
+      }
 
-.art-slidecontainer004 .art-slide-item
-{
+      .art-slidecontainer003 .art-slide-item {
+        -webkit-transform: rotate(0);
+        -moz-transform: rotate(0);
+        transform: rotate(0);
+      }
 
-    -webkit-transform: rotate(0);
-    -moz-transform: rotate(0);
-    transform: rotate(0);
-}
+      .art-slidecontainer003 .art-slide-item {
+        -webkit-transition: 600ms ease-in-out opacity;
+        -moz-transition: 600ms ease-in-out opacity;
+        -ms-transition: 600ms ease-in-out opacity;
+        -o-transition: 600ms ease-in-out opacity;
+        transition: 600ms ease-in-out opacity;
+        position: absolute !important;
+        display: none;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+      }
 
+      .art-slidecontainer003 .active,
+      .art-slidecontainer003 .next,
+      .art-slidecontainer003 .prev {
+        display: block;
+      }
 
+      .art-slidecontainer003 .active {
+        opacity: 1;
+      }
 
-.art-slidecontainer004 .art-slide-item {
-    -webkit-transition: 600ms ease-in-out opacity;
-    -moz-transition: 600ms ease-in-out opacity;
-    -ms-transition: 600ms ease-in-out opacity;
-    -o-transition: 600ms ease-in-out opacity;
-    transition: 600ms ease-in-out opacity;
-    position: absolute !important;
-    display: none;
-	left: 0;
-	top: 0;
-	opacity: 0;
-    width:  100%;
-    height: 100%;
-}
+      .art-slidecontainer003 .next,
+      .art-slidecontainer003 .prev {
+        width: 100%;
+      }
 
-.art-slidecontainer004 .active, .art-slidecontainer004 .next, .art-slidecontainer004 .prev {
-    display: block;
-}
+      .art-slidecontainer003 .next.forward,
+      .art-slidecontainer003 .prev.back {
+        opacity: 1;
+      }
 
-.art-slidecontainer004 .active {
-    opacity: 1;
-}
+      .art-slidecontainer003 .active.forward {
+        opacity: 0;
+      }
 
-.art-slidecontainer004 .next, .art-slidecontainer004 .prev {
-    width: 100%;
-}
+      .art-slidecontainer003 .active.back {
+        opacity: 0;
+      }
 
-.art-slidecontainer004 .next.forward, .art-slidecontainer004 .prev.back {
-    opacity: 1;
-}
-
-.art-slidecontainer004 .active.forward {
-    opacity: 0;
-}
-
-.art-slidecontainer004 .active.back {
-    opacity: 0;
-}
-
-
-.art-slide0040 {
-    background-image:  url('images/slide0040.jpg');
+      .art-slide0030 {
+        background-image: url("images/slide0030.jpg");
         /* background-size:  auto auto; */
-        background-position:  center center;
-    background-repeat: no-repeat;
-}
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-/* special setup for header/pageslider */
-.responsive .art-header .art-slide0040 {
-    background-image:  url('images/slide0040.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
+      /* special setup for header/pageslider */
+      .responsive .art-header .art-slide0030 {
+        background-image: url("images/slide0030.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.responsive .art-pageslider .art-slide0040 {
-    background-image:  url('images/slide0040.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
+      .responsive .art-pageslider .art-slide0030 {
+        background-image: url("images/slide0030.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.default-responsive .art-header .art-slide0040 {
-    background-image: url('images/slide0040.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
+      .default-responsive .art-header .art-slide0030 {
+        background-image: url("images/slide0030.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.default-responsive .art-pageslider .art-slide0040 {
-    background-image: url('images/slide0040.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}.art-slide0041 {
-    background-image:  url('images/slide0041.jpg');
+      .default-responsive .art-pageslider .art-slide0030 {
+        background-image: url("images/slide0030.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+      .art-slide0031 {
+        background-image: url("images/slide0031.jpg");
         /* background-size:  auto auto; */
-        background-position:  center center;
-    background-repeat: no-repeat;
-}
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-/* special setup for header/pageslider */
-.responsive .art-header .art-slide0041 {
-    background-image:  url('images/slide0041.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
+      /* special setup for header/pageslider */
+      .responsive .art-header .art-slide0031 {
+        background-image: url("images/slide0031.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.responsive .art-pageslider .art-slide0041 {
-    background-image:  url('images/slide0041.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
+      .responsive .art-pageslider .art-slide0031 {
+        background-image: url("images/slide0031.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.default-responsive .art-header .art-slide0041 {
-    background-image: url('images/slide0041.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
+      .default-responsive .art-header .art-slide0031 {
+        background-image: url("images/slide0031.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.default-responsive .art-pageslider .art-slide0041 {
-    background-image: url('images/slide0041.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}.art-slide0042 {
-    background-image:  url('images/slide0042.jpg');
+      .default-responsive .art-pageslider .art-slide0031 {
+        background-image: url("images/slide0031.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+      .art-slide0032 {
+        background-image: url("images/slide0032.jpg");
         /* background-size:  auto auto; */
-        background-position:  center center;
-    background-repeat: no-repeat;
-}
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-/* special setup for header/pageslider */
-.responsive .art-header .art-slide0042 {
-    background-image:  url('images/slide0042.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
+      /* special setup for header/pageslider */
+      .responsive .art-header .art-slide0032 {
+        background-image: url("images/slide0032.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.responsive .art-pageslider .art-slide0042 {
-    background-image:  url('images/slide0042.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
+      .responsive .art-pageslider .art-slide0032 {
+        background-image: url("images/slide0032.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.default-responsive .art-header .art-slide0042 {
-    background-image: url('images/slide0042.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
+      .default-responsive .art-header .art-slide0032 {
+        background-image: url("images/slide0032.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
 
-.default-responsive .art-pageslider .art-slide0042 {
-    background-image: url('images/slide0042.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}.art-slide0043 {
-    background-image:  url('images/slide0043.jpg');
+      .default-responsive .art-pageslider .art-slide0032 {
+        background-image: url("images/slide0032.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+      .art-slide0033 {
+        background-image: url("images/slide0033.jpg");
         /* background-size:  auto auto; */
-        background-position:  center center;
-    background-repeat: no-repeat;
-}
-
-/* special setup for header/pageslider */
-.responsive .art-header .art-slide0043 {
-    background-image:  url('images/slide0043.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
-
-.responsive .art-pageslider .art-slide0043 {
-    background-image:  url('images/slide0043.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
-
-.default-responsive .art-header .art-slide0043 {
-    background-image: url('images/slide0043.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-
-.default-responsive .art-pageslider .art-slide0043 {
-    background-image: url('images/slide0043.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-
-.art-slidenavigator004 {
-  display: inline-block;
-  position: absolute;
-  direction: ltr !important;
-  top: 161px;
-  left: 63.48%;
-  z-index: 101;
-  line-height: 0 !important;
-  -webkit-background-origin: border !important;
-  -moz-background-origin: border !important;
-  background-origin: border-box !important;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  text-align: center;
-    white-space: nowrap;
-    }
-.art-slidenavigator004
-{
-background: #7B828A;background: -webkit-linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;background: -moz-linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;background: -o-linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;background: -ms-linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;-svg-background: linear-gradient(top, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;background: linear-gradient(to bottom, rgba(163, 168, 174, 0.6) 0, rgba(120, 128, 135, 0.6) 53%, rgba(86, 92, 97, 0.6) 100%) no-repeat;
--webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;
-
-
-padding:7px;
-
-
-
-
-
-}
-.art-slidenavigator004 > a
-{
-background: #464A4E;background: #464A4E;background: #464A4E;background: #464A4E;background: #464A4E;-svg-background: #464A4E;background: #464A4E;
--webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
-
-
-
-margin:0 10px 0 0;
-
-width: 10px;
-
-height: 10px;
-}
-.art-slidenavigator004 > a.active
-{
-background: #C4C7CA;background: #C4C7CA;background: #C4C7CA;background: #C4C7CA;background: #C4C7CA;-svg-background: #C4C7CA;background: #C4C7CA;
--webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
-
-
-
-margin:0 10px 0 0;
-
-width: 10px;
-
-height: 10px;
-}
-.art-slidenavigator004 > a:hover
-{
-background: #656B72;background: #656B72;background: #656B72;background: #656B72;background: #656B72;-svg-background: #656B72;background: #656B72;
--webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
-
-
-
-margin:0 10px 0 0;
-
-width: 10px;
-
-height: 10px;
-}
-
-</style></head>
-<body>
-<div id="art-main">
-<header class="art-header">
-
-    <div class="art-shapes">
-        
-            </div>
-
-
-
-
-
-
-                <div id="art-flash-area">
-                    <div id="art-flash-container">
-                    <object width="1000" height="250" id="art-flash-object" data="images/flash.swf" type="application/x-shockwave-flash">
-                        <param name="quality" value="high">
-                    	<param name="scale" value="exactfit">
-                    	<param name="wmode" value="transparent">
-                    	<param name="flashvars" value="color1=0xFFFFFF&amp;alpha1=.30&amp;framerate1=24&amp;loop=true&amp;wmode=transparent">
-                        <param name="swfliveconnect" value="true">
-                        <!--[if !IE]>-->
-                        <object type="application/x-shockwave-flash" data="images/flash.swf" width="1000" height="250">
-                            <param name="quality" value="high">
-                    	    <param name="scale" value="exactfit">
-                            <param name="wmode" value="transparent">
-                                                    	    <param name="flashvars" value="color1=0xFFFFFF&amp;alpha1=.30&amp;framerate1=24&amp;loop=true&amp;wmode=transparent">
-                            <param name="swfliveconnect" value="true">
-                        <!--<![endif]-->
-                          	<div class="art-flash-alt"><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player"></a></div>
-                        <!--[if !IE]>-->
-                        </object>
-                        <!--<![endif]-->
-                    </object>
-                    </div>
-                    </div>
-                    
-</header>
-<nav class="art-nav">
-    <ul class="art-hmenu"><li><a href="accueil.html" class="active">Accueil</a></li><li><a href="presentation.html">Présentation</a><ul><li><a href="presentation/contacts.html">Contacts</a></li><li><a href="presentation/acces.html">Accès</a></li><li><a href="presentation/taxe_agefiph.html">Taxe AGEFIPH</a></li><li><a href="presentation/liens.html">Liens</a></li></ul></li><li><a href="blanchisserie.html">Blanchisserie</a></li><li><a href="espaces_verts.html">Espaces Verts</a></li><li><a href="menage_indust.html">Ménage indust.</a></li><li><a href="plv_condi_mailing.html">PLV-Condi-Mailing</a><ul><li><a href="plv_condi_mailing/fabrication.html">Fabrication</a></li><li><a href="plv_condi_mailing/conditionnement.html">Conditionnement</a></li><li><a href="plv_condi_mailing/mailing.html">Mailing</a></li></ul></li><li><a href="esat-adped-94.html">ESAT-ADPED 94</a><ul><li><a href="esat-adped-94/projets-individualises.html">Projets Individualisés</a></li><li><a href="esat-adped-94/different-competent.html">Différent &amp; Compétent</a></li></ul></li></ul> 
-    </nav>
-<div class="art-sheet clearfix">
-            <div class="art-layout-wrapper">
-                <div class="art-content-layout">
-                    <div class="art-content-layout-row">
-                        <div class="art-layout-cell art-content"><article class="art-post art-article">
-                                
-                                                
-                <div class="art-postcontent art-postcontent-0 clearfix"><div class="art-content-layout-wrapper layout-item-0">
-<div class="art-content-layout layout-item-1">
-    <div class="art-content-layout-row">
-    <div class="art-layout-cell layout-item-2" style="width: 55%" >
-        <p><iframe width="480" height="270" src="https://www.youtube.com/embed/ui3BJCvpDpo?wmode=transparent&amp;wmode=transparent&amp;amp;wmode=transparent" frameborder="0" allowfullscreen=""></iframe><br></p><p><br></p><p><span style="font-weight: bold; font-size: 20px;">ESAT Les Ateliers de Fresnes :&nbsp;</span></p><p><span style="font-weight: bold; font-size: 20px; font-style: italic;">là où l'open space... guérit</span><br></p>
-    </div><div class="art-layout-cell layout-item-2" style="width: 45%" >
-        <p style="padding-left: 20px; line-height: 150%;"><a href="https://www.youtube.com/channel/UC5bYeN5X0TD8--tk_qj6Lkw" target="_blank" title="Serge GALLO"><img width="100" height="100" alt="" src="images/serge_gallo.jpg" style="float: left; margin-top: 1px; margin-right: 10px; margin-bottom: 8px; margin-left: 1px; " class=""></a><span style="font-size: 14px; font-weight: bold;">Merci à Serge GALLO, Auteur et réalisateur du film, pour sa très belle prestation...</span><br></p><p style="padding-left: 20px; line-height: 150%;"><span style="font-style: italic;">Un jour où je passais devant, j'ai poussé la porte, par curiosité.&nbsp;<br></span></p><p style="padding-left: 20px; line-height: 150%;"><span style="font-style: italic;">"J'en étais un peu resté aux articles de papèterie fabriqués par des travailleurs handicapés "pour s'occuper".<br>On m'a permis d'entrer, et puis de revenir avec mes caméras.<br>Alors, un ESAT, c'est quoi exactement ? Tout le contraire d'un lieu occupationnel.<br>A Fresnes, j'ai découvert une formidable fourmilière, pleine de portraits drôles et attachants.<br>Un lieu de mise en confiance et d'épanouissement pour des gens différents et compétents. Une entreprise bien huilée et très performante. Et souvent, leur seconde famille.<br>Entrez avec moi pendant 7 minutes dans cet univers où l'open space... guérit." &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Serge Gallo</span><span style="font-size: 14px; font-weight: bold;"><br></span></p>
-    </div>
-    </div>
-</div>
-</div>
-<div class="art-content-layout-wrapper layout-item-3">
-<div class="art-content-layout">
-    <div class="art-content-layout-row">
-    <div class="art-layout-cell layout-item-4" style="width: 25%" >
-        <h4 style="text-align: center;"><span style="color: rgb(10, 255, 255); text-decoration: underline; font-family: 'Trebuchet MS';">Blanchisserie</span></h4><div id="001" style="position: relative; display: inline-block; z-index: 0; margin: 5px;  border-width: 0px;  " class="art-collage">
-<div class="art-slider art-slidecontainer001" data-width="230" data-height="185">
-    <div class="art-slider-inner">
-<div class="art-slide-item art-slide0010" >
-<a class="art-link-wrapper" href="blanchisserie.html" title="Blanchisserie" style="width:100%; height:100%; display: block"></a>
-
-</div>
-<div class="art-slide-item art-slide0011" >
-
-
-</div>
-<div class="art-slide-item art-slide0012" >
-
-
-</div>
-<div class="art-slide-item art-slide0013" >
-
-
-</div>
-
-    </div>
-</div>
-<div class="art-slidenavigator art-slidenavigator001" data-left="1" data-top="1">
-<a href="#" class="art-slidenavigatoritem"></a><a href="#" class="art-slidenavigatoritem"></a><a href="#" class="art-slidenavigatoritem"></a><a href="#" class="art-slidenavigatoritem"></a>
-</div>
-
-
-
-    </div>
-
-        
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         <span style="font-family: 'Trebuchet MS';">
-         <span style="text-decoration: underline;">
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-        </span></span><h4 style="text-align: center; line-height: 125%;"><span style="color: rgb(10, 255, 255); text-decoration: underline; font-family: 'Trebuchet MS';">Professionnels</span></h4>
-    </div><div class="art-layout-cell layout-item-4" style="width: 25%" >
-        <h4 style="text-align: center;"><span style="color: rgb(37, 253, 13); text-decoration: underline; font-family: 'Trebuchet MS';">Espaces Verts</span></h4><div id="005" style="position: relative; display: inline-block; z-index: 0; margin: 5px;  border-width: 0px;  " class="art-collage">
-<div class="art-slider art-slidecontainer005" data-width="230" data-height="185">
-    <div class="art-slider-inner">
-<div class="art-slide-item art-slide0050" >
-<a class="art-link-wrapper" href="espaces_verts.html" title="Espaces Verts" style="width:100%; height:100%; display: block"></a>
-
-</div>
-<div class="art-slide-item art-slide0051" >
-
-
-</div>
-<div class="art-slide-item art-slide0052" >
-
-
-</div>
-<div class="art-slide-item art-slide0053" >
-
-
-</div>
-
-    </div>
-</div>
-<div class="art-slidenavigator art-slidenavigator005" data-left="1" data-top="1">
-<a href="#" class="art-slidenavigatoritem"></a><a href="#" class="art-slidenavigatoritem"></a><a href="#" class="art-slidenavigatoritem"></a><a href="#" class="art-slidenavigatoritem"></a>
-</div>
-
-
-
-    </div>
-
-        
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         <span style="font-family: 'Trebuchet MS';">
-         <span style="text-decoration: underline;">
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-        </span></span><h4 style="text-align: center;"><span style="color: rgb(37, 253, 13); text-decoration: underline; font-family: 'Trebuchet MS';">Création et Entretien</span></h4>
-    </div><div class="art-layout-cell layout-item-5" style="width: 25%" >
-        <h4 style="text-align: center;"><span style="color: #FFFB00;">&nbsp;<span style="text-decoration: underline; font-family: 'Trebuchet MS';">Ménage Industriel</span></span></h4><div id="003" style="position: relative; display: inline-block; z-index: 0; margin: 5px;  border-width: 0px;  " class="art-collage">
-<div class="art-slider art-slidecontainer003" data-width="230" data-height="185">
-    <div class="art-slider-inner">
-<div class="art-slide-item art-slide0030" >
-<a class="art-link-wrapper" href="menage_indust.html" title="Ménage industriel" style="width:100%; height:100%; display: block"></a>
-
-</div>
-<div class="art-slide-item art-slide0031" >
-
-
-</div>
-<div class="art-slide-item art-slide0032" >
-
-
-</div>
-<div class="art-slide-item art-slide0033" >
-
-
-</div>
-
-    </div>
-</div>
-<div class="art-slidenavigator art-slidenavigator003" data-left="1" data-top="1">
-<a href="#" class="art-slidenavigatoritem"></a><a href="#" class="art-slidenavigatoritem"></a><a href="#" class="art-slidenavigatoritem"></a><a href="#" class="art-slidenavigatoritem"></a>
-</div>
-
-
-
-    </div>
-
-        
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         <span style="font-family: 'Trebuchet MS';">
-         <span style="text-decoration: underline;">
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-        </span></span><h4 style="text-align: center; line-height: 125%;"><span style="font-size: 16px; color: rgb(255, 251, 0); text-decoration: underline; font-family: 'Trebuchet MS';">Entretien des locaux</span></h4><p style="text-align: justify;"><span style="text-align: left;"></span><span style="color: rgb(255, 255, 255); font-family: Arial, sans-serif; font-size: 13px; letter-spacing: 1px; font-weight: normal;"><span style="color: rgb(24, 26, 27); font-family: Arial, 'Arial Unicode MS', Helvetica, sans-serif; text-align: left;"></span></span></p><p style="text-align: justify;"><span style="text-align: left;"></span></p><p>
-        </p>
-    </div><div class="art-layout-cell layout-item-4" style="width: 25%" >
-        <h4 style="text-align: center;"><span style="color: rgb(254, 228, 200); text-decoration: underline; font-family: 'Trebuchet MS';">Fabrication</span></h4><div id="004" style="position: relative; display: inline-block; z-index: 0; margin: 5px;  border-width: 0px;  " class="art-collage">
-<div class="art-slider art-slidecontainer004" data-width="230" data-height="185">
-    <div class="art-slider-inner">
-<div class="art-slide-item art-slide0040" >
-<a class="art-link-wrapper" href="plv_condi_mailing.html" style="width:100%; height:100%; display: block"></a>
-
-</div>
-<div class="art-slide-item art-slide0041" >
-
-
-</div>
-<div class="art-slide-item art-slide0042" >
-
-
-</div>
-<div class="art-slide-item art-slide0043" >
-
-
-</div>
-
-    </div>
-</div>
-<div class="art-slidenavigator art-slidenavigator004" data-left="1" data-top="1">
-<a href="#" class="art-slidenavigatoritem"></a><a href="#" class="art-slidenavigatoritem"></a><a href="#" class="art-slidenavigatoritem"></a><a href="#" class="art-slidenavigatoritem"></a>
-</div>
-
-
-
-    </div>
-
-        
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         <span style="font-family: 'Trebuchet MS';">
-         <span style="text-decoration: underline;">
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-        </span></span><h4 style="text-align: center; line-height: 125%;"><span style="color: rgb(254, 228, 200); text-decoration: underline; font-family: 'Trebuchet MS';">Condi - Mailing</span></h4><p class="MsoNormal" style="margin-top: 0px; margin-bottom: 0px; margin-right: 4px; text-indent: 0px; word-spacing: 0px; text-align: justify;"><span style="text-align: left;"></span></p><p>
-        </p>
-    </div>
-    </div>
-</div>
-</div>
-<div class="art-content-layout layout-item-6">
-    <div class="art-content-layout-row">
-    <div class="art-layout-cell layout-item-7" style="width: 5%" >
-        <p><br></p>
-    </div><div class="art-layout-cell layout-item-8" style="width: 90%" >
-        <h4 style="margin-top: 0px;"><span style="font-family: 'Trebuchet MS';"><span style="color: rgb(105, 63, 78); font-style: italic; letter-spacing: 1px;">Une réelle économie sur votre taxe AGEFIPH en profitant de nos services...</span><br></span></h4><h4></h4><p class="MsoNormal" style="margin-bottom: 10pt; text-align: justify; line-height: 14px; margin-top: 0px;"><b><span style="line-height: 20px; font-style: italic; font-size: 16px; color: rgb(105, 63, 78); font-family: 'Trebuchet MS'; text-decoration: underline;">Qu'est ce que la contribution AGEFIPH ?</span></b></p><p class="MsoNormal" style="text-align: justify;"><span style="color: rgb(105, 63, 78); font-family: 'Trebuchet MS';">La loi fait obligation aux employeurs, occupant au moins vingt salariés, de réserver 6% de ces emplois aux travailleurs handicapés. Si ce taux n’est pas atteint, ils devront verser à l’AGEFIPH une contribution annuelle proportionnelle à l’écart constaté entre le nombre de personnes handicapées rémunérées et l’obligation légale.</span></p><p class="MsoNormal" style="text-align: justify;"><span style="color: rgb(105, 63, 78); font-family: 'Trebuchet MS';">Ainsi, une entreprise qui n’emploierait aucun salarié handicapé, mais justifierait de contrat de fourniture ou de sous-traitance, pourrait réduire de moitié au maximum sa contribution annuelle à l’AGEFIPH.</span></p><p><span style="font-family: 'Trebuchet MS';"><span style="line-height: 14px;"><b><span style="line-height: 20px; font-size: 18px; font-style: italic; color: rgb(105, 63, 78); text-decoration: underline;">Comment s'en acquitter ?</span></b></span><br></span></p><h3 style="line-height: 125%;"><span style="font-family: 'Trebuchet MS'; color: rgb(255, 255, 255); font-style: italic;"><span style="color: #24B6FF;"><span style="color: #693F4E;">Travailler avec nous, c'est la possibilité de remplir une partie de l'Obligation d'Emploi de Personnes Handicapées !</span><span style="color: #693F4E;"> </span>&nbsp;</span> &nbsp;</span><a href="presentation/taxe_agefiph.html" class="art-button" style="font-family: 'Trebuchet MS';">Suite...</a></h3>
-    </div><div class="art-layout-cell layout-item-7" style="width: 5%" >
-        <p><br></p>
-    </div>
-    </div>
-</div>
-</div>
-                                
-                
-
-</article></div>
-                    </div>
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      /* special setup for header/pageslider */
+      .responsive .art-header .art-slide0033 {
+        background-image: url("images/slide0033.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      .responsive .art-pageslider .art-slide0033 {
+        background-image: url("images/slide0033.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      .default-responsive .art-header .art-slide0033 {
+        background-image: url("images/slide0033.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      .default-responsive .art-pageslider .art-slide0033 {
+        background-image: url("images/slide0033.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      .art-slidenavigator003 {
+        display: inline-block;
+        position: absolute;
+        direction: ltr !important;
+        top: 161px;
+        left: 63.48%;
+        z-index: 101;
+        line-height: 0 !important;
+        -webkit-background-origin: border !important;
+        -moz-background-origin: border !important;
+        background-origin: border-box !important;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        text-align: center;
+        white-space: nowrap;
+      }
+      .art-slidenavigator003 {
+        background: #7b828a;
+        background: -webkit-linear-gradient(
+            top,
+            rgba(163, 168, 174, 0.6) 0,
+            rgba(120, 128, 135, 0.6) 53%,
+            rgba(86, 92, 97, 0.6) 100%
+          )
+          no-repeat;
+        background: -moz-linear-gradient(
+            top,
+            rgba(163, 168, 174, 0.6) 0,
+            rgba(120, 128, 135, 0.6) 53%,
+            rgba(86, 92, 97, 0.6) 100%
+          )
+          no-repeat;
+        background: -o-linear-gradient(
+            top,
+            rgba(163, 168, 174, 0.6) 0,
+            rgba(120, 128, 135, 0.6) 53%,
+            rgba(86, 92, 97, 0.6) 100%
+          )
+          no-repeat;
+        background: -ms-linear-gradient(
+            top,
+            rgba(163, 168, 174, 0.6) 0,
+            rgba(120, 128, 135, 0.6) 53%,
+            rgba(86, 92, 97, 0.6) 100%
+          )
+          no-repeat;
+        -svg-background: linear-gradient(
+            top,
+            rgba(163, 168, 174, 0.6) 0,
+            rgba(120, 128, 135, 0.6) 53%,
+            rgba(86, 92, 97, 0.6) 100%
+          )
+          no-repeat;
+        background: linear-gradient(
+            to bottom,
+            rgba(163, 168, 174, 0.6) 0,
+            rgba(120, 128, 135, 0.6) 53%,
+            rgba(86, 92, 97, 0.6) 100%
+          )
+          no-repeat;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+
+        padding: 7px;
+      }
+      .art-slidenavigator003 > a {
+        background: #464a4e;
+        background: #464a4e;
+        background: #464a4e;
+        background: #464a4e;
+        background: #464a4e;
+        -svg-background: #464a4e;
+        background: #464a4e;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+
+        margin: 0 10px 0 0;
+
+        width: 10px;
+
+        height: 10px;
+      }
+      .art-slidenavigator003 > a.active {
+        background: #c4c7ca;
+        background: #c4c7ca;
+        background: #c4c7ca;
+        background: #c4c7ca;
+        background: #c4c7ca;
+        -svg-background: #c4c7ca;
+        background: #c4c7ca;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+
+        margin: 0 10px 0 0;
+
+        width: 10px;
+
+        height: 10px;
+      }
+      .art-slidenavigator003 > a:hover {
+        background: #656b72;
+        background: #656b72;
+        background: #656b72;
+        background: #656b72;
+        background: #656b72;
+        -svg-background: #656b72;
+        background: #656b72;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+
+        margin: 0 10px 0 0;
+
+        width: 10px;
+
+        height: 10px;
+      }
+
+      .art-slidecontainer004 {
+        position: relative;
+        width: 230px;
+        height: 185px;
+      }
+
+      .default-responsive .art-header .art-slidecontainer004,
+      .responsive .art-header .art-slidecontainer004 {
+        position: absolute !important;
+      }
+
+      .responsive .art-pageslider .art-slidecontainer004 {
+        position: absolute !important;
+      }
+
+      .art-slidecontainer004 .art-slide-item {
+        -webkit-transform: rotate(0);
+        -moz-transform: rotate(0);
+        transform: rotate(0);
+      }
+
+      .art-slidecontainer004 .art-slide-item {
+        -webkit-transition: 600ms ease-in-out opacity;
+        -moz-transition: 600ms ease-in-out opacity;
+        -ms-transition: 600ms ease-in-out opacity;
+        -o-transition: 600ms ease-in-out opacity;
+        transition: 600ms ease-in-out opacity;
+        position: absolute !important;
+        display: none;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .art-slidecontainer004 .active,
+      .art-slidecontainer004 .next,
+      .art-slidecontainer004 .prev {
+        display: block;
+      }
+
+      .art-slidecontainer004 .active {
+        opacity: 1;
+      }
+
+      .art-slidecontainer004 .next,
+      .art-slidecontainer004 .prev {
+        width: 100%;
+      }
+
+      .art-slidecontainer004 .next.forward,
+      .art-slidecontainer004 .prev.back {
+        opacity: 1;
+      }
+
+      .art-slidecontainer004 .active.forward {
+        opacity: 0;
+      }
+
+      .art-slidecontainer004 .active.back {
+        opacity: 0;
+      }
+
+      .art-slide0040 {
+        background-image: url("images/slide0040.jpg");
+        /* background-size:  auto auto; */
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      /* special setup for header/pageslider */
+      .responsive .art-header .art-slide0040 {
+        background-image: url("images/slide0040.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      .responsive .art-pageslider .art-slide0040 {
+        background-image: url("images/slide0040.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      .default-responsive .art-header .art-slide0040 {
+        background-image: url("images/slide0040.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      .default-responsive .art-pageslider .art-slide0040 {
+        background-image: url("images/slide0040.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+      .art-slide0041 {
+        background-image: url("images/slide0041.jpg");
+        /* background-size:  auto auto; */
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      /* special setup for header/pageslider */
+      .responsive .art-header .art-slide0041 {
+        background-image: url("images/slide0041.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      .responsive .art-pageslider .art-slide0041 {
+        background-image: url("images/slide0041.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      .default-responsive .art-header .art-slide0041 {
+        background-image: url("images/slide0041.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      .default-responsive .art-pageslider .art-slide0041 {
+        background-image: url("images/slide0041.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+      .art-slide0042 {
+        background-image: url("images/slide0042.jpg");
+        /* background-size:  auto auto; */
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      /* special setup for header/pageslider */
+      .responsive .art-header .art-slide0042 {
+        background-image: url("images/slide0042.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      .responsive .art-pageslider .art-slide0042 {
+        background-image: url("images/slide0042.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      .default-responsive .art-header .art-slide0042 {
+        background-image: url("images/slide0042.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      .default-responsive .art-pageslider .art-slide0042 {
+        background-image: url("images/slide0042.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+      .art-slide0043 {
+        background-image: url("images/slide0043.jpg");
+        /* background-size:  auto auto; */
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      /* special setup for header/pageslider */
+      .responsive .art-header .art-slide0043 {
+        background-image: url("images/slide0043.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      .responsive .art-pageslider .art-slide0043 {
+        background-image: url("images/slide0043.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      .default-responsive .art-header .art-slide0043 {
+        background-image: url("images/slide0043.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      .default-responsive .art-pageslider .art-slide0043 {
+        background-image: url("images/slide0043.jpg");
+        background-size: auto auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      .art-slidenavigator004 {
+        display: inline-block;
+        position: absolute;
+        direction: ltr !important;
+        top: 161px;
+        left: 63.48%;
+        z-index: 101;
+        line-height: 0 !important;
+        -webkit-background-origin: border !important;
+        -moz-background-origin: border !important;
+        background-origin: border-box !important;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        text-align: center;
+        white-space: nowrap;
+      }
+      .art-slidenavigator004 {
+        background: #7b828a;
+        background: -webkit-linear-gradient(
+            top,
+            rgba(163, 168, 174, 0.6) 0,
+            rgba(120, 128, 135, 0.6) 53%,
+            rgba(86, 92, 97, 0.6) 100%
+          )
+          no-repeat;
+        background: -moz-linear-gradient(
+            top,
+            rgba(163, 168, 174, 0.6) 0,
+            rgba(120, 128, 135, 0.6) 53%,
+            rgba(86, 92, 97, 0.6) 100%
+          )
+          no-repeat;
+        background: -o-linear-gradient(
+            top,
+            rgba(163, 168, 174, 0.6) 0,
+            rgba(120, 128, 135, 0.6) 53%,
+            rgba(86, 92, 97, 0.6) 100%
+          )
+          no-repeat;
+        background: -ms-linear-gradient(
+            top,
+            rgba(163, 168, 174, 0.6) 0,
+            rgba(120, 128, 135, 0.6) 53%,
+            rgba(86, 92, 97, 0.6) 100%
+          )
+          no-repeat;
+        -svg-background: linear-gradient(
+            top,
+            rgba(163, 168, 174, 0.6) 0,
+            rgba(120, 128, 135, 0.6) 53%,
+            rgba(86, 92, 97, 0.6) 100%
+          )
+          no-repeat;
+        background: linear-gradient(
+            to bottom,
+            rgba(163, 168, 174, 0.6) 0,
+            rgba(120, 128, 135, 0.6) 53%,
+            rgba(86, 92, 97, 0.6) 100%
+          )
+          no-repeat;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+
+        padding: 7px;
+      }
+      .art-slidenavigator004 > a {
+        background: #464a4e;
+        background: #464a4e;
+        background: #464a4e;
+        background: #464a4e;
+        background: #464a4e;
+        -svg-background: #464a4e;
+        background: #464a4e;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+
+        margin: 0 10px 0 0;
+
+        width: 10px;
+
+        height: 10px;
+      }
+      .art-slidenavigator004 > a.active {
+        background: #c4c7ca;
+        background: #c4c7ca;
+        background: #c4c7ca;
+        background: #c4c7ca;
+        background: #c4c7ca;
+        -svg-background: #c4c7ca;
+        background: #c4c7ca;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+
+        margin: 0 10px 0 0;
+
+        width: 10px;
+
+        height: 10px;
+      }
+      .art-slidenavigator004 > a:hover {
+        background: #656b72;
+        background: #656b72;
+        background: #656b72;
+        background: #656b72;
+        background: #656b72;
+        -svg-background: #656b72;
+        background: #656b72;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+
+        margin: 0 10px 0 0;
+
+        width: 10px;
+
+        height: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="art-main">
+      <header class="art-header">
+        <div class="art-shapes"></div>
+
+        <div id="art-flash-area">
+          <div id="art-flash-container">
+            <object
+              width="1000"
+              height="250"
+              id="art-flash-object"
+              data="images/flash.swf"
+              type="application/x-shockwave-flash"
+            >
+              <param name="quality" value="high" />
+              <param name="scale" value="exactfit" />
+              <param name="wmode" value="transparent" />
+              <param
+                name="flashvars"
+                value="color1=0xFFFFFF&amp;alpha1=.30&amp;framerate1=24&amp;loop=true&amp;wmode=transparent"
+              />
+              <param name="swfliveconnect" value="true" />
+              <!--[if !IE]>-->
+              <object
+                type="application/x-shockwave-flash"
+                data="images/flash.swf"
+                width="1000"
+                height="250"
+              >
+                <param name="quality" value="high" />
+                <param name="scale" value="exactfit" />
+                <param name="wmode" value="transparent" />
+                <param
+                  name="flashvars"
+                  value="color1=0xFFFFFF&amp;alpha1=.30&amp;framerate1=24&amp;loop=true&amp;wmode=transparent"
+                />
+                <param name="swfliveconnect" value="true" />
+                <!--<![endif]-->
+                <div class="art-flash-alt">
+                  <a href="http://www.adobe.com/go/getflashplayer"
+                    ><img
+                      src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif"
+                      alt="Get Adobe Flash player"
+                  /></a>
                 </div>
+                <!--[if !IE]>-->
+              </object>
+              <!--<![endif]-->
+            </object>
+          </div>
+        </div>
+      </header>
+      <nav class="art-nav">
+        <ul class="art-hmenu">
+          <li><a href="accueil.html" class="active">Accueil</a></li>
+          <li>
+            <a href="presentation.html">Présentation</a>
+            <ul>
+              <li><a href="presentation/contacts.html">Contacts</a></li>
+              <li><a href="presentation/acces.html">Accès</a></li>
+              <li><a href="presentation/taxe_agefiph.html">Taxe AGEFIPH</a></li>
+              <li><a href="presentation/liens.html">Liens</a></li>
+            </ul>
+          </li>
+          <li><a href="blanchisserie.html">Blanchisserie</a></li>
+          <li><a href="espaces_verts.html">Espaces Verts</a></li>
+          <li><a href="menage_indust.html">Ménage indust.</a></li>
+          <li>
+            <a href="plv_condi_mailing.html">PLV-Condi-Mailing</a>
+            <ul>
+              <li>
+                <a href="plv_condi_mailing/fabrication.html">Fabrication</a>
+              </li>
+              <li>
+                <a href="plv_condi_mailing/conditionnement.html"
+                  >Conditionnement</a
+                >
+              </li>
+              <li><a href="plv_condi_mailing/mailing.html">Mailing</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="esat-adped-94.html">ESAT-ADPED 94</a>
+            <ul>
+              <li>
+                <a href="esat-adped-94/projets-individualises.html"
+                  >Projets Individualisés</a
+                >
+              </li>
+              <li>
+                <a href="esat-adped-94/different-competent.html"
+                  >Différent &amp; Compétent</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="art-sheet clearfix">
+        <div class="art-layout-wrapper">
+          <div class="art-content-layout">
+            <div class="art-content-layout-row">
+              <div class="art-layout-cell art-content">
+                <article class="art-post art-article">
+                  <div class="art-postcontent art-postcontent-0 clearfix">
+                    <div class="art-content-layout-wrapper layout-item-0">
+                      <div class="art-content-layout layout-item-1">
+                        <div class="art-content-layout-row">
+                          <div
+                            class="art-layout-cell layout-item-2"
+                            style="width: 55%"
+                          >
+                            <p>
+                              <iframe
+                                width="480"
+                                height="270"
+                                src="https://www.youtube.com/embed/ui3BJCvpDpo?wmode=transparent&amp;wmode=transparent&amp;amp;wmode=transparent"
+                                frameborder="0"
+                                allowfullscreen=""
+                              ></iframe
+                              ><br />
+                            </p>
+                            <p><br /></p>
+                            <p>
+                              <span style="font-weight: bold; font-size: 20px"
+                                >ESAT Les Ateliers de Fresnes :&nbsp;</span
+                              >
+                            </p>
+                            <p>
+                              <span
+                                style="
+                                  font-weight: bold;
+                                  font-size: 20px;
+                                  font-style: italic;
+                                "
+                                >là où l'open space... guérit</span
+                              ><br />
+                            </p>
+                          </div>
+                          <div
+                            class="art-layout-cell layout-item-2"
+                            style="width: 45%"
+                          >
+                            <p style="padding-left: 20px; line-height: 150%">
+                              <a
+                                href="https://www.youtube.com/channel/UC5bYeN5X0TD8--tk_qj6Lkw"
+                                target="_blank"
+                                title="Serge GALLO"
+                                ><img
+                                  width="100"
+                                  height="100"
+                                  alt=""
+                                  src="images/serge_gallo.jpg"
+                                  style="
+                                    float: left;
+                                    margin-top: 1px;
+                                    margin-right: 10px;
+                                    margin-bottom: 8px;
+                                    margin-left: 1px;
+                                  "
+                                  class="" /></a
+                              ><span style="font-size: 14px; font-weight: bold"
+                                >Merci à Serge GALLO, Auteur et réalisateur du
+                                film, pour sa très belle prestation...</span
+                              ><br />
+                            </p>
+                            <p style="padding-left: 20px; line-height: 150%">
+                              <span style="font-style: italic"
+                                >Un jour où je passais devant, j'ai poussé la
+                                porte, par curiosité.&nbsp;<br
+                              /></span>
+                            </p>
+                            <p style="padding-left: 20px; line-height: 150%">
+                              <span style="font-style: italic"
+                                >"J'en étais un peu resté aux articles de
+                                papèterie fabriqués par des travailleurs
+                                handicapés "pour s'occuper".<br />On m'a permis
+                                d'entrer, et puis de revenir avec mes
+                                caméras.<br />Alors, un ESAT, c'est quoi
+                                exactement ? Tout le contraire d'un lieu
+                                occupationnel.<br />A Fresnes, j'ai découvert
+                                une formidable fourmilière, pleine de portraits
+                                drôles et attachants.<br />Un lieu de mise en
+                                confiance et d'épanouissement pour des gens
+                                différents et compétents. Une entreprise bien
+                                huilée et très performante. Et souvent, leur
+                                seconde famille.<br />Entrez avec moi pendant 7
+                                minutes dans cet univers où l'open space...
+                                guérit." &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                &nbsp; &nbsp; &nbsp; &nbsp; Serge Gallo</span
+                              ><span style="font-size: 14px; font-weight: bold"
+                                ><br
+                              /></span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="art-content-layout-wrapper layout-item-3">
+                      <div class="art-content-layout">
+                        <div class="art-content-layout-row">
+                          <div
+                            class="art-layout-cell layout-item-4"
+                            style="width: 25%"
+                          >
+                            <h4 style="text-align: center">
+                              <span
+                                style="
+                                  color: rgb(10, 255, 255);
+                                  text-decoration: underline;
+                                  font-family: 'Trebuchet MS';
+                                "
+                                >Blanchisserie</span
+                              >
+                            </h4>
+                            <div
+                              id="001"
+                              style="
+                                position: relative;
+                                display: inline-block;
+                                z-index: 0;
+                                margin: 5px;
+                                border-width: 0px;
+                              "
+                              class="art-collage"
+                            >
+                              <div
+                                class="art-slider art-slidecontainer001"
+                                data-width="230"
+                                data-height="185"
+                              >
+                                <div class="art-slider-inner">
+                                  <div class="art-slide-item art-slide0010">
+                                    <a
+                                      class="art-link-wrapper"
+                                      href="blanchisserie.html"
+                                      title="Blanchisserie"
+                                      style="
+                                        width: 100%;
+                                        height: 100%;
+                                        display: block;
+                                      "
+                                    ></a>
+                                  </div>
+                                  <div
+                                    class="art-slide-item art-slide0011"
+                                  ></div>
+                                  <div
+                                    class="art-slide-item art-slide0012"
+                                  ></div>
+                                  <div
+                                    class="art-slide-item art-slide0013"
+                                  ></div>
+                                </div>
+                              </div>
+                              <div
+                                class="art-slidenavigator art-slidenavigator001"
+                                data-left="1"
+                                data-top="1"
+                              >
+                                <a href="#" class="art-slidenavigatoritem"></a
+                                ><a href="#" class="art-slidenavigatoritem"></a
+                                ><a href="#" class="art-slidenavigatoritem"></a
+                                ><a href="#" class="art-slidenavigatoritem"></a>
+                              </div>
+                            </div>
+
+                            <span style="font-family: 'Trebuchet MS'">
+                              <span style="text-decoration: underline"> </span
+                            ></span>
+                            <h4 style="text-align: center; line-height: 125%">
+                              <span
+                                style="
+                                  color: rgb(10, 255, 255);
+                                  text-decoration: underline;
+                                  font-family: 'Trebuchet MS';
+                                "
+                                >Professionnels</span
+                              >
+                            </h4>
+                          </div>
+                          <div
+                            class="art-layout-cell layout-item-4"
+                            style="width: 25%"
+                          >
+                            <h4 style="text-align: center">
+                              <span
+                                style="
+                                  color: rgb(37, 253, 13);
+                                  text-decoration: underline;
+                                  font-family: 'Trebuchet MS';
+                                "
+                                >Espaces Verts</span
+                              >
+                            </h4>
+                            <div
+                              id="005"
+                              style="
+                                position: relative;
+                                display: inline-block;
+                                z-index: 0;
+                                margin: 5px;
+                                border-width: 0px;
+                              "
+                              class="art-collage"
+                            >
+                              <div
+                                class="art-slider art-slidecontainer005"
+                                data-width="230"
+                                data-height="185"
+                              >
+                                <div class="art-slider-inner">
+                                  <div class="art-slide-item art-slide0050">
+                                    <a
+                                      class="art-link-wrapper"
+                                      href="espaces_verts.html"
+                                      title="Espaces Verts"
+                                      style="
+                                        width: 100%;
+                                        height: 100%;
+                                        display: block;
+                                      "
+                                    ></a>
+                                  </div>
+                                  <div
+                                    class="art-slide-item art-slide0051"
+                                  ></div>
+                                  <div
+                                    class="art-slide-item art-slide0052"
+                                  ></div>
+                                  <div
+                                    class="art-slide-item art-slide0053"
+                                  ></div>
+                                </div>
+                              </div>
+                              <div
+                                class="art-slidenavigator art-slidenavigator005"
+                                data-left="1"
+                                data-top="1"
+                              >
+                                <a href="#" class="art-slidenavigatoritem"></a
+                                ><a href="#" class="art-slidenavigatoritem"></a
+                                ><a href="#" class="art-slidenavigatoritem"></a
+                                ><a href="#" class="art-slidenavigatoritem"></a>
+                              </div>
+                            </div>
+
+                            <span style="font-family: 'Trebuchet MS'">
+                              <span style="text-decoration: underline"> </span
+                            ></span>
+                            <h4 style="text-align: center">
+                              <span
+                                style="
+                                  color: rgb(37, 253, 13);
+                                  text-decoration: underline;
+                                  font-family: 'Trebuchet MS';
+                                "
+                                >Création et Entretien</span
+                              >
+                            </h4>
+                          </div>
+                          <div
+                            class="art-layout-cell layout-item-5"
+                            style="width: 25%"
+                          >
+                            <h4 style="text-align: center">
+                              <span style="color: #fffb00"
+                                >&nbsp;<span
+                                  style="
+                                    text-decoration: underline;
+                                    font-family: 'Trebuchet MS';
+                                  "
+                                  >Ménage Industriel</span
+                                ></span
+                              >
+                            </h4>
+                            <div
+                              id="003"
+                              style="
+                                position: relative;
+                                display: inline-block;
+                                z-index: 0;
+                                margin: 5px;
+                                border-width: 0px;
+                              "
+                              class="art-collage"
+                            >
+                              <div
+                                class="art-slider art-slidecontainer003"
+                                data-width="230"
+                                data-height="185"
+                              >
+                                <div class="art-slider-inner">
+                                  <div class="art-slide-item art-slide0030">
+                                    <a
+                                      class="art-link-wrapper"
+                                      href="menage_indust.html"
+                                      title="Ménage industriel"
+                                      style="
+                                        width: 100%;
+                                        height: 100%;
+                                        display: block;
+                                      "
+                                    ></a>
+                                  </div>
+                                  <div
+                                    class="art-slide-item art-slide0031"
+                                  ></div>
+                                  <div
+                                    class="art-slide-item art-slide0032"
+                                  ></div>
+                                  <div
+                                    class="art-slide-item art-slide0033"
+                                  ></div>
+                                </div>
+                              </div>
+                              <div
+                                class="art-slidenavigator art-slidenavigator003"
+                                data-left="1"
+                                data-top="1"
+                              >
+                                <a href="#" class="art-slidenavigatoritem"></a
+                                ><a href="#" class="art-slidenavigatoritem"></a
+                                ><a href="#" class="art-slidenavigatoritem"></a
+                                ><a href="#" class="art-slidenavigatoritem"></a>
+                              </div>
+                            </div>
+
+                            <span style="font-family: 'Trebuchet MS'">
+                              <span style="text-decoration: underline"> </span
+                            ></span>
+                            <h4 style="text-align: center; line-height: 125%">
+                              <span
+                                style="
+                                  font-size: 16px;
+                                  color: rgb(255, 251, 0);
+                                  text-decoration: underline;
+                                  font-family: 'Trebuchet MS';
+                                "
+                                >Entretien des locaux</span
+                              >
+                            </h4>
+                            <p style="text-align: justify">
+                              <span style="text-align: left"></span
+                              ><span
+                                style="
+                                  color: rgb(255, 255, 255);
+                                  font-family: Arial, sans-serif;
+                                  font-size: 13px;
+                                  letter-spacing: 1px;
+                                  font-weight: normal;
+                                "
+                                ><span
+                                  style="
+                                    color: rgb(24, 26, 27);
+                                    font-family: Arial, 'Arial Unicode MS',
+                                      Helvetica, sans-serif;
+                                    text-align: left;
+                                  "
+                                ></span
+                              ></span>
+                            </p>
+                            <p style="text-align: justify">
+                              <span style="text-align: left"></span>
+                            </p>
+                            <p></p>
+                          </div>
+                          <div
+                            class="art-layout-cell layout-item-4"
+                            style="width: 25%"
+                          >
+                            <h4 style="text-align: center">
+                              <span
+                                style="
+                                  color: rgb(254, 228, 200);
+                                  text-decoration: underline;
+                                  font-family: 'Trebuchet MS';
+                                "
+                                >Fabrication</span
+                              >
+                            </h4>
+                            <div
+                              id="004"
+                              style="
+                                position: relative;
+                                display: inline-block;
+                                z-index: 0;
+                                margin: 5px;
+                                border-width: 0px;
+                              "
+                              class="art-collage"
+                            >
+                              <div
+                                class="art-slider art-slidecontainer004"
+                                data-width="230"
+                                data-height="185"
+                              >
+                                <div class="art-slider-inner">
+                                  <div class="art-slide-item art-slide0040">
+                                    <a
+                                      class="art-link-wrapper"
+                                      href="plv_condi_mailing.html"
+                                      style="
+                                        width: 100%;
+                                        height: 100%;
+                                        display: block;
+                                      "
+                                    ></a>
+                                  </div>
+                                  <div
+                                    class="art-slide-item art-slide0041"
+                                  ></div>
+                                  <div
+                                    class="art-slide-item art-slide0042"
+                                  ></div>
+                                  <div
+                                    class="art-slide-item art-slide0043"
+                                  ></div>
+                                </div>
+                              </div>
+                              <div
+                                class="art-slidenavigator art-slidenavigator004"
+                                data-left="1"
+                                data-top="1"
+                              >
+                                <a href="#" class="art-slidenavigatoritem"></a
+                                ><a href="#" class="art-slidenavigatoritem"></a
+                                ><a href="#" class="art-slidenavigatoritem"></a
+                                ><a href="#" class="art-slidenavigatoritem"></a>
+                              </div>
+                            </div>
+
+                            <span style="font-family: 'Trebuchet MS'">
+                              <span style="text-decoration: underline"> </span
+                            ></span>
+                            <h4 style="text-align: center; line-height: 125%">
+                              <span
+                                style="
+                                  color: rgb(254, 228, 200);
+                                  text-decoration: underline;
+                                  font-family: 'Trebuchet MS';
+                                "
+                                >Condi - Mailing</span
+                              >
+                            </h4>
+                            <p
+                              class="MsoNormal"
+                              style="
+                                margin-top: 0px;
+                                margin-bottom: 0px;
+                                margin-right: 4px;
+                                text-indent: 0px;
+                                word-spacing: 0px;
+                                text-align: justify;
+                              "
+                            >
+                              <span style="text-align: left"></span>
+                            </p>
+                            <p></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="art-content-layout layout-item-6">
+                      <div class="art-content-layout-row">
+                        <div
+                          class="art-layout-cell layout-item-7"
+                          style="width: 5%"
+                        >
+                          <p><br /></p>
+                        </div>
+                        <div
+                          class="art-layout-cell layout-item-8"
+                          style="width: 90%"
+                        >
+                          <h4 style="margin-top: 0px">
+                            <span style="font-family: 'Trebuchet MS'"
+                              ><span
+                                style="
+                                  color: rgb(105, 63, 78);
+                                  font-style: italic;
+                                  letter-spacing: 1px;
+                                "
+                                >Une réelle économie sur votre taxe AGEFIPH en
+                                profitant de nos services...</span
+                              ><br
+                            /></span>
+                          </h4>
+                          <h4></h4>
+                          <p
+                            class="MsoNormal"
+                            style="
+                              margin-bottom: 10pt;
+                              text-align: justify;
+                              line-height: 14px;
+                              margin-top: 0px;
+                            "
+                          >
+                            <b
+                              ><span
+                                style="
+                                  line-height: 20px;
+                                  font-style: italic;
+                                  font-size: 16px;
+                                  color: rgb(105, 63, 78);
+                                  font-family: 'Trebuchet MS';
+                                  text-decoration: underline;
+                                "
+                                >Qu'est ce que la contribution AGEFIPH ?</span
+                              ></b
+                            >
+                          </p>
+                          <p class="MsoNormal" style="text-align: justify">
+                            <span
+                              style="
+                                color: rgb(105, 63, 78);
+                                font-family: 'Trebuchet MS';
+                              "
+                              >La loi fait obligation aux employeurs, occupant
+                              au moins vingt salariés, de réserver 6% de ces
+                              emplois aux travailleurs handicapés. Si ce taux
+                              n’est pas atteint, ils devront verser à l’AGEFIPH
+                              une contribution annuelle proportionnelle à
+                              l’écart constaté entre le nombre de personnes
+                              handicapées rémunérées et l’obligation
+                              légale.</span
+                            >
+                          </p>
+                          <p class="MsoNormal" style="text-align: justify">
+                            <span
+                              style="
+                                color: rgb(105, 63, 78);
+                                font-family: 'Trebuchet MS';
+                              "
+                              >Ainsi, une entreprise qui n’emploierait aucun
+                              salarié handicapé, mais justifierait de contrat de
+                              fourniture ou de sous-traitance, pourrait réduire
+                              de moitié au maximum sa contribution annuelle à
+                              l’AGEFIPH.</span
+                            >
+                          </p>
+                          <p>
+                            <span style="font-family: 'Trebuchet MS'"
+                              ><span style="line-height: 14px"
+                                ><b
+                                  ><span
+                                    style="
+                                      line-height: 20px;
+                                      font-size: 18px;
+                                      font-style: italic;
+                                      color: rgb(105, 63, 78);
+                                      text-decoration: underline;
+                                    "
+                                    >Comment s'en acquitter ?</span
+                                  ></b
+                                ></span
+                              ><br
+                            /></span>
+                          </p>
+                          <h3 style="line-height: 125%">
+                            <span
+                              style="
+                                font-family: 'Trebuchet MS';
+                                color: rgb(255, 255, 255);
+                                font-style: italic;
+                              "
+                              ><span style="color: #24b6ff"
+                                ><span style="color: #693f4e"
+                                  >Travailler avec nous, c'est la possibilité de
+                                  remplir une partie de l'Obligation d'Emploi de
+                                  Personnes Handicapées !</span
+                                ><span style="color: #693f4e"> </span
+                                >&nbsp;</span
+                              >
+                              &nbsp;</span
+                            ><a
+                              href="presentation/taxe_agefiph.html"
+                              class="art-button"
+                              style="font-family: 'Trebuchet MS'"
+                              >Suite...</a
+                            >
+                          </h3>
+                        </div>
+                        <div
+                          class="art-layout-cell layout-item-7"
+                          style="width: 5%"
+                        >
+                          <p><br /></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <footer class="art-footer">
+        <div class="art-footer-inner">
+          <div
+            style="
+              position: relative;
+              display: inline-block;
+              padding-left: 40px;
+              padding-right: 40px;
+            "
+          >
+            <p><br /></p>
+            <p>
+              <a
+                href="https://www.facebook.com/Les-Ateliers-de-Fresnes-725962174202376/?ref=aymt_homepage_panel"
+                target="_blank"
+                title='Page "Les Ateliers de Fresnes"'
+                style="font-style: italic"
+                ><span style="color: rgb(255, 255, 0); font-size: 16px"
+                  >Suivez nous sur Facebook / avec notre page "Les Ateliers de
+                  Fresnes"</span
+                ></a
+              ><span style="font-size: 12px"></span>
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
-<footer class="art-footer">
-  <div class="art-footer-inner">
-<div style="position:relative;display:inline-block;padding-left:40px;padding-right:40px"><p><br></p><p><a href="https://www.facebook.com/Les-Ateliers-de-Fresnes-725962174202376/?ref=aymt_homepage_panel" target="_blank" title="Page &quot;Les Ateliers de Fresnes&quot;" style="font-style: italic;"><span style="color: rgb(255, 255, 0);  font-size: 16px;">Suivez nous sur Facebook / avec notre page "Les Ateliers de Fresnes"</span></a><span style="font-size: 12px;"></span></p></div>
-    <p class="art-page-footer">
-        <span id="art-footnote-links"><a href="http://www.artisteer.com/" target="_blank">Web Template</a> created with Artisteer.</span>
-    </p>
-  </div>
-</footer>
-
-</div>
-
-
-</body></html>
+  </body>
+</html>
